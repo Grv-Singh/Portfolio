@@ -45,6 +45,6 @@
 
 [website]: https://gauravsinghsays.blogspot.com/
 [twitter]: https://twitter.com/grvsinghsays
-[linkedin]: https://linkedin.com/in/codeSTACKr
+[linkedin]: https://linkedin.com/in/grvsingh97
 [wakatime]: https://wakatime.com/@GrvSingh
 [showwcase]: https://app.showwcase.com/profile/grv97
