@@ -51,7 +51,24 @@
 &nbsp;
 <img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
 &nbsp;
-<img align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />
+<img align="left" alt="Material-UI" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/material-ui.svg" />
+&nbsp;
+<img align="left" alt="React" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/react.svg" />
+&nbsp;
+<img align="left" alt="Linux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/linux.svg" />
+&nbsp;
+<img align="left" alt="Redux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/redux.svg" />
+&nbsp;
+<img align="left" alt="Windows" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" />
+&nbsp;
+<img align="left" alt="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" />
+&nbsp;
+<img align="left" alt="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
+&nbsp;
+<img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
+
+
+
 
 [website]: https://gauravsinghsays.blogspot.com/
 [github]: https://github.com/Grv-Singh/
