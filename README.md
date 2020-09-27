@@ -66,7 +66,7 @@
 <img align="left" alt="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
 &nbsp;
 <img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
-
+&nbsp;
 
 
 
