@@ -5,7 +5,7 @@
 ## I'm a Full Stack Web Engineer, Mentor!
 
 - 🌱 I’m currently learning everything 🤣
-- 👯 I’m looking to collaborate with other developers
+- 👩🧑🏼 I’m looking to collaborate with other developers
 - 🥅 2020 Goals: Contribute more to Open Source projects
 - ⚡ Fun fact: I love to cook and cycle 🚴‍
 
