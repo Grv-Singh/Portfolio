@@ -1,11 +1,4 @@
 ### Hi there 👋
-[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/acad.grv97@gmail.com)
-&nbsp;
-<a href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" width="120px"></a>
-<br/>
-[<img align="left" alt="LinkedIn" width="220px" src="https://www.insurewithsterling.com/Images/button_schedule_insurance_meeting_with_agent.jpg" />][calendly] &nbsp; &nbsp;
-<br/><br/>
-
 ## I'm a Full Stack Web Engineer, Mentor!
 
 - 🌱 I’m currently learning everything 🤣
@@ -25,6 +18,14 @@
 ## Development Stats 🛠
 [<img src="https://wakatime.com/share/@GrvSingh/aa074655-56f8-4539-a794-161c77c31b5c.svg" alt="Daily"/>](https://wakatime.com/@GrvSingh) &nbsp;
 [<img src="https://wakatime.com/share/@GrvSingh/604ee4cd-5456-4ee6-91ef-ba7cfed0f874.svg" alt="All time"/>](https://wakatime.com/@GrvSingh)
+
+###
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/acad.grv97@gmail.com)
+&nbsp;
+<a href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" width="120px"></a>
+<br/>
+[<img align="left" alt="LinkedIn" width="220px" src="https://www.insurewithsterling.com/Images/button_schedule_insurance_meeting_with_agent.jpg" />][calendly] &nbsp; &nbsp;
+<br/><br/>
 
 ### Let's Connect 🤝:
 [<img align="left" alt="Twitter" src="https://img.shields.io/twitter/follow/grvsinghsays?color=1DA1F2&logo=twitter&style=for-the-badge" />](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%Grv-Singh&screen_name=Grv-Singh) &nbsp; &nbsp;
