@@ -1,6 +1,8 @@
 ### Hi there 👋
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/acad.grv97@gmail.com) &nbsp; &nbsp;
 <a href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" width="120px"></a> &nbsp; &nbsp;
+ Schedule a Meeting [<img align="left" alt="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/googlecalendar.svg" />][calendly] &nbsp; &nbsp;
+
 
 ## I'm a Full Stack Web Engineer, Mentor!
 
@@ -64,10 +66,6 @@
 &nbsp;
 <img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
 &nbsp;
-
-## Schedule a Meeting
-[<img align="left" alt="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/googlecalendar.svg" />][calendly] &nbsp; &nbsp;
-
 
 [calendly]: https://calendly.com/acad-grv97/15min/
 [website]: https://gauravsinghsays.blogspot.com/
