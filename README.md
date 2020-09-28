@@ -65,8 +65,11 @@
 <img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
 &nbsp;
 
+## Schedule a Meeting
+[<img align="left" alt="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/googlecalendar.svg" />][calendly] &nbsp; &nbsp;
 
 
+[calendly]: https://calendly.com/acad-grv97/15min/
 [website]: https://gauravsinghsays.blogspot.com/
 [github]: https://github.com/Grv-Singh/
 [twitter]: https://twitter.com/grvsinghsays
