@@ -19,7 +19,6 @@
 [<img src="https://wakatime.com/share/@GrvSingh/aa074655-56f8-4539-a794-161c77c31b5c.svg" alt="Daily"/>](https://wakatime.com/@GrvSingh) &nbsp;
 [<img src="https://wakatime.com/share/@GrvSingh/604ee4cd-5456-4ee6-91ef-ba7cfed0f874.svg" alt="All time"/>](https://wakatime.com/@GrvSingh)
 
-###
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/acad.grv97@gmail.com)
 &nbsp;
 <a href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" width="120px"></a>
