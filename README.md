@@ -58,8 +58,6 @@
 &nbsp;
 <img align="left" alt="Linux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/linux.svg" />
 &nbsp;
-<img align="left" alt="Redux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/redux.svg" />
-&nbsp;
 <img align="left" alt="Windows" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" />
 &nbsp;
 <img align="left" alt="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" />
