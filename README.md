@@ -1,5 +1,5 @@
 ### Hi there 👋
-## I'm a Full Stack Web Engineer, Mentor!
+## I'm a Full Stack Web Engineer & Data Analyst!
 
 - 🌱 I’m currently learning data science & web development 🤣
 - 👩🧑🏼 I’m looking to collaborate with other developers
