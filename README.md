@@ -22,6 +22,7 @@
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/acad.grv97@gmail.com)
 &nbsp;
 <br/>
+<br/>
 [<img align="left" alt="LinkedIn" width="220px" src="https://www.insurewithsterling.com/Images/button_schedule_insurance_meeting_with_agent.jpg" />][calendly] &nbsp; &nbsp;
 <br/>
 
@@ -62,7 +63,7 @@
 &nbsp;
 <img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" />
 &nbsp;
-<br>
+### Really liked this ? 
 <a href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" width="120px"></a>
 
 [calendly]: https://calendly.com/acad-grv97/15min/
