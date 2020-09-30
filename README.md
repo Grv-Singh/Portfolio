@@ -31,8 +31,21 @@
 [<img align="left" alt="Blog" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.7.0/icons/blogger.svg" />][website] &nbsp; &nbsp;
 [<img align="left" alt="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin] &nbsp; &nbsp;
 
-
 ## Languages and Tools:
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" />
+&nbsp;
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/drupal.svg" />
+&nbsp;
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" />
+&nbsp;
+<img align="left" alt="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" />
+&nbsp;
+<img align="left" alt="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
+&nbsp;
+<img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
+&nbsp;
+<img align="left" alt="D3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" />
+&nbsp;
 <img align="left" alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />&nbsp;
 <img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
 &nbsp;
@@ -55,21 +68,7 @@
 &nbsp;
 <img align="left" alt="Windows" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" />
 &nbsp;
-<img align="left" alt="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" />
-&nbsp;
-<img align="left" alt="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
-&nbsp;
-<img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
-&nbsp;
-<img align="left" alt="D3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" />
-&nbsp;
-<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/drupal.svg" />
-&nbsp;
-<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" />
-&nbsp;
 <img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" />
-&nbsp;
-<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" />
 &nbsp;
 <br/>
 ### Like what you see ? 
