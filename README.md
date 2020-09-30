@@ -27,7 +27,6 @@
 <br/><br/>
 
 ### Let's Connect 🤝:
-[<img align="left" alt="Twitter" src="https://img.shields.io/twitter/follow/grvsinghsays?color=1DA1F2&logo=twitter&style=for-the-badge" />](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%Grv-Singh&screen_name=Grv-Singh) &nbsp; &nbsp;
 [<img align="left" alt="Github" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/github.svg" />][github] &nbsp; &nbsp;
 [<img align="left" alt="Blog" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.7.0/icons/blogger.svg" />][website] &nbsp; &nbsp;
 [<img align="left" alt="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin] &nbsp; &nbsp;
