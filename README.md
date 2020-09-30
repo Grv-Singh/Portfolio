@@ -63,7 +63,7 @@
 &nbsp;
 <img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" />
 &nbsp;
-
+<br/>
 ### Like what you see ? 
 <a href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" width="120px"></a>
 
