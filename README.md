@@ -61,7 +61,15 @@
 &nbsp;
 <img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
 &nbsp;
-<img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" />
+<img align="left" alt="D3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" />
+&nbsp;
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/drupal.svg" />
+&nbsp;
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" />
+&nbsp;
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" />
+&nbsp;
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" />
 &nbsp;
 <br/>
 ### Like what you see ? 
