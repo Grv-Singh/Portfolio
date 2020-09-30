@@ -32,8 +32,6 @@
 [<img align="left" alt="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin] &nbsp; &nbsp;
 
 ## Languages and Tools:
-<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" />
-&nbsp;
 <img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/drupal.svg" />
 &nbsp;
 <img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" />
@@ -52,6 +50,8 @@
 <img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
 &nbsp;
 <img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />&nbsp;
+<img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" />
+&nbsp;
 <img align="left" alt="SQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
 &nbsp;
 <img align="left" alt="MongoDB" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" />
@@ -70,6 +70,7 @@
 &nbsp;
 <img align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" />
 &nbsp;
+
 <br/>
 ### Like what you see ? 
 <a href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" width="120px"></a>
