@@ -22,8 +22,8 @@
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/acad.grv97@gmail.com)
 &nbsp;
 <br/>
-<br/>
 [<img align="left" alt="LinkedIn" width="220px" src="https://www.insurewithsterling.com/Images/button_schedule_insurance_meeting_with_agent.jpg" />][calendly] &nbsp; &nbsp;
+<br/>
 <br/>
 
 ### Let's Connect 🤝:
