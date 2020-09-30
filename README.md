@@ -1,7 +1,7 @@
 ### Hi there 👋
 ## I'm a Full Stack Web Engineer, Mentor!
 
-- 🌱 I’m currently learning everything 🤣
+- 🌱 I’m currently learning data science & web development 🤣
 - 👩🧑🏼 I’m looking to collaborate with other developers
 - 🥅 2020 Goals: Contribute more to Open Source projects
 - ⚡ Fun fact: I love to cook and cycle 🚴‍
@@ -40,11 +40,7 @@
 <img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
 &nbsp;
 <img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />&nbsp;
-<img align="left" alt="GraphQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/graphql/graphql.png" />
-&nbsp;
 <img align="left" alt="SQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
-&nbsp;
-<img align="left" alt="MySQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" />
 &nbsp;
 <img align="left" alt="MongoDB" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" />
 &nbsp;
@@ -65,6 +61,8 @@
 <img align="left" alt="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
 &nbsp;
 <img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" />
+&nbsp;
+<img align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" />
 &nbsp;
 
 [calendly]: https://calendly.com/acad-grv97/15min/
