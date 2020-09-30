@@ -1,7 +1,7 @@
 ### Hi there 👋
 ## I'm a Full Stack Web Developer & Data Analytic!
 
-- 🌱 I’m currently learning data science & web development 🤣
+- 🌱 I’m currently learning data science & web development
 - 👩🧑🏼 I’m looking to collaborate with other developers
 - 🥅 2020 Goals: Contribute more to Open Source projects
 - ⚡ Fun fact: I love to cook and cycle 🚴‍
