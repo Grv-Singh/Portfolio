@@ -9,13 +9,13 @@
 ### Spotify Playing 🎧
 [<img src="https://now-playing-codestackr.vercel.app/api/spotify-playing" alt="Spotify Playing" width="350" style="vertical-align:top" />](https://open.spotify.com/playlist/4mqmRYYgXAbWb8ZuYb9RAL)
 
-### Mathematics & Programming 📐
+### Math & Programming 📐
 [<img src="https://projecteuler.net/profile/grv197.png" alt="Project Euler" />](https://projecteuler.net)
 
 ### Clickety Clack ⌨  
 [<img src="https://data.typeracer.com/misc/badge?user=grv97" alt="Typing Stats" />](https://data.typeracer.com/pit/profile?user=grv97)
 
-## Development Stats 🛠
+## Stats 🛠
 [<img src="https://wakatime.com/share/@GrvSingh/aa074655-56f8-4539-a794-161c77c31b5c.svg" alt="Daily"/>](https://wakatime.com/@GrvSingh) &nbsp;
 [<img src="https://wakatime.com/share/@GrvSingh/604ee4cd-5456-4ee6-91ef-ba7cfed0f874.svg" alt="All time"/>](https://wakatime.com/@GrvSingh)
 
