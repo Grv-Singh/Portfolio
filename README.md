@@ -1,5 +1,5 @@
 ### Hi there 👋
-## I'm a Full Stack Developer & Data Analytic!
+## I'm a Full Stack Developer & Data Scientist!
 
 - 🌱 I’m currently learning data science & web development
 - 👩🧑🏼 I’m looking to collaborate with other developers
