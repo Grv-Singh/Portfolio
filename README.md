@@ -9,7 +9,7 @@
 ### Spotify Playing 🎧
 [<img src="https://now-playing-codestackr.vercel.app/api/spotify-playing" alt="Spotify Playing" width="350" style="vertical-align:top" />](https://open.spotify.com/playlist/4mqmRYYgXAbWb8ZuYb9RAL)
 
-### Math & Programming 📐
+### Mathematics and Computer programming 📐
 [<img src="https://projecteuler.net/profile/grv197.png" alt="Project Euler" />](https://projecteuler.net)
 
 ### Clickety Clack ⌨  
