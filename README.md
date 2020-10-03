@@ -1,7 +1,7 @@
 ### Hi there 👋
 ## I'm a Full Stack Developer & Data Scientist!
 
-- 🌱 I’m currently learning data science & web development
+- 🌱 I see my learning curve in full stack development & data science.
 - 👩🧑🏼 I’m looking to collaborate with other developers
 - 🥅 2020 Goals: Contribute more to Open Source projects
 - ⚡ Fun fact: I love to cook and cycle 🚴‍
