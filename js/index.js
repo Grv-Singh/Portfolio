@@ -82,4 +82,4 @@ function changeColor() {
     $('div.parallax').css("background-color","rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")");
   }
 
-   function changeColor();
+changeColor();
