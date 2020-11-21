@@ -55,9 +55,9 @@
 }
 .dropcap {
   float: left;
-  font-size: 400%;
-  color: #cf142b;
-  margin: -13px 7px -13px 0;
+  font-size: 300%;
+  color: #e1e1e1;
+  margin: -11px 7px -11px 1px;
 }
 
 .ikon {
