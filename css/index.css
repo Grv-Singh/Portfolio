@@ -1,7 +1,6 @@
 div.parallax {
-	height: 100%;
-	/* max-height: 600px; */
-	width: 1000px;
+	height: -webkit-fill-available;
+	width: -webkit-fill-available;
 	background-color: hsla(200,40%,30%,.4);
 	background-image: 
 		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
@@ -21,6 +20,8 @@ div.parallax {
 		400px 260px;
 	animation: 50s para infinite linear;
 	position: fixed;
+	left:0%;
+	top:0%;
 	}
 
 @keyframes para {
