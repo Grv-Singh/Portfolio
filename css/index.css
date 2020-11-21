@@ -4,7 +4,7 @@
   border: 2px solid white;
 }
 body{
-  font-size: 20px; 
+  font-size: 20px !important; 
 }
 .tooltip {
   pointer-events: none;
