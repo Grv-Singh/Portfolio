@@ -29,87 +29,16 @@
          }
       </script>
       <!-- Global site tag (gtag.js) - Google Analytics -->
-      <!-- Global site tag (gtag.js) - Google Analytics -->
       <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2XHV5PHH"></script> -->
       <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://grv-singh.github.io/js/index.js"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
          
          gtag('config', 'G-KQ2XHV5PHH');
-
-         // IIFE to ensure safe use of $
-(function( $ ) {
-
-  // Create plugin
-  $.fn.tooltips = function(el) {
-
-    var $tooltip,
-      $body = $('body'),
-      $el;
-
-    // Ensure chaining works
-    return this.each(function(i, el) {
-    
-      $el = $(el).attr("data-tooltip", i);
-
-      // Make DIV and append to page 
-      var $tooltip = $('<div class="tooltip" data-tooltip="' + i + '">' + $el.attr('title') + '<div class="arrow"></div></div>').appendTo("body");
-
-      // Position right away, so first appearance is smooth
-      var linkPosition = $el.position();
-
-      $tooltip.css({
-        top: linkPosition.top - $tooltip.outerHeight() - 13,
-        left: linkPosition.left - ($tooltip.width()/2)
-      });
-
-      $el
-      // Get rid of yellow box popup
-      .removeAttr("alt")
-
-      // Mouseenter
-      .hover(function() {
-
-        $el = $(this);
-
-        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']');
-
-        // Reposition tooltip, in case of page movement e.g. screen resize                        
-        var linkPosition = $el.position();
-
-        $tooltip.css({
-          top: linkPosition.top - $tooltip.outerHeight() - 13,
-          left: linkPosition.left - ($tooltip.width()/2)
-        });
-
-        // Adding class handles animation through CSS
-        $tooltip.addClass("active");
-
-        // Mouseleave
-      }, function() {
-
-        $el = $(this);
-
-        // Temporary class for same-direction fadeout
-        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']').addClass("out");
-
-        // Remove all classes
-        setTimeout(function() {
-          $tooltip.removeClass("active").removeClass("out");
-          }, 300);
-
-        });
-
-      });
-
-    }
-
-})(jQuery);
-
-$("img[title]").tooltips();
       </script>
       <!-- Begin Jekyll SEO tag v2.6.1 -->
       <title>Portfolio - Gaurav Singh</title>
@@ -134,12 +63,12 @@ $("img[title]").tooltips();
       <![endif]-->
       <link rel="shortcut icon" type="image/jpg" href="https://i.postimg.cc/J7QcG55G/circle-cropped.png"/>
       <!-- Google Tag Manager -->
-      <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
          })(window,document,'script','dataLayer','GTM-5TXQJXH');
-      </script> -->
+      </script>
       <!-- End Google Tag Manager -->
    </head>
    <body>
@@ -234,7 +163,7 @@ $("img[title]").tooltips();
          <footer>
          </footer>
       </div>
-      <!-- <script src="https://grv-singh.github.io/assets/js/scale.fix.js"></script>
-      <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> -->
+      <script src="https://grv-singh.github.io/assets/js/scale.fix.js"></script>
+      <script src="https://instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
    </body>
 </html>
