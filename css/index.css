@@ -1,54 +1,43 @@
 div.parallax {
-	height: -webkit-fill-available;
-	width: -webkit-fill-available;
-	background-color: hsla(200,40%,30%,.4);
-	background-image: 
-		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
-		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
-		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
-		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
-	background-repeat: repeat-x;
-	background-position: 
-		0 100%,
-		0 50%,
-		0 100%,
-		0 0;
-	background-size: 
-		800px,
-		500px 200px,
-		1000px,
-		400px 260px;
-	animation: 50s para infinite linear;
-	position: fixed;
-	left:0%;
-	top:0%;
-	}
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  background-color: hsla(200, 40%, 30%, 0.4);
+  background-image: url("https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
+    url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png");
+  background-repeat: repeat-x;
+  background-position: 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 800px, 500px 200px, 1000px, 400px 260px;
+  animation: 50s para infinite linear;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+}
 
 @keyframes para {
-	100% {
-		background-position: 
-			-800px 95%,
-			500px 50%,
-			1000px 100%,
-			400px 0;
-		}
-	}
+  100% {
+    background-position: -800px 95%, 500px 50%, 1000px 100%, 400px 0;
+  }
+}
 
 @font-face {
-  font-family: 'Product Sans' !important;
+  font-family: "Product Sans" !important;
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+      format("woff2");
 }
 .tooltip,
 .arrow:after {
   background: black;
   border: 2px solid white;
 }
-body{
-  font-size: 13px !important; 
-  font-family: 'Product Sans';
-	background-color: transparent !important;
+body {
+  font-size: 13px !important;
+  font-family: Product Sans !important;
+  background-color: transparent !important;
 }
 .tooltip {
   pointer-events: none;
