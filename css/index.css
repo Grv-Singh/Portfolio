@@ -46,7 +46,7 @@ html {
 body{
   font-size: 13px !important; 
   font-family: 'Product Sans';
-background-colour: none !important;
+background-color: none !important;
 }
 .tooltip {
   pointer-events: none;
