@@ -3,7 +3,9 @@
   background: black;
   border: 2px solid white;
 }
-
+body{
+  font-size: 20px; 
+}
 .tooltip {
   pointer-events: none;
   opacity: 0;
