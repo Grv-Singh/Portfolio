@@ -64,7 +64,7 @@
   margin: 10px;
   -webkit-filter: drop-shadow(3px 3px 3px #fff);
   filter: drop-shadow(3px 3px 3px #fff);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .ikon:hover {
   transform: scale(1.4);
