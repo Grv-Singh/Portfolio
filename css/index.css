@@ -11,6 +11,7 @@
 }
 body{
   font-size: 13px !important; 
+  font-family: 'Product Sans';
 }
 .tooltip {
   pointer-events: none;
