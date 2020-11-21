@@ -1,0 +1,98 @@
+.tooltip,
+.arrow:after {
+  background: black;
+  border: 2px solid white;
+}
+
+.tooltip {
+  pointer-events: none;
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font: bold 14px "Helvetica Neue", Sans-Serif;
+  font-stretch: condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+}
+.arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+
+  transform: rotate(45deg);
+}
+.tooltip.active {
+  opacity: 1;
+  margin-top: 5px;
+  transition: all 0.2s ease;
+}
+.tooltip.out {
+  opacity: 0;
+  margin-top: -20px;
+}
+::selection {
+  background-color: #e1e1e1;
+  color: #f1f1f1;
+}
+.dropcap {
+  float: left;
+  font-size: 400%;
+  color: #cf142b;
+  margin: -13px 7px -13px 0;
+}
+
+.ikon {
+  margin: 5px;
+  -webkit-filter: drop-shadow(3px 3px 3px #fff);
+  filter: drop-shadow(3px 3px 3px #fff);
+  transition: all 0.1s ease-in-out;
+}
+.ikon:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+  -webkit-filter: drop-shadow(3px 3px 3px #e1e1e1);
+  filter: drop-shadow(3px 3px 3px #e1e1e1);
+}
+.akon {
+  margin: 5px;
+  border-radius: 10px;
+  border: #fff 1px solid;
+  -webkit-filter: drop-shadow(3px 3px 3px #fff);
+  filter: drop-shadow(3px 3px 3px #fff);
+}
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
