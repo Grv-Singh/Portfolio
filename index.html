@@ -30,14 +30,86 @@
       </script>
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2XHV5PHH"></script>
+      <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2XHV5PHH"></script> -->
       <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
          
          gtag('config', 'G-KQ2XHV5PHH');
+
+         // IIFE to ensure safe use of $
+(function( $ ) {
+
+  // Create plugin
+  $.fn.tooltips = function(el) {
+
+    var $tooltip,
+      $body = $('body'),
+      $el;
+
+    // Ensure chaining works
+    return this.each(function(i, el) {
+    
+      $el = $(el).attr("data-tooltip", i);
+
+      // Make DIV and append to page 
+      var $tooltip = $('<div class="tooltip" data-tooltip="' + i + '">' + $el.attr('title') + '<div class="arrow"></div></div>').appendTo("body");
+
+      // Position right away, so first appearance is smooth
+      var linkPosition = $el.position();
+
+      $tooltip.css({
+        top: linkPosition.top - $tooltip.outerHeight() - 13,
+        left: linkPosition.left - ($tooltip.width()/2)
+      });
+
+      $el
+      // Get rid of yellow box popup
+      .removeAttr("alt")
+
+      // Mouseenter
+      .hover(function() {
+
+        $el = $(this);
+
+        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']');
+
+        // Reposition tooltip, in case of page movement e.g. screen resize                        
+        var linkPosition = $el.position();
+
+        $tooltip.css({
+          top: linkPosition.top - $tooltip.outerHeight() - 13,
+          left: linkPosition.left - ($tooltip.width()/2)
+        });
+
+        // Adding class handles animation through CSS
+        $tooltip.addClass("active");
+
+        // Mouseleave
+      }, function() {
+
+        $el = $(this);
+
+        // Temporary class for same-direction fadeout
+        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']').addClass("out");
+
+        // Remove all classes
+        setTimeout(function() {
+          $tooltip.removeClass("active").removeClass("out");
+          }, 300);
+
+        });
+
+      });
+
+    }
+
+})(jQuery);
+
+$("img[title]").tooltips();
       </script>
       <!-- Begin Jekyll SEO tag v2.6.1 -->
       <title>Portfolio - Gaurav Singh</title>
@@ -64,7 +136,14 @@
          margin: 5px;
          -webkit-filter: drop-shadow(3px 3px 3px #fff);
          filter: drop-shadow(3px 3px 3px #fff);
+         transition: all .1s ease-in-out;
          }
+         .ikon:hover {
+            transform: scale(1.4);
+            cursor: pointer;
+            -webkit-filter: drop-shadow(3px 3px 3px #e1e1e1);
+         filter: drop-shadow(3px 3px 3px #e1e1e1);
+            }
          .akon{
          margin: 5px;
          border-radius: 10px;
@@ -92,15 +171,68 @@
       </style>
       <link rel="shortcut icon" type="image/jpg" href="https://i.postimg.cc/J7QcG55G/circle-cropped.png"/>
       <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
          })(window,document,'script','dataLayer','GTM-5TXQJXH');
-      </script>
+      </script> -->
       <!-- End Google Tag Manager -->
    </head>
    <body>
+      <style>
+         .tooltip,
+.arrow:after {
+  background: black;
+  border: 2px solid white;
+}
+
+.tooltip {
+  pointer-events: none;
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font: bold 14px "Helvetica Neue", Sans-Serif;
+  font-stretch: condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+}
+.arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+
+  transform: rotate(45deg);
+}
+.tooltip.active {
+  opacity: 1;
+  margin-top: 5px;
+  transition: all 0.2s ease;
+}
+.tooltip.out {
+  opacity: 0;
+  margin-top: -20px;
+}
+      </style>
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TXQJXH"
          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -118,14 +250,14 @@
             <br>
          <br><h3 id="lets-connect-">Let’s Connect 🤝</h3>
             <p>
-               <a target="_blank" href="https://linkedin.com/in/grvsingh97/"><img target="_blank" class="ikon" align="left" alt="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /></a>
-<!--                <a target="_blank" href="/sw"><img target="_blank" class="ikon" align="left" alt="Github" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/github.svg" /></a>     -->
-               <a target="_blank" href="/qa"><img target="_blank" class="ikon" align="left" alt="Quora" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/quora.svg" /></a>
-               <a target="_blank" href="/blog"><img target="_blank" class="ikon" align="left" alt="Blog" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.7.0/icons/blogger.svg" /></a>
-               <a target="_blank" href="/cv"><img target="_blank" class="ikon" align="left" alt="Blog" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/readthedocs.svg" /></a>
-               <a target="_blank" href="mailto:acad.grv97@gmail.com"><img target="_blank" class="ikon" align="left" alt="GMail" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/gmail.svg" /></a>
-               <a target="_blank" href="https://wa.link/cjt71u"><img target="_blank" class="ikon" align="left" alt="Whatsapp" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/whatsapp.svg" /></a>
-               <a target="_blank" href="tel:+918946968876"><img target="_blank" class="ikon" align="left" alt="call" width="28px" src="https://i.postimg.cc/529kyWhj/call-answer.png" /></a>
+               <a target="_blank" href="https://linkedin.com/in/grvsingh97/"><img target="_blank" class="ikon" align="left" title="LinkedIn" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /></a>
+<!--                <a target="_blank" href="/sw"><img target="_blank" class="ikon" align="left" title="Github" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/github.svg" /></a>     -->
+               <a target="_blank" href="/qa"><img target="_blank" class="ikon" align="left" title="Quora" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/quora.svg" /></a>
+               <a target="_blank" href="/blog"><img target="_blank" class="ikon" align="left" title="Blog" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.7.0/icons/blogger.svg" /></a>
+               <a target="_blank" href="/cv"><img target="_blank" class="ikon" align="left" title="Résumé" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/readthedocs.svg" /></a>
+               <a target="_blank" href="mailto:acad.grv97@gmail.com"><img target="_blank" class="ikon" align="left" title="Inbox" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/gmail.svg" /></a>
+               <a target="_blank" href="https://wa.link/cjt71u"><img target="_blank" class="ikon" align="left" title="Whatsapp" width="28px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/whatsapp.svg" /></a>
+               <a target="_blank" href="tel:+918946968876"><img target="_blank" class="ikon" align="left" title="Dial" width="28px" src="https://i.postimg.cc/529kyWhj/call-answer.png" /></a>
             </p>
             </p>
          </header>
@@ -142,55 +274,55 @@
                <li>⚡ Fun fact: I love to cook and cycle 🚴‍</li>
             </ul>
             <h3 id="spotify-playing-">Spotify Playing 🎧</h3>
-            <p><a target="_blank" href="https://open.spotify.com/playlist/4mqmRYYgXAbWb8ZuYb9RAL"><img target="_blank" src="https://now-playing-codestackr.vercel.app/api/spotify-playing" alt="Spotify Playing" width="350" style="vertical-align:top" /></a></p>
+            <p><a target="_blank" href="https://open.spotify.com/playlist/4mqmRYYgXAbWb8ZuYb9RAL"><img target="_blank" src="https://now-playing-codestackr.vercel.app/api/spotify-playing" title="Spotify Playlist" width="350" style="vertical-align:top" /></a></p>
             <h3 id="mathematics-and-computer-programming-">Mathematics and Computer programming 📐</h3>
-            <p><a target="_blank" href="https://projecteuler.net"><img class="akon" target="_blank" src="https://projecteuler.net/profile/grv197.png" alt="Project Euler" /></a></p>
+            <p><a target="_blank" href="https://projecteuler.net"><img class="akon" target="_blank" src="https://projecteuler.net/profile/grv197.png" title="Project Euler" /></a></p>
             <h3 id="clickety-clack-">Clickety Clack ⌨</h3>
-            <p><a target="_blank" href="https://data.typeracer.com/pit/profile?user=grv97"><img class="akon" target="_blank" src="https://data.typeracer.com/misc/badge?user=grv97" alt="Typing Stats" /></a></p>
+            <p><a target="_blank" href="https://data.typeracer.com/pit/profile?user=grv97"><img class="akon" target="_blank" src="https://data.typeracer.com/misc/badge?user=grv97" title="Typing Stats" /></a></p>
             <h2 id="stats-">Stats 🛠</h2>
-            <p><a target="_blank" href="/stats"><img class="akon" target="_blank" src="https://wakatime.com/share/@GrvSingh/aa074655-56f8-4539-a794-161c77c31b5c.svg" alt="Daily" /></a>  
-               <a target="_blank" href="/stats"><img class="akon" target="_blank" src="https://wakatime.com/share/@GrvSingh/604ee4cd-5456-4ee6-91ef-ba7cfed0f874.svg" alt="All time" /></a>
+            <p><a target="_blank" href="/stats"><img class="akon" target="_blank" src="https://wakatime.com/share/@GrvSingh/aa074655-56f8-4539-a794-161c77c31b5c.svg" title="Daily Stats" /></a>  
+               <a target="_blank" href="/stats"><img class="akon" target="_blank" src="https://wakatime.com/share/@GrvSingh/604ee4cd-5456-4ee6-91ef-ba7cfed0f874.svg" title="All time Stats" /></a>
             </p>
             
             <h2 id="languages-and-tools-">Languages and Tools 🔧</h2>
-            <p><img target="_blank" class="ikon" align="left" alt="PHP" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" /> <img  target="_blank" class="ikon" align="left" alt="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" /> <img  target="_blank" class="ikon" align="left" alt="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
-               <img  target="_blank" class="ikon" align="left" alt="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" /> <img  target="_blank" class="ikon" align="left" alt="D3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" /> <img  target="_blank" class="ikon" align="left" alt="Visual Studio Code" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/visualstudiocode.svg" /> <img  target="_blank" class="ikon" align="left" alt="HTML5" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/html5.svg" /> <img target="_blank" class="ikon" align="left" alt="CSS3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/javascript.svg" /> 
-               <img  target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" /> <img  target="_blank" class="ikon" align="left" alt="SQL" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mysql.svg" /> <img  target="_blank" class="ikon" align="left" alt="MongoDB" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mongodb.svg" /> <img  target="_blank" class="ikon" align="left" alt="Git" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/git.svg" /> <img target="_blank" class="ikon" align="left" alt="GitHub" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/github.svg" /> <img target="_blank" class="ikon" align="left" alt="Material-UI" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/material-ui.svg" /> <img target="_blank" class="ikon" align="left" alt="React" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/react.svg" /> <img target="_blank" class="ikon" align="left" alt="Linux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/linux.svg" /> <img target="_blank" class="ikon" align="left" alt="Windows" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" /> <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" /> 
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/strapi.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zapier.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/airtable.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/arduino.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/cloudflare.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/curl.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/eslint.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/xdadevelopers.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zoom.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/figma.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fontawesome.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/svg.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/symfony.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/slack.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ifttt.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/json.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/kde.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/scikit-learn.svg" />
-               <img target="_blank" class="ikon" align="left" alt="Twig" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/chocolatey.svg" />
+            <p><img target="_blank" class="ikon" align="left" title="PHP" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" /> <img  target="_blank" class="ikon" align="left" title="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" /> <img  target="_blank" class="ikon" align="left" title="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
+               <img  target="_blank" class="ikon" align="left" title="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" /> <img  target="_blank" class="ikon" align="left" title="D3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" /> <img  target="_blank" class="ikon" align="left" title="Visual Studio Code" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/visualstudiocode.svg" /> <img  target="_blank" class="ikon" align="left" title="HTML5" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/html5.svg" /> <img target="_blank" class="ikon" align="left" title="CSS" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/javascript.svg" /> 
+               <img  target="_blank" class="ikon" align="left" title="Markdown" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" /> <img  target="_blank" class="ikon" align="left" title="SQL" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mysql.svg" /> <img  target="_blank" class="ikon" align="left" title="MongoDB" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mongodb.svg" /> <img  target="_blank" class="ikon" align="left" title="Git" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/git.svg" /> <img target="_blank" class="ikon" align="left" title="GitHub" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/github.svg" /> <img target="_blank" class="ikon" align="left" title="Material-UI" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/material-ui.svg" /> <img target="_blank" class="ikon" align="left" title="React" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/react.svg" /> <img target="_blank" class="ikon" align="left" title="Linux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/linux.svg" /> <img target="_blank" class="ikon" align="left" title="Windows" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" /> <img target="_blank" class="ikon" align="left" title="NGINX" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" /> 
+               <img target="_blank" class="ikon" align="left" title="Strapi" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/strapi.svg" />
+               <img target="_blank" class="ikon" align="left" title="Zapier Automation" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zapier.svg" />
+               <img target="_blank" class="ikon" align="left" title="Airtable" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/airtable.svg" />
+               <img target="_blank" class="ikon" align="left" title="Arduino" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/arduino.svg" />
+               <img target="_blank" class="ikon" align="left" title="Cloudflare" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/cloudflare.svg" />
+               <img target="_blank" class="ikon" align="left" title="Curl" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/curl.svg" />
+               <img target="_blank" class="ikon" align="left" title="ESLint" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/eslint.svg" />
+               <img target="_blank" class="ikon" align="left" title="XDA Developers" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/xdadevelopers.svg" />
+               <img target="_blank" class="ikon" align="left" title="Zoom" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zoom.svg" />
+               <img target="_blank" class="ikon" align="left" title="Figma" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/figma.svg" />
+               <img target="_blank" class="ikon" align="left" title="Font Awesome" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fontawesome.svg" />
+               <img target="_blank" class="ikon" align="left" title="SVG" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/svg.svg" />
+               <img target="_blank" class="ikon" align="left" title="Symfony" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/symfony.svg" />
+               <img target="_blank" class="ikon" align="left" title="Slack" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/slack.svg" />
+               <img target="_blank" class="ikon" align="left" title="IFTTT" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ifttt.svg" />
+               <img target="_blank" class="ikon" align="left" title="JSON" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/json.svg" />
+               <img target="_blank" class="ikon" align="left" title="KDE" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/kde.svg" />
+               <img target="_blank" class="ikon" align="left" title="Scikit-Learn" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/scikit-learn.svg" />
+               <img target="_blank" class="ikon" align="left" title="Chocolatey" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/chocolatey.svg" />
                <br />
             </p>
             <br /><br /><br /><br /><br />
             <h3 id="like-what-you-see-">Like what you see ?</h3>
-               <a target="_blank" href="https://saythanks.io/to/acad.grv97@gmail.com"><img target="_blank" src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" alt="Say Thanks!" /></a>
+               <a target="_blank" href="https://saythanks.io/to/acad.grv97@gmail.com"><img target="_blank" src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" title="Say Thanks!" /></a>
                <br />
-               <a target="_blank" href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img  target="_blank" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="28px" alt="Buy a Coffee" width="120px" /></a>
+               <a target="_blank" href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img  target="_blank" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" title="Buy Me A Coffee" height="28px" title="Buy a Coffee" width="120px" /></a>
                <br />
-               <a target="_blank" href="https://calendly.com/grv-singh/15min"><img target="_blank" align="left" alt="LinkedIn" width="220px" src="https://www.insurewithsterling.com/Images/button_schedule_insurance_meeting_with_agent.jpg" /></a>    
+               <a target="_blank" href="https://calendly.com/grv-singh/15min"><img target="_blank" align="left" title="Meet & Greet" width="220px" src="https://www.insurewithsterling.com/Images/button_schedule_insurance_meeting_with_agent.jpg" /></a>    
                <br />
             </p>      
    </section>
          <footer>
          </footer>
       </div>
-      <script src="https://grv-singh.github.io/assets/js/scale.fix.js"></script>
-      <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+      <!-- <script src="https://grv-singh.github.io/assets/js/scale.fix.js"></script>
+      <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> -->
    </body>
 </html>
