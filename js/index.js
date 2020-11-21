@@ -84,7 +84,7 @@ function changeColor() {
     }
     //add the color to the element you want:
     $('div.parallax').css("background-color","rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")");
-    console.log("event fired. color get:" + colors[0] + colors[1] + colors[2]);
+    console.log("event fired. color get:" + "rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")");
   }
 
 changeColor();
