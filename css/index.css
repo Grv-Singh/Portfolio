@@ -62,13 +62,13 @@ body {
   position: absolute;
   left: 50%;
   margin-left: -35px;
-  bottom: -16px;
+  bottom: -17px;
 }
 .arrow:after {
   content: "";
   position: absolute;
   left: 20px;
-  top: -20px;
+  top: -22px;
   width: 25px;
   height: 25px;
   box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
