@@ -61,7 +61,7 @@
 }
 
 .ikon {
-  margin: 10px;
+  margin: 5px;
   -webkit-filter: drop-shadow(3px 3px 3px #fff);
   filter: drop-shadow(3px 3px 3px #fff);
   transition: all 0.3s ease-in-out;
@@ -73,7 +73,7 @@
   filter: drop-shadow(3px 3px 3px #e1e1e1);
 }
 .akon {
-  margin: 10px;
+  margin: 5px;
   border-radius: 10px;
   border: #fff 1px solid;
   -webkit-filter: drop-shadow(3px 3px 3px #fff);
