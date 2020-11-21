@@ -88,3 +88,6 @@ function changeColor() {
   }
 
 changeColor();
+
+$("g.titles").innerHTML = '';
+
