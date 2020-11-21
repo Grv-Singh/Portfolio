@@ -83,7 +83,7 @@ function changeColor() {
         colors[i] = color;
     }
     //add the color to the element you want:
-    document.getElementById('parallax').style.backgroundColor("rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")");
+    document.getElementById('parallax').style.background= "rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")";
     console.log("event fired. color get:" + "rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")");
   }
 
