@@ -1,9 +1,5 @@
 * {
-  transition: all 0.2s ease;
-}
-
-iframe>svg>g>rect.background {
-  fill: transparent !important; 
+  transition: all 0.5s ease;
 }
 
 #parallax {
