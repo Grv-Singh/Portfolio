@@ -68,7 +68,6 @@
 })(jQuery);
 
 $("img[title]").tooltips();
-$("iframe[title]").tooltips();
 
 function changeColor() {
     //rgb
