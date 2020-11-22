@@ -2,7 +2,7 @@
   transition: all 0.2s ease;
 }
 
-g>rect.background, {
+g>rect.background {
   fill: transparent !important; 
 }
 
