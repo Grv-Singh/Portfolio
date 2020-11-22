@@ -1,3 +1,7 @@
+* {
+  transition: all 0.2s ease;
+}
+
 #parallax {
   height: -webkit-fill-available;
   width: -webkit-fill-available;
