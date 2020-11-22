@@ -3,7 +3,7 @@
 }
 
 g>rect.background, {
-  fill:transparent; 
+  fill: transparent !important; 
 }
 
 #parallax {
