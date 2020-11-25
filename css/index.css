@@ -59,7 +59,6 @@ body {
 body {
   font-size: 13px !important;
   font-family: Product Sans !important;
-  background-color: transparent !important;
 }
 .tooltip {
   pointer-events: none;
