@@ -7,6 +7,10 @@ html, body {
 	padding: 0;
 }
 
+.logo__path{
+	display:none !important;
+}
+
 .background {  
 	position: absolute;
 	display: block;  
