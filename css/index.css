@@ -7,7 +7,7 @@ html, body {
 	padding: 0;
 }
 
-.logo__path{
+a.logo{
 	display:none !important;
 }
 
