@@ -166,13 +166,17 @@ body {
   -webkit-filter: drop-shadow(3px 3px 3px #fff);
   filter: drop-shadow(3px 3px 3px #fff);
   transition: all 0.3s ease-in-out;
+cursor:pointer;
 }
+
 .ikon:hover {
   transform: scale(1.4);
   cursor: pointer;
   -webkit-filter: drop-shadow(3px 3px 3px #e1e1e1);
   filter: drop-shadow(3px 3px 3px #e1e1e1);
+cursor:pointer;
 }
+
 .akon {
   margin: 5px;
   border-radius: 10px;
