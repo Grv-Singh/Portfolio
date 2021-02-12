@@ -15,6 +15,14 @@ html, body {
 	z-index: 0;
 }
 
+header{
+width: 270px;
+    top: 10px;
+    float: left;
+    position: fixed;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
 /* #parallax {
   height: -webkit-fill-available;
   width: -webkit-fill-available;
