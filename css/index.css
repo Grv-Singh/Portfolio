@@ -1,3 +1,7 @@
+* {
+  transition: all 0.5s ease;
+}
+
 html,
 body {
   margin: 0;
@@ -221,7 +225,7 @@ body {
 .slide {
   float: left;
   width: 18em;
-  height: 600px;
+  height: 500px;
   position: relative;
   margin: 8px 8px 8px 8px;
   border-radius: 10px;
