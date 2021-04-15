@@ -232,7 +232,7 @@ body {
 }
 
 .slide:hover {
-  transform: translate(50%);
+  transform: translate(1.2);
 }
 
 .temp {
