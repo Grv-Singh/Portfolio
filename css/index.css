@@ -12,25 +12,24 @@ a.logo {
   display: none !important;
 }
 
-div.slider,
 html {
   --scrollbarBG: #cfd8dc;
   --thumbBG: #90a4ae;
 }
-div.slider,
+
 body::-webkit-scrollbar {
   width: 11px;
 }
-div.slider,
+
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
-div.slider,
+
 body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
-div.slider,
+
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 6px;
