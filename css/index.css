@@ -211,7 +211,7 @@ body {
 
 .slider-wrap {
   width: 200em;
-  height: 500px;
+  height: 600px;
   margin: 20px auto;
 }
 .slider {
@@ -219,7 +219,9 @@ body {
 }
 .holder {
   width: 300%;
+  margin: 4em;
 }
+
 .slide {
   float: left;
   width: 18em;
