@@ -243,6 +243,7 @@ div.slider::-webkit-scrollbar {
   z-index: 1;
   transform: scale(1.2);
   cursor: pointer;
+  width: 36em;
 }
 
 .temp {
