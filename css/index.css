@@ -232,8 +232,7 @@ body {
 }
 
 .slide:hover {
-  z-index: 1;
-  top: 3em;
+  transform: translate(50%);
 }
 
 .temp {
