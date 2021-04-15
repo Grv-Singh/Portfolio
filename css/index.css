@@ -240,6 +240,9 @@ cursor:pointer;
 #slide-2 {
   background-image: url(https://image.thum.io/get/https://www.wikimedia.org/);
 }
+#slide-3 {
+  background-image: url(https://image.thum.io/get/https://www.waterforpeople.org/);
+}
 .slide:before {
   content: "";
   position: absolute;
