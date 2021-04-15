@@ -2,49 +2,55 @@
   transition: all 0.5s ease;
 }
 
-html, body {
-	margin: 0;
-	padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-a.logo{
-	display:none !important;
+a.logo {
+  display: none !important;
 }
 
-.slider,html {
---scrollbarBG: #CFD8DC;
---thumbBG: #90A4AE;
+div.slider,
+html {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
 }
-.slider,body::-webkit-scrollbar {
-width: 11px;
+div.slider,
+body::-webkit-scrollbar {
+  width: 11px;
 }
-.slider,body {
-scrollbar-width: thin;
-scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+div.slider,
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
-.slider,body::-webkit-scrollbar-track {
-background: var(--scrollbarBG);
+div.slider,
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
 }
-.slider,body::-webkit-scrollbar-thumb {
-background-color: var(--thumbBG) ;
-border-radius: 6px;
-border: 3px solid var(--scrollbarBG);
-}
-
-.background {  
-	position: absolute;
-	display: block;  
-	top: 0;  
-	left: 0;  
-	z-index: 0;
+div.slider,
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
 
-header{
-width: 270px;
-    top: 10px;
-    float: left;
-    position: fixed;
-    -webkit-font-smoothing: subpixel-antialiased;
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+header {
+  width: 270px;
+  top: 10px;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* #parallax {
@@ -166,7 +172,7 @@ body {
   -webkit-filter: drop-shadow(3px 3px 3px #fff);
   filter: drop-shadow(3px 3px 3px #fff);
   transition: all 0.3s ease-in-out;
-cursor:pointer;
+  cursor: pointer;
 }
 
 .ikon:hover {
@@ -174,7 +180,7 @@ cursor:pointer;
   cursor: pointer;
   -webkit-filter: drop-shadow(3px 3px 3px #e1e1e1);
   filter: drop-shadow(3px 3px 3px #e1e1e1);
-cursor:pointer;
+  cursor: pointer;
 }
 
 .akon {
@@ -223,12 +229,13 @@ cursor:pointer;
   background-position: -100px 0;
 }
 .temp {
+  font-size: 8px;
   position: absolute;
   color: white;
   font-size: 100px;
   bottom: 15px;
   left: 15px;
-  font-family: 'Josefin Slab', serif;
+  font-family: "Josefin Slab", serif;
   font-weight: 100;
 }
 #slide-0 {
@@ -243,6 +250,58 @@ cursor:pointer;
 #slide-3 {
   background-image: url(https://image.thum.io/get/https://www.waterforpeople.org/);
 }
+#slide-4 {
+  background-image: url(https://image.thum.io/get/https://www.mcsuk.org/);
+}
+#slide-5 {
+  background-image: url(https://image.thum.io/get/https://www.tomstrust.org.uk/);
+}
+#slide-6 {
+  background-image: url(https://image.thum.io/get/https://www.elephantprotectioninitiative.org/);
+}
+#slide-7 {
+  background-image: url(https://image.thum.io/get/https://www.embracerelief.org/);
+}
+#slide-8 {
+  background-image: url(https://image.thum.io/get/https://www.wildlifecollections.com/);
+}
+#slide-9 {
+  background-image: url(https://image.thum.io/get/http://www.goldenswithoutborders.org/);
+}
+#slide-10 {
+  background-image: url(https://image.thum.io/get/https://www.mygreenfills.com/);
+}
+#slide-11 {
+  background-image: url(https://image.thum.io/get/https://www.onetreeplanted.org/);
+}
+#slide-12 {
+  background-image: url(https://image.thum.io/get/https://www.naacp.org/);
+}
+#slide-13 {
+  background-image: url(https://image.thum.io/get/https://www.project18.org.za/);
+}
+#slide-14 {
+  background-image: url(https://image.thum.io/get/https://www.boxed.com/);
+}
+#slide-15 {
+  background-image: url(https://image.thum.io/get/https://www.reachwithin.org/);
+}
+#slide-16 {
+  background-image: url(https://image.thum.io/get/https://www.facebook.com/thegreencompanyma/);
+}
+#slide-17 {
+  background-image: url(https://image.thum.io/get/https://www.arcticus.co.uk/);
+}
+#slide-18 {
+  background-image: url(https://image.thum.io/get/https://www.partners.ngo/);
+}
+#slide-19 {
+  background-image: url(https://image.thum.io/get/https://www.greater-change.org/);
+}
+#slide-20 {
+  background-image: url(https://image.thum.io/get/https://www.shamsfrance.wixsite.com/shams/);
+}
+
 .slide:before {
   content: "";
   position: absolute;
