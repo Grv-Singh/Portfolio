@@ -233,7 +233,7 @@ body {
 
 .slide:hover {
   z-index: 1;
-  margin-bottom: 1em;
+  top: 3em;
 }
 
 .temp {
