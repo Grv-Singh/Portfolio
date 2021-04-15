@@ -211,12 +211,18 @@ body {
 
 .slider-wrap {
   width: 200em;
-  height: 600px;
+  height: 500px;
   margin: 20px auto;
 }
 .slider {
   overflow-x: scroll;
+  height: 50em;
 }
+
+div.slider::-webkit-scrollbar {
+  display: none;
+}
+
 .holder {
   width: 300%;
   margin: 4em;
