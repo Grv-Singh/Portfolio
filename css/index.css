@@ -17,6 +17,10 @@ html {
   --thumbBG: #90a4ae;
 }
 
+.acmeclass{
+	background: aqua;
+}
+
 body::-webkit-scrollbar {
   width: 11px;
 }
