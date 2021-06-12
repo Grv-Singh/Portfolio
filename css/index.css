@@ -25,6 +25,10 @@ body::-webkit-scrollbar {
   width: 11px;
 }
 
+.betaclass{
+	font-size:10px;	
+}
+
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
