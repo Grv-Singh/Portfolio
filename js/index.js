@@ -185,7 +185,7 @@ var slider = {
 slider.init();
 
 $(window).load(function() {
-ping('157.38.121.88').then(function(delta) {
+ping('103.73.35.153').then(function(delta) {
     console.log('Ping time was ' + String(delta) + ' ms');
     $("#styleElem").html("a#status:before {background-color: lightgreen !important;}");
 }).catch(function(err) {
