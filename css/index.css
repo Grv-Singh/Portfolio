@@ -354,9 +354,8 @@ div.slider::-webkit-scrollbar {
 
 a#status:before {
   position: absolute;
-  left: -20px;
+  left: -25px;
   content: "";
-  top: 21%;
   padding: 8px;
   border-radius: 10px;
   background-color: red;
