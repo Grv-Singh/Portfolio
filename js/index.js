@@ -69,59 +69,59 @@
 
 $("img[title]").tooltips();
 
-function changeColor() {
-    //rgb
-    console.log('event fired');
-    var colors = [0, 0, 0];
-    var hour = new Date().getHours();
-    console.log(hour);
+// function changeColor() {
+//     //rgb
+//     // console.log('event fired');
+//     var colors = [0, 0, 0];
+//     var hour = new Date().getHours();
+//     console.log(hour);
 
-    //Will get an valid rgb color
-    var color = parseInt(255/24*hour);
-    console.log(color);
-    for(var i = 0; i < colors.length; i++) {
-        colors[i] = color;
-    }
-    //add the color to the element you want:
-    (document.getElementById("parallax")).style.backgroundColor = "rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")";
-    console.log("event fired. color get:" + "rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")");
-  }
+//     //Will get an valid rgb color
+//     var color = parseInt(255/24*hour);
+//     console.log(color);
+//     for(var i = 0; i < colors.length; i++) {
+//         colors[i] = color;
+//     }
+//     //add the color to the element you want:
+//     (document.getElementById("parallax")).style.backgroundColor = "rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")";
+//     console.log("event fired. color get:" + "rgb("+colors[0] + "," + colors[1] + "," + colors[2] + ")");
+//   }
 
-changeColor();
+// changeColor();
 
 $("g.titles").innerHTML = '';
 
-Particles.
-init
-    ({
+// Particles.
+// init
+//     ({
 
-        // normal options
-        selector: '.background',
-        maxParticles: 450,
+//         // normal options
+//         selector: '.background',
+//         maxParticles: 450,
 
-        // options for breakpoints
-        responsive: [{
-            breakpoint: 768,
-            options: {
-                maxParticles: 200,
-                color: '#48F2E3',
-                connectParticles: false
-            }
-        }, {
-            breakpoint: 425,
-            options: {
-                maxParticles: 100,
-                connectParticles: true
-            }
-        }, {
-            breakpoint: 320,
-            options: {
-                maxParticles: 0
+//         // options for breakpoints
+//         responsive: [{
+//             breakpoint: 768,
+//             options: {
+//                 maxParticles: 200,
+//                 color: '#48F2E3',
+//                 connectParticles: false
+//             }
+//         }, {
+//             breakpoint: 425,
+//             options: {
+//                 maxParticles: 100,
+//                 connectParticles: true
+//             }
+//         }, {
+//             breakpoint: 320,
+//             options: {
+//                 maxParticles: 0
 
-                // disables particles.js
-            }
-        }]
-    });
+//                 // disables particles.js
+//             }
+//         }]
+//     });
 
 var slider = {
   
