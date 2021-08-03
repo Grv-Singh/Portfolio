@@ -353,7 +353,7 @@ div.slider::-webkit-scrollbar {
 }
 
 #status a:before {
-  content: "";
+  content: "Test";
   font-size: 10px;
   border-radius: 10px;
   background-color: red;
