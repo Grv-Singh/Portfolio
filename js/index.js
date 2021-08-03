@@ -192,4 +192,4 @@ ping('http://157.38.121.88').then(function(delta) {
     console.error('Could not ping remote URL', err);
     $("a#status:before").css("background-color","red");
 });
-};
+)};
