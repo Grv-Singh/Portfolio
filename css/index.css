@@ -352,10 +352,6 @@ div.slider::-webkit-scrollbar {
   background: #999;
 }
 
-:root {
-  --status: "red";
-}
-
 a#status:before {
   position: absolute;
   left: -20px;
@@ -363,5 +359,5 @@ a#status:before {
   top: 21%;
   padding: 8px;
   border-radius: 10px;
-  background-color: var(--status);
+  background-color: "red";
 }

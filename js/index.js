@@ -187,9 +187,9 @@ slider.init();
 $(window).load(function() {
 ping('157.38.121.88').then(function(delta) {
     console.log('Ping time was ' + String(delta) + ' ms');
-    document.documentElement.style.setProperty('--status','lightgreen');
+    $("#styleElem").html("a#status:before {background-color: lightgreen !important;}");
 }).catch(function(err) {
     console.error('Could not ping remote URL', err);
-    document.documentElement.style.setProperty('--status','red');
+    $("#styleElem").html("a#status:before {background-color: red !important;}");
 });
 });
