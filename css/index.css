@@ -359,5 +359,5 @@ a#status:before {
   top: 21%;
   padding: 8px;
   border-radius: 10px;
-  background-color: "red";
+  background-color: red;
 }
