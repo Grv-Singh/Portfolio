@@ -17,8 +17,8 @@ html {
   --thumbBG: #90a4ae;
 }
 
-.acmeclass{
-	background: aqua;
+.acmeclass {
+  background: aqua;
 }
 
 body::-webkit-scrollbar {
@@ -350,4 +350,11 @@ div.slider::-webkit-scrollbar {
 }
 .slider-nav a.active {
   background: #999;
+}
+
+#status a:before {
+  content: "";
+  font-size: 10px;
+  border-radius: 10px;
+  background-color: red;
 }
