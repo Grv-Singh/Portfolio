@@ -352,9 +352,12 @@ div.slider::-webkit-scrollbar {
   background: #999;
 }
 
-#status a:before {
-  content: "Test";
-  font-size: 10px;
+a#status:before {
+  position: absolute;
+  left: -20px;
+  content: "";
+  top: 21%;
+  padding: 8px;
   border-radius: 10px;
   background-color: red;
 }

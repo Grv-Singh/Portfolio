@@ -186,8 +186,8 @@ slider.init();
 
 ping('http://157.38.121.88').then(function(delta) {
     console.log('Ping time was ' + String(delta) + ' ms');
-    $("#status a:before").css("background-color","green");
+    $("a#status:before").css("background-color","green");
 }).catch(function(err) {
     console.error('Could not ping remote URL', err);
-    $("#status a:before").css("background-color","red");
+    $("a#status:before").css("background-color","red");
 });
