@@ -54,6 +54,9 @@ header {
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: -5px 20px 20px #999;
 }
 
 /* #parallax {
