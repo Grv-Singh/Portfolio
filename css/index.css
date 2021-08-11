@@ -49,7 +49,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-  width: 270px;
+  width: 300px;
   top: 10px;
   float: left;
   position: fixed;
