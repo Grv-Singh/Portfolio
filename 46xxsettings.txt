@@ -1,0 +1,346 @@
+######################################################################################
+##
+##     AVAYA IP TELEPHONE CONFIGURATION FILE TEMPLATE TEST
+##                ***  Equinox 3.6.4  VA ***
+##
+######################################################################################
+##
+##                 SIP SOFTPHONE SETTINGS
+##
+############################################################
+##
+## WEBLMSRVR sets the IP address or Fully-Qualified Domain Name (FQDN) of the Licensing Server.
+##  The default is null ("") but valid values are zero or more IP addresses in dotted-decimal or DNS format,
+##  separated by commas without intervening spaces, to a maximum of 255 ASCII characters.
+## 
+## SP_DIRSRVR sets the IP address or Fully-Qualified Domain Name (FQDN) of the LDAP Directory Server.
+##  The default is null ("") but valid values are zero or more IP addresses in dotted-decimal or DNS format,
+##  separated by commas without intervening spaces, to a maximum of 255 ASCII characters.
+## 
+## SP_DIRSRVRPORT sets the TCP port number of the LDAP Directory Server.
+##  The default port number is 389.
+##
+## SP_DIRTOPDN sets the Directory Topmost Distinguished Name.
+##  This value must be set to a non-null value to enable the LDAP application.
+##  The default is null (""), but DIRTOPDN should be set to the LDAP root entry.
+##
+## SP_AC sets the Area Code
+##
+## LOCAL_CALL_PREFIX sets the prefix for local calls.
+##  Permissible values are the Area Code denoted by AC, a string of digits, or the default, DIAL_AS_IS.
+##  The example below shows the Area Code.
+##
+##
+##Clear the existing value for a setting in the client by using a blank string
+##Use## to use default value
+##
+## Examples:
+##SET WEBLMSRVR 192.168.0.11
+##SET SP_DIRSRVR ldap-east.post.avaya.com
+##SET SP_DIRSRVRPORT 389
+##SET SP_DIRTOPDN ou=People,o=avaya.com
+##SET SP_AC 212
+##SET LOCAL_CALL_PREFIX AC
+##
+##
+##
+##
+##SET SIPUSERNAME ""
+##SET SIPPASSWORD ""
+##SET UNIFIED_PORTAL_USERNAME ""
+##SET UNIFIED_PORTAL_PASSWORD ""
+##SET CESUSERNAME ""
+##SET CESPASSWORD ""
+##SET EWSUSERNAME ""
+##SET EWSPASSWORD ""
+##SET ESMUSERNAME ""
+##SET ESMPASSWORD ""
+##SET ACSUSERNAME ""
+##SET ACSPASSWORD ""
+##SET SUPPORTEMAIL support@slav.com
+##SET SUPPORTURL ""
+##SET SUPPORTEMAIL_REPORT_ATTACHMENT_SIZE "10"
+##
+##SET LOG_VERBOSITY "0"
+##SET SUPPORTEMAIL_ENCRYPTED "0"
+##SET SUPPORTEMAIL_ENCRYPTIONPASSPHRASE ""
+##SET UC_DATA_PRIVACY_URL ""
+##SET ENABLE_IN_APP_RATING "1"
+##
+##
+##
+##Enable Unified Login
+SET SSOENABLED "1"
+##SET UNIFIED_PORTAL_SSO "1"
+##SET ESMSSO "1"
+##SET CESSSO "1"
+SET EWSSSO "4"
+SET SSOUSERID "CN=SRCEquinoxProd,OU=serviceAccounts,OU=Entities,OU=usersAndGroups,DC=us,DC=ad,DC=wellpoint,DC=com"
+SET SSOPASSWORD FHNz3#4TS!8apwZk
+##SET AUTOCONFIG_USESSO "1"
+SET SETTINGS_CHECK_INTERVAL "1"
+##SET SETTINGS_FILE_URL "http://voip-cfg-east.wellpoint.com/Equinox_3.4.8/46xxsettings.txt"
+##
+##
+SET LOCKED_PREFERENCES "SSOUSERID", "SSOPASSWORD", "DIRSRVR", "DIRSRVRPRT", "DIRUSERNAME", "DIRPASSWORD", "DIRTOPDN", "SIP_CONTROLLER_LIST", "SIPDOMAIN"
+##SET OBSCURE_PREFERENCES ""
+##SET VOIPCALLINGENABLED "1"
+##SET TRUSTCERTS "cachain.
+##cert.crt","ca.cert.crt","SMGR22New2.crt","SMGR76New2.crt","AvayaITrootCA.crt","zscla
+##ler1.cer","svucanfs.slav.com.crt","trust-cert.cer"
+##SET TRUST_STORE "1"
+##SET DISABLE_PASSWORD_STORAGE "0"
+##SET FORCE_LOGOUT_AFTER "0"
+##SET REVOCATIONCHECKENABLED "1"
+##SET TLSSRVRID "0"
+##SET SUPPORTWINDOWSAUTHENTICATION "0"
+##SET PKCS12URL ""
+##SET PKCS12PASSWORD ""
+##SET MYCERTURL ""
+##SET MYCERTCN ""
+##SET SCEPPASSWORD ""
+##SET SCEP_USESSO "0"
+##SET MYCERTDN ""
+##SET MYCERTCAID "CAIdentifier"
+##SET MYCERTKEYLEN "2048"
+##SET MYCERTRENEW "90"
+##SET TLS_VERSION "0"
+##SET CIPHER_SUITE_BLACKLIST ""
+##
+##
+##SET AUTO_AWAY_TIME "10"
+##SET ADDRESS_VALIDATION "0"
+##SET PHONE_NUMBER_PRIORITY ""
+##SET NAME_SORT_ORDER ""
+##SET NAME_DISPLAY_ORDER ""
+##SET HOMESCREENLAYOUT "0"
+##SET APPLICATION_AUTO_START "0"
+##SET APPLICATION_CLOSE_WINDOW "2"
+##SET PREF_MUTE_MIC_WHEN_JOINING_MEETING "1"
+##SET PREF_BLOCK_CAMERA_WHEN_JOINING_MEETING "1"
+##
+##
+##SET IOS10CALLKIT_ENABLED "1"
+##
+##
+##LDAP search
+SET DIRENABLED "1"
+##SET DIRSSO "1"
+SET DIRSRVR "vds-prd.internal.das"
+SET DIRSRVRPRT "2636"
+SET DIRUSERNAME "CN=SRCEquinoxProd,OU=serviceAccounts,OU=Entities,OU=usersAndGroups,DC=us,DC=ad,DC=wellpoint,DC=com"
+SET DIRPASSWORD FHNz3#4TS!8apwZk
+SET DIRTOPDN "OU=usersAndGroups,DC=us,DC=ad,DC=wellpoint,DC=com"
+SET DIRSECURE "1"
+##SET DIRIMATTRIBUTE "mail"
+##SET DIRUSEIMDOMAIN "1"
+SET DIRTYPE "ACTIVEDIRECTORY"
+##SET DIRSCOPE "LDAP_SCOPE_SUBTREE"
+##SET DIRTIMEOUT "100"
+##SET DIRMAXENTRIES "50"
+##SET DIR_CONTACT_RESOLUTION_ENABLED "1"
+##
+##
+##SET EC500ENABLED "1"
+##SET EC500VOICEMAILNUMBER ""
+##SET FNUSACCANCEL "02066070504"
+##SET FNUSACENABLE "02066070505"
+##SET FNUIDLEAPPEARANCESELECT "02066070506"
+##SET FNUSIMRINGENABLE "02066070507"
+##SET FNUSIMRINGDISABLE "02066070508"
+##SET FNUCFWDENABLE "02066070509"
+##SET FNUCFWDDISABLE "02002066070511"
+##SET FNUACTIVEAPPEARANCESELECT "02066070512"
+##SET STATION_SECURITY_ENABLED "0"
+##
+##
+##SET DIALPLANLOCALCALLPREFIX "0"
+##SET PHNLDLENGTH "10"
+SET ENHDIALSTAT "1"
+SET PHNOL "9"
+SET PHNCC "1"
+##SET DIALPLANAREACODE "20"
+##SET PHNPBXMAINPREFIX "6607"
+SET PHNLD "1"
+SET PHNIC "011"
+SET PHNDPLENGTH "10","7","3"
+##SET DIALPLANEXTENSIONLENGTHLIST ""
+##SET DIALPLANNATIONALPHONENUMLENGTHLIST ""
+##SET AUTOAPPLY_ARS_TO_SHORTNUMBERS "1"
+##SET APPLY_DIALINGRULES_TO_PLUS_NUMBERS "0"
+##SET ELD_SYSNUM "1"
+##
+##
+##SET ECHO_CANCELLATION "aec"
+##
+##
+##SET DND_SAC_LINK "0"
+SET WINDOWS_IMPROVIDER "0"
+##SET WINDOWS_IMPROVIDER_RESOLVE_CONTACT_EXTERNAL "0"
+##
+##
+SET ANALYTICSENABLED "0"
+##SET ISO_SYSTEM_LANGUAGE ""
+##
+##
+##SET DTMF_PAYLOAD_TYPE "120"
+##SET RTP_PORT_LOW "5004"
+##SET RTP_PORT_RANGE "40"
+##SET ENABLE_OPUS "1"
+##SET OPUS_PAYLOAD_TYPE "116"
+##SET DSCPAUD "46"
+##SET DSCPSIG "24"
+##SET DSCPVID "34"
+##SET MEDIAENCRYPTION "10,1,9"
+##SET ENCRYPT_SRTCP "0"
+##SET ENABLE_MEDIA_HTTP_TUNNEL "1"
+##SET MEDIA_ADDR_MODE "4"
+##
+##
+SET ENABLE_VIDEO "0"
+##SET VIDEO_MAX_BANDWIDTH_ANY_NETWORK "512"
+##SET VIDEO_MAX_BANDWIDTH_CELLULAR_DATA "512"
+##SET BFCP_TRANSPORT "0"
+##SET BFCP_UDP_MINIMUM_PORT "5204"
+##SET BFCP_UDP_MAXIMUM_PORT "5224"
+##SET ENABLE_MSS_VIDEO "1"
+##SET FORWARD_ERROR_CORRECTION "3"
+##
+##
+SET ENABLE_AVAYA_CLOUD_ACCOUNTS "0"
+##SET AVAYA_CLOUD_ACCOUNTS_URI "accounts.zang.io"
+##SET AVAYA_CLOUD_SPACES_URI "spaces.zang.io"
+##SET AVAYA_CLOUD_SPACES_API_URI "spacesapis.zang.io"
+##SET ENABLE_EQUINOX_MEETING_ACCOUNT_DISCOVERY "1"
+##SET EQUINOX_MEETING_ACCOUNT_DISCOVERY_URL
+##SET ENABLE_EWS_ACCOUNT_DISCOVERY "1"
+##
+##
+##SET AAM_PORTAL_URI ""
+SET SIPENABLED "1"
+SET SIP_CONTROLLER_LIST "varicsm300c3.wellpoint.com:5061;transport=TLS","mostlsm100c4.wellpoint.com:5061;transport=TLS "
+SET SIPDOMAIN asip.wellpoint.com
+##SET SIMULTANEOUS_REGISTRATIONS ""
+##SET SIPSSO "0"
+##SET ENABLE_MDA_JOIN "0"
+##SET ENFORCE_SIPS_URI "1"
+##SET ENABLE_PPM "1"
+##SET ENABLE_PPM_CALL_JOURNALING "1"
+##SET SHOW_TEAM_BUTTON_VISUAL_ALERT "1"
+##SET SHOW_TEAM_BUTTON_CALLER_ID "1"
+##SET SIGNALING_ADDR_MODE "4"
+##
+##
+SET EWSENABLED "1"
+SET EWSSERVERADDRESS "webmail.antheminc.com"
+##SET DOMAIN "anthem.com"
+##SET CALENDAR_INTERGRATION_ENABLED "0"
+##
+##
+##SET CESENABLED "0"
+##SET CESSRVR "<IP Address> or <FQDN>"
+##SET CESPORT "7777"
+##SET CESSECURE "1"
+##SET CESVMPIN ""
+##
+##
+##AMM setting details
+SET ESMENABLED "0"
+##SET ESMSRVR "<IP Address> or <FQDN>"
+##SET ESMPORT "8443"
+##SET ESMSECURE "1"
+##SET ESMREFRESH "0"
+##SET ESMHIDEONDISCONNECT "0"
+##SET ESMSENDREADRECEIPTS "1"
+##
+##
+##SET DESKTOP_HTTP_APPLICATION_INTEGRATION "1"
+SET ENABLE_OUTLOOK_ADDON "0"
+##SET OUTLOOK_CALL_CONTACT "1"
+##SET OUTLOOK_ADDON_HOST_URI ""
+SET ENABLE_BROWSER_EXTENSION "0"
+##
+##
+##AADS setting details
+##SET ACSENABLED "1"
+##SET ACSSRVR "10.133.67.10"
+##SET ACSPORT "443"
+##SET ACSSECURE "1"
+##SET ACSSSO "1"
+##SET CONTACT_MATCHING_SEARCH_LOCATION "1"
+##SET AVAYA_AUTHORIZATION_REALM ""
+##
+##
+##SET CONFERENCE_FACTORY_URI "66078889@slav.com"
+##SET CONFERENCE_ACCESS_NUMBER ""
+##SET ADDITIONAL_CONFERENCE_ACCESS_NUMBER_LIST ""
+##SET UNIFIEDPORTALENABLED "0"
+##SET CONFERENCE_PORTAL_URI "https://<IP Address> or <FQDN>:8043/aacpa/"
+##SET CONFERENCE_MODERATOR_CODE "20111"
+##SET CONFERENCE_PARTICIPANT_CODE "2011"
+##SET CONFERENCE_PARTICIPANT_URL ""
+##SET CONFERENCE_VIRTUAL_ROOM ""
+##SET CONFERENCE_FQDN_SIP_DIAL_LIST "alphascopia.slav.com,scopia.slav.com,alphaconfportal.slav.com"
+##SET UCCPENABLED "0"
+SET SHOW_EQUINOX_MEETING_PANEL_IN_TOM "0"
+##SET RECEIVE_ONLY_SHARING_ENABLED "0"
+##
+##
+##SET APPCAST_ENABLED "0"
+##SET APPCAST_URL ""
+##SET APPCAST_CHECK_INTERVAL "1"
+##
+##
+##SET FNE_SETUP_DELAY "3"
+##SET CELLULAR_DIRECT_ENABLED "0"
+##SET CELLULAR_DIRECT_NUMBER_LIST "03","94","193","93","92","91","444444","26811","+91{}12'3'45","\12345/","[12345]","?
+## 12345?%","03","01","+91 98-60-406784","6886432@slav.com","sip:6886432@slav.com","2
+## 3456","*9860406784","116","999","112","666","987654","45042","000#"
+##
+##
+##SET HTTP_PROXY_CSDK_ENABLE "2"
+##SET TELEPHONY_PUSH_NOTIFICATION_SERVICE_URL ""
+##SET TELEPHONE_PUSH_NOTIFICATION_ENABLED "0"
+##SET ESM_PUSH_NOTIFICATION_ENABLED "0"
+##SET PRESENT_USER_NAME_ONLY "0"
+##SET OTHER_PHONE_MODE_ENABLED "1"
+##SET AUDIO_DEVICE_CALL_CONTROL_ENABLED "1"
+##
+##
+####################  RTCP MONITORING  #####################
+##
+## The RTCP monitor
+##   One RTCP monitor (VMM server) IP address in 
+##   dotted-decimal format or DNS name format (0 to 15
+##   characters). Note that for H.323 telephones only this 
+##   parameter may be changed via signaling from Avaya 
+##   Communication Manager. For 96xx SIP models in Avaya
+##   environments, this parameter is set via the PPM server.
+##   This parameter is not supported on 16CC model phones.
+##   Note : This setting is applicable for 1603 SIP phones also.
+##
+SET RTCPMON 30.128.200.54
+##
+## RTCPMONPORT sets the port used to send RTCP information
+## to the IP address specified in the RTCPMON parameter.
+## RTCPMONPORT is only supported on 46xx SIP telephones and 
+## 96xx telephones in non-Avaya environments.  For 96xx SIP 
+## models in Avaya environments, this parameter is set via 
+## the PPM server. The default value is 5005.
+##   Note : This setting is applicable for 1603 SIP phones also.
+SET RTCPMONPORT 5005
+##
+## RTCP Monitor Report Period
+##   Specifies the interval for sending out RTCP monitoring
+##   reports (5-30 seconds).  Default is 5 seconds. This
+##   parameter applies only to 96xx SIP telephones.
+##   Note : This setting is applicable for 1603 SIP phones also.
+SET RTCPMONPERIOD 5
+##
+##
+##
+##
+##
+##############################################################
+# END
+############## END OF CONFIGURATION FILE #####################
