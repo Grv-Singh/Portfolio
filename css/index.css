@@ -52,10 +52,7 @@ body::-webkit-scrollbar-thumb {
 
 header {
   width: 300px;
-  top: 10px;
-  float: left;
-  padding-left: 3em;
-  margin-left: -4em;
+  top: 3em;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
   z-index: 5;
