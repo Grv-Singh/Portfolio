@@ -54,7 +54,7 @@ header {
   width: 300px;
   top: 10px;
   float: left;
-  padding-left: 6em;
+  padding-left: 3em;
   margin-left: -4em;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -360,7 +360,7 @@ div.slider::-webkit-scrollbar {
 
 a#status:before {
   position: absolute;
-  left: 2em;
+  left: 0.5em;
   content: "";
   padding: 8px;
   border-radius: 10px;
