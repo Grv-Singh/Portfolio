@@ -356,10 +356,9 @@ div.slider::-webkit-scrollbar {
 }
 
 a#status:before {
-  position: relative;
-  content: "";
-  top: -20em;
-  font-size: 1px;
-  padding: 7px;
-  border-radius: 10px;
+    position: fixed;
+    content: "";
+    padding: 8px;
+    margin: -0.5em;
+    border-radius: 10px;
 }
