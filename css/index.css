@@ -352,6 +352,9 @@ div.slider::-webkit-scrollbar {
 }
 
 
+#slide-a-7 {
+  background-image: url(https://thumbs.dreamstime.com/z/mustard-fields-village-mustard-fields-village-237724620.jpg);
+}
 
 .slide:before {
   content: "";
