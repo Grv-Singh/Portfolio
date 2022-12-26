@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-  width: 300px;
+  width: 23em;
   top: 3em;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -140,7 +140,7 @@ body {
   position: absolute;
   left: 50%;
   margin-left: -35px;
-  bottom: -17px;
+  bottom: -16px;
 }
 .arrow:after {
   content: "";
