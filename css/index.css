@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #fff;
 }
 
-#parallax {
+body {
   height: -webkit-fill-available;
   width: -webkit-fill-available;
   background-color: hsla(200, 40%, 30%, 0.4);
