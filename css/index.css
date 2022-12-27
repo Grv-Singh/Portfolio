@@ -50,8 +50,8 @@ body::-webkit-scrollbar-thumb {
   z-index: 0;
 }
 
-header {
-  width: 24em;
+.header {
+  width: 24em !important;
   top: 3em;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
