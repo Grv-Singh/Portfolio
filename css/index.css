@@ -59,16 +59,17 @@ body::-webkit-scrollbar-thumb {
   background-color: #fff;
 }
 
-body {
+/* #parallax {
   height: -webkit-fill-available;
   width: -webkit-fill-available;
   background-color: hsla(200, 40%, 30%, 0.4);
-  background-image: url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
+  background-image: url("https://media.giphy.com/media/M9TbsVzWI8YAEEJJ5u/source.gif"),
+    url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
     url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
     url("https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png");
   background-repeat: repeat-x;
-  background-position: 0 50%, 0 100%, 0 0;
-  background-size: 500px 200px, 1000px, 400px 260px;
+  background-position: 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 250px, 500px 200px, 1000px, 400px 260px;
   animation: 50s para infinite linear;
   position: fixed;
   left: 0%;
@@ -77,9 +78,9 @@ body {
 
 @keyframes para {
   100% {
-    background-position: 500px 50%, 1000px 100%, 400px 0;
+    background-position: -800px 95%, 500px 50%, 1000px 100%, 400px 0;
   }
-}
+} */
 
 /* body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
