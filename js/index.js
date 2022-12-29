@@ -191,16 +191,3 @@ ping('103.73.35.153').then(function(delta) {
     console.error('Could not ping remote URL', err);
     $("#styleElem").html("a#status:before {background-color: red !important;}");
 });
-
-
-window.onload = function() {
-  let frameElement = document.getElementById("all-time");
-  let doc = frameElement.contentDocument;
-  doc.body.innerHTML = doc.body.innerHTML + '<style>.background{ fill: transparent !important; }</style>';
-}
-
-window.onload = function() {
-  let frameElement2 = document.getElementById("all-time-2");
-  let doc = frameElement2.contentDocument;
-  doc2.body.innerHTML = doc2.body.innerHTML + '<style>.background{ fill: transparent !important; }</style>';
-}
