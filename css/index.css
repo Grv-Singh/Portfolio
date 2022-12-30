@@ -175,6 +175,7 @@ body {
 
 .ikon {
   margin: 0.75em;
+  font-size: 150%;
   -webkit-filter: drop-shadow(3px 3px 3px #fff);
   filter: drop-shadow(3px 3px 3px #fff);
   transition: all 0.3s ease-in-out;
