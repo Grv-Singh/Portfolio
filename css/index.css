@@ -190,6 +190,28 @@ body {
   cursor: pointer;
 }
 
+icon {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(red var(--progress), gray 0deg);
+  font-size: 0;
+}
+
+icon::after {
+  content: attr(data-progress) '%';
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+  border-radius: 50%;
+  background: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
 .akon {
   margin: 5px;
   border-radius: 10px;
