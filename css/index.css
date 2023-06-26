@@ -193,7 +193,7 @@ body {
 .skill-icon {
   padding: 10px;
   border-radius: 50%;
-  background: conic-gradient(lightgreen 40deg, yellow var(--progress), transparent 0deg);
+  background: conic-gradient(red 40deg, yellow var(--progress), transparent 0deg);
 }
 
 .akon {
