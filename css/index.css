@@ -190,7 +190,7 @@ body {
   cursor: pointer;
 }
 
-.icon {
+.skill-icon {
   padding: 10px;
   border-radius: 50%;
   background: conic-gradient(yellow var(--progress), transparent 0deg);
