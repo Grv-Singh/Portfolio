@@ -191,12 +191,9 @@ body {
 }
 
 .icon {
-  display: flex;
-  width: 100px;
-  height: 100px;
+  padding: 10px;
   border-radius: 50%;
-  background: conic-gradient(red var(--progress), transparent 0deg);
-  font-size: 0;
+  background: conic-gradient(yellow var(--progress), transparent 0deg);
 }
 
 .akon {
