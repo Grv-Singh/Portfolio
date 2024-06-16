@@ -1,162 +1,360 @@
-import os
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
-from PIL import Image
-from PIL.ExifTags import TAGS
-import requests
-import time
-from selenium.webdriver.common.action_chains import ActionChains
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2XHV5PHH"></script>
+<!-- Hotjar Tracking Code for my site -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3788397,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-def handle_sticky_notes(driver, job_id):
-    # Click the sticky note image to open the popup
-    sticky_note_image = driver.find_element(By.XPATH, '//img[@onclick and contains(@src,"yellowsticky-sm")]')
-    sticky_note_image.click()
+  gtag('config', 'G-KQ2XHV5PHH');
+</script>
+<script>
+  function trackImageClick(element) {
+   var title = element.getAttribute("title");
+    gtag('event', 'click', {
+      'event_category': 'Image Interaction',
+      'event_action': 'click',
+      'event_label': name
+    });
+  }
+</script>
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "//cdn.mouseflow.com/projects/5c1f49e5-04c5-4906-b1bd-3c71b200beb6.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+      <script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5TXQJXH');</script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+      <script type="application/ld+json">
+         {
+           "@context": "https://schema.org/",
+           "@type": "Person",
+           "name": "Gaurav Singh",
+           "url": "",
+           "image": "https://i.postimg.cc/Y0bKVmz9/IMG-5190-2-modified.png",
+           "sameAs": [
+             "https://www.facebook.com/grv.sj",
+             "https://twitter.com/grvsinghsays",
+             "https://www.instagram.com/grvsays",
+             "https://www.youtube.com/channel/UCSMwiBEXzlU-2khoEa2WBCg",
+             "https://www.linkedin.com/in/grvsingh97",
+             "https://soundcloud.com/gaurav-singh-22",
+             "https://github.com/Grv-Singh",
+             ""
+           ],
+           "jobTitle": "Software Developer 2",
+           "worksFor": {
+             "@type": "Organization",
+             "name": "Legato Healthcare Technologies"
+           }  
+         }
+      </script>
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://raw.githubusercontent.com/Grv-Singh/Portfolio/master/js/ping.js" defer></script>
+      <script src="https://raw.githubusercontent.com/Grv-Singh/Portfolio/master/js/index.js" defer></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    # Switch to the new window
-    WebDriverWait(driver, 10).until(EC.number_of_windows_to_be(2))
-    windows = driver.window_handles
-    driver.switch_to.window(windows[1])
+  gtag('config', 'G-KQ2XHV5PHH');
+</script>
+      <title>Portfolio - Gaurav Singh</title>
+      <meta name="generator" content="Jekyll v3.9.0" />
+      <meta property="og:title" content="Portfolio | Gaurav Singh" />
+      <meta name="google-site-verification" content="KXZqLMBXcjGDS0O9gKtjrJK2Z4bzY9lHr9vkWkmDDqw" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="keywords" content="AWS,cloud,big data, splunk, snowflake, hadoop, sqoop, spark, kafka, python, seo,javascript,full stack,front end,ui,ux,wsl,windows 10, vs code,jupyter,full stack developers,azure,mysql,sql,asci,utf-8,php,html,
+                                     ,symfony,twig,XML,JSON,GeoJSON,technology,androoid,app inventor,markdown,form,volunteer,mentor,page insight,cloudflare,dns,proxy,big data, machine learning,ai,react.js,d3.js,js,jquery,moment.js,git,github,offie 365, ms office, word, excel, sway,c,c++,nginx,google sheets, google docs, thunkable, figma,python,azure,zapier,ajax,bootstrap,web developmenyt, front end evelopment, full stack development,data structures,scrum, oops, mvc, wiki,dbms, computer network, math, logic, cyber security, project euler, hascat, linux, kde, data science, big data anaytics, grid computing" />
+      <meta name="description" content="Seeking knowledge from multiple fields and develop creatively to make our lives easier. Synergizing technology with solutions, a big data engineer and web specialist by profession." />
+      <meta property="og:description" content="Seeking knowledge from multiple fields and develop creatively to make our lives easier. Synergizing technology with solutions, a big data engineer and web specialist by profession." />
+      <link rel="canonical" href="/" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta property="og:url" content="/" />
+      <meta property="og:site_name" content="Grv-Singh" />
+      <script type="application/ld+json">
+         {"url":"/","@type":"WebSite","headline":"👋 Hi there","description":"Portfolio","name":"Grv-Singh","@context":"https://schema.org"}
+      </script>
+      <link rel="stylesheet" href="https://raw.githubusercontent.com/Grv-Singh/Portfolio/master/css/index.css" defer>
+<!--       <link rel="stylesheet" href="/assets/css/style.css?v=c36824ba34c6c3058e8d56e608d015805a2bdef5"> -->
+      <link rel="shortcut icon" type="image/jpg" href="https://i.postimg.cc/J7QcG55G/circle-cropped.png"/>
+   </head>
+   <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TXQJXH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="wrapper" style="position: absolute !important;">
+         <header style="width: 24em !important;">
+            <img src="https://i.postimg.cc/XJMD6wKh/PXL-20230312-115757817-modified.png" width="200px"/>
+            <br><br>
+            <style id="styleElem"></style>
+            <h1><a target="_blank" id="status" href="/sw" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Name'});" >Gaurav Singh</a></h1>
+            <h3>
+               <span class="dropcap">D</span>efiant, innovative and unrelenting by nature. Talks about advancements, sustainability and purpose driven business. A data engineer in Cleaning, Analytics, Storytelling, Visualization and a web specialist.
+            </h3>
+            <br>
+            <h3 id="lets-connect-">🤝🏻</i> Let's connect</h3>
+            <p>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Github'});" href="https://github.com/Grv-Singh"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Github" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" /></a>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'LinkedIn'});" href="https://linkedin.com/in/grvsingh97/"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="LinkedIn" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /></a>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Quora'});" href="/qa"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Quora" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/quora.svg" /></a>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Blogger'});" href="/blog"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Blog" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.7.0/icons/blogger.svg" /></a>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Mail'});" href="mailto:acad.grv97@gmail.com?subject=Reaching out&body=Hello! I came across your portfolio on the internet. This is related to.."><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Inbox me" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mail-dot-ru.svg" /></a>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Whatsapp'});" href="https://api.whatsapp.com/send?phone=918946968876&text=Hello!%20Gaurav!"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Whatsapp" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/whatsapp.svg" /></a>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Call'});" href="tel:+918946968876"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Dial" width="20px" src="https://i.postimg.cc/529kyWhj/call-answer.png" /></a>
+               <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Address'});" href="https://goo.gl/maps/M1VnB4KJiSBLLtBy8"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Address" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/homeadvisor.svg" /></a>
+            </p>
+         <br>
+         <br>
+<!--             <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="grvsingh97" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/grvsingh97?trk=profile-badge">Gaurav Singh</a></div> -->
+         <br>
+         <br>
+         <br><h3 id="like-what-you-see-">😍 Like what you see ?</h3>
+            <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Meeting'});" href="https://calendly.com/grv-singh/quickcall"><img target="_blank" align="left" title="Meet & Greet" width="130em" style="padding:0.2em;" src="https://raw.githubusercontent.com/Grv-Singh/Portfolio/master/css/book.png" /></a>
+            <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Say Thanks'});" href="https://saythanks.io/to/acad.grv97"><img style="width: 10em;padding:0.2em;" target="_blank" src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" title="Say Thanks!" /></a>
+            <br>
+            <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Buy Coffee'});" href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img  target="_blank" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" title="Buy Me A Coffee" height="28px" title="Buy a Coffee" style="width: 10em;padding:0.2em;" /></a>
+            <br>
+            <br>
+         <br>
+            </p>
+         </header>
+         <section style="width: 41em;">
+            <h3 id="hi-there-">👋 Hi! there,</h3>
+            
+            <ul>
+               <li><h3>💡 <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Projects'});" href="/sw">View projects</a> or <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Resume'});" href="/cv">Let's work together</a></h3></li>
+               <li><h3>🧐 I am a curious mind and we can talk on anything</h3></li>
+               <li><h3>🤔 Question ? Ask me on <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Quora'});"  target="_blank" href="/qa">Quora</a></h3></li>
+               <li><h3>🌏 Based out of <font style="color:#FF9933;">In</font><font style="color:#000080;"></font>d<font style="color:#138808;">ia</font>, open to exploration!</h3></li>
+               <li><h3>✨ Fun fact: I can cook good food.</h3></li>
+            </ul>
 
-    # Scrape data from the popup
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
+            <h2 id="languages-and-tools-">🛠 Tools of trade</h2>
+            <p style="display:inline-block !important;">
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 72deg;" align="left" title="AWS" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/amazonaws.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Splunk" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/splunk.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="PHP" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="D3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Visual Studio Code" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/visualstudiocode.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="HTML5" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/html5.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Javascript" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/javascript.svg" /> 
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Markdown" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="SQL" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mysql.svg" /> 
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="MS Teams" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/microsoftteams.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Linux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/linux.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Windows" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="NGINX" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" /> 
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Strapi" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/strapi.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Zapier Automation" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zapier.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Arduino" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/arduino.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Curl" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/curl.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="XDA Developers" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/xdadevelopers.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Zoom" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zoom.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 360deg;" align="left" title="Font Awesome" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fontawesome.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="SVG" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/svg.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Symfony" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/symfony.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Slack" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/slack.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="IFTTT" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ifttt.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="JSON" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/json.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="KDE" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/kde.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Chocolatey" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/chocolatey.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Hive" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/hive.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Anaconda" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/anaconda.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Android" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/android.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Azure Devops" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/azuredevops.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Bata" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftazure.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Bitbucket" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/bitbucket.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Bootstrap" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/bootstrap.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Confluence" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/confluence.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="CSS3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/css3.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Fitbit" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fitbit.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Google" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/google.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Google Drive" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googledrive.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Google Chrome" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlechrome.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Google Lens" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlelens.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Google Maps" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlemaps.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Google Business" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlemybusiness.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Google Pay" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlepay.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Google Sheets" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlesheets.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Google Tag Manager" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googletagmanager.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Google Translate" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googletranslate.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Jira" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jira.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Jekyll" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jekyll.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="JPEG" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jpeg.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Keras" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/keras.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Lighthouse" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/lighthouse.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Microsoft Excel" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftexcel.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Microsoft Office" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftoffice.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Microsoft Powerpoint" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftpowerpoint.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Microsoft Sharepoint" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftsharepoint.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Microsoft Word" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftword.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="NPM" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/npm.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="NFC" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/nfc.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Numpy" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/numpy.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Overleaf" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/overleaf.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Pandas" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/pandas.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Pastebin" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/pastebin.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Paypal" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/paypal.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Playstation" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/playstation.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Postman" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/postman.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 108deg;" align="left" title="Powershell" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/powershell.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 108deg;" align="left" title="Scikit-Learn" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/scikit-learn.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Slideshare" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/slideshare.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Stackoverflow" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/stackoverflow.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Ubuntu" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ubuntu.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Unsplash" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/unsplash.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Wakatime" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/wakatime.svg" />
+               <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Wikipedia" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/wikipedia.svg" />
+               <br />
+            </p>
+            <br>
+            <h3 id="mathematics-and-computer-programming-">🍃 Biodiversity scavenged </h3>
+            <br>
+            <style type="text/css" media="screen">
+.inat-widget { font-family: Georgia, serif; line-height: 1;}
+.inat-widget td {vertical-align: top; padding-bottom: 10px;}
+.inat-label { color: #888; }
+.inat-meta { font-size: smaller; margin-top: 3px; line-height: 1.2;}
+.inat-observation-body, .inat-user-body { padding-left: 10px; }
+.inat-observation-image {text-align: center;}
+.inat-observation-image, .inat-user-image { width: 100px; display: inline-block; }
+.inat-observation-image img, .inat-user-image img { max-width: 100px; }
+.inat-observation-image img { vertical-align: middle; }
+.inat-widget-small .inat-observation-image { display:block; float: left; height:100px; margin: 0 3px 3px 0; }
+.inat-label, .inat-value, .inat-user { font-family: "Trebuchet MS", Arial, sans-serif; }
+.inat-user-body {vertical-align: middle;}
+.inat-widget td.inat-user-body {vertical-align: middle;}
+.inat-widget .inat-footer td.inat-value {vertical-align: middle; padding-left: 10px;}
+</style>
+<div class="inat-widget">
+  <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/grv97.widget?layout=small&limit=8&order=desc&order_by=observed_on"></script>
+  <br>
+   <strong><a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'iNaturalist'});" href="https://www.inaturalist.org/observations/grv97">more observations »</a></strong>
+</div>
 
-    # Replace <br> tags with newline characters
-    for br in soup.find_all("br"):
-        br.replace_with("\n")
+            
+            <br>
+            
+            <h3 id="mathematics-and-computer-programming-">📐 Math & compute</h3>
+            <p><a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Project Euler'});" target="_blank" href="https://projecteuler.net"><img class="akon" target="_blank" src="https://projecteuler.net/profile/grv197.png" title="Project Euler" /></a></p>
 
-    text_elements = soup.find_all('p')
+            <h3 id="clickety-clack-">⌨ Clickety Clack</h3>
+            <p><a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'WPM'});" target="_blank" href="https://data.typeracer.com/pit/profile?user=grv97"><img class="akon" target="_blank" src="https://data.typeracer.com/misc/badge?user=grv97" title="Typing Stats" /></a></p>
 
-    # Directory and file setup
-    parent_folder = 'Bare DQE Bot'
-    job_folder = os.path.join(parent_folder, job_id)
-    if not os.path.exists(job_folder):
-        os.makedirs(job_folder)
+<h2 id="stats-">📈 Work activity</h2>
+            <p>
+<!--                <a  onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Stats'});" target="_blank" href="/stats"> -->
+            <h3>⌚ Last month</h3>
+            <figure class="ikon"><embed src="https://wakatime.com/share/@GrvSingh/bbf9e056-1f40-406f-a5d6-b9bcd102fada.svg"></embed></figure>
+            <h3>⏳ Last year</h3>
+            <figure><embed src="https://wakatime.com/share/@GrvSingh/92b56b4c-bc44-4b29-83d7-7bbfdf7616cd.svg"></embed></figure>
 
-    unwanted_text = "Note – For data quality reasons, please upload your photos directly from your computer, mobile phone or tablet. Do not upload them (or send from your mobile to your computer) via any other website, social network, or application of the sort of WhatsApp, Viber, Messenger or similar. Please do not modify your photos or their properties in any way. If you do so, your report will be excluded."
+<!--             </a> -->
+            </p>
+<h3 id="art-">🧑‍🎨 Art Gallery</h3>
+<!-- <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script> -->
+<p>
+<div class="pa-carousel-widget" style="width:100%; height:480px; display:none;"
+  data-link="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8"
+  data-title="Art"
+  data-description="4 new items added to shared album">
+  <object data="https://lh3.googleusercontent.com/v45s2Dq0Xqc8MSxvLECCfPEJ0Y935vo44UABPORFXOWPVRY704drapPt-Y8FRaAHDFjUcfHSMURJvsUdPnFG_mJpWhfSXULwFvaCQLIi9fMg7-lviGkrD2wmMJ9Y68L8DAL-cDo7oZs=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AL9nZEXuxvD0ToXXRn8xRTnDcsjM7BWs9ttEdDjpQm_TG7ew181-5XnmXjahT6VZIidJj2M7Pv_9BVyNIpFZMojUwEyTqYeyefrrVZb9V8AEuDdpnc3-jJ_hXrpTH603GlgPv-tG5PAcA7V8QPW03s2MtM1WLg=w723-h933-no"></object>
+  <object data="https://lh3.googleusercontent.com/JVeZTvWGmTMU6Gh69y526ynht9_e_6mJdTqgxSIgINYXoyDhm59FVY2qvtzixoIMlAkft90O7V4pWrSc06dAXVLvYL0FaY3TFCvu5QViqR_DTcukIoJ4iH1ebJM0x_oU3AUmytf_bhA=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/S6EL-ugE6uvID9WzyWaPU-Y39MF8uqpZEhPgcn-BL8ZMVeag2GbV-tXumD8Zg97v3X2OwPdrpmByFRTGpk_yIl_JCfkYu7ZPrqFE66m3m-AJOf1GHuUaFqwgI9cshbhumK6XKgOYKDw=w1920-h1080"></object>
+</div>
+</p>
 
-    with open(os.path.join(job_folder, 'Notes.txt'), 'w', encoding='utf-8') as file:
-        for element in text_elements:
-            text = element.get_text()  # Get text with replaced <br> tags
-            if text.strip() != unwanted_text:
-                file.write(text.strip() + '\n\n')  # Adding two new lines for clear separation
+<h3 id="art-">🍽️ Cooking</h3>
+<p>
+<!--    <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script> -->
+<div class="pa-carousel-widget" style="width:100%; height:480px; display:none;"
+  data-link="https://photos.app.goo.gl/BQbFwK3NMJN22GZe8"
+  data-title="Cooking"
+  data-description="13 new items added to shared album">
+  <object data="https://lh3.googleusercontent.com/_ziqG8k0ll5iom_NQcLesiwORSDVhkKr9z2bNxgEi89e5LL6vyVaik0RwbQauDAveEVDA69aosHUwyhmgZ3YyzpTUJDJ2nkj3soDvswnvDnc-W9yGchvd4defbB3MRJeQS8PxMJiR8c=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/AkR6tWE4XMUwEChOmHXXEBX52L7ZjS9ffpb_9TNz6k8AXm3bTFrGEjxQ9CgcUyDsugjkTTR-JZ2euETsCvvv46AGP-3asZo-xrbgpWHg_MjIUbmgkUTdXBdYi0guMC0zOuc3cihpTQo=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/m1vSsgiLDdIdwfsX36yA-LvC4Ap9CXf73ePPm1JBaIqMJS6VoyZj1NPVNfHt-lIAgZgZOCzKz_glGLIzC3cRx9n5EgLXuBNGLHw4neIbhXaiQyCe4gzTw_GdTOYwTsuXl_ngAd5D3lM=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/La5Y7AdRt-PRjdXxE8_0TlC_q-fmNUA44uVSWjp0IbrGPfl1y9dGDv51zomkDtfadQbr4WYOtR49zDIe5Tp3Qd6zHdPagy5V3gb1eUc16toNQxWkOfGjF7h_Z0eU5KtGPaEMvrSXLRk=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/vV-UB3P_jv0aqb1ZzO88dDvnB_NLswpcmZw_5ymJCjTh7fmjtFz9MSu8IfwP2R78IbDTHlxIHpblyHjvGsSq4uXtaxzKF1bDlehauAkE6h7nSrAKpeadCFEvqIyjEFmTzYD-_NbMs7s=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/aAiGzlUlWI1qiK0rAMdC6kGuI9pJorcWwijlca4VZ60ecujWkzMBbzUnRe3bvhxYTJUkiCfK7v6Ks6ZBJ9Gkuk616laHHKNrIvurBeYK6EyyKqqD2iWG3yEWBDBwpwev5BrG4BgHouM=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/KDY7rlu8-1CLpH-v6v-a6Gs11ctzUgT7rxF1-e5gnzT2IQTKxHdiJHM4I0k61o2LWoz2Rtva05Igvr948dgAsp9fH71cjV5CiO6rK35y5Dh4V3bOCh8_KlIbY5w3VTLRkMFSTx90c8k=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/WHzOhrHhNTX-zXMQdQOvPZ_sl3FvOlDc1C5770shuytUPHAMSWvq-3EAdIxWCrsrRBCsQX3IbDd3yoIv8oG05BaB-8QCkf_y_T4K7c5NfT--jeEuWr1m6LhwaDSvpeBQX-NO16xgdMo=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/0FpY2v9zprMFcRaGAonPx2aX-kpzs_1UapDcl9TsBQ70YjorsitgrbHuUBtIZQMuZsIAZnyoMmTTGDGySgYh03nrhgewIiHyT2sTU7oKMnAPmzXWyCFLdAFnqHzY_bw_QREhNZLyTRA=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/Y_EhQ6KJoV_hTYsEFz2ksb0pNSrtjHefAT2iduCwAtsTPDH_8P79BFI6X7rpXsD-ACvvN5PZe7MsUFp0jCDkQoab0WtMGxVrVNnsP67HOzxhSJ9iNyqWvvIT6oWNeMxMfndHdPFd7fM=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/VEfXzJde9aXG5SOBNhWyN6J34jKlsRtn7uPneCq3pEhzKipTKurHOlTnWyAzr7PAqrGTB4wEzrV-Cd-PwsSSU-6DqeXCT31okQ_0xA9z8zxZejYL7xJeEYKCmV2Wfx80t314Q-WcsEE=w1920-h1080"></object>
+</div>
+</p>
 
-    # Close the popup and switch back to the main window
-    driver.close()
-    driver.switch_to.window(windows[0])
+<h3 id="spotify-playing-">🎧 Spotify Playing</h3>
+            <p><iframe src="https://open.spotify.com/embed/playlist/47iPfZrgscXhVJlWPQDKXK?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></p>
 
-# Continue with any other scraping on the main page
-# Example: Extract and print all paragraph texts
-paragraphs = soup.find_all('p')
-for i, p in enumerate(paragraphs):
-    print(f"Paragraph {i}: {p.text}")
+<h3>
+               📷 Photography 
+            </h3> 
+            <p>
+               <div class="slider-wrap">
+  <div class="slider" id="slider">
+    <div class="holder">
+         <a target="_blank" href="https://www.dreamstime.com/nalwa-king-punjab-सोजा-पुत्-नई-ते-नलवा-आ-जाएगा।-image263710174#res25254492" class="active"><div class="slide" id="slide-a-0"><span class="temp">सोजा पुत् नई ते नलवा आ जाएगा।</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/sunset-time-image263710173#res25254492" class="active"><div class="slide" id="slide-a-1"><span class="temp">Sunset about time</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/cloudscape-flight-top-above-image263709865#res25254492" class="active"><div class="slide" id="slide-a-2"><span class="temp">Cloudscape from flight on top above</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/cityscape-jaipur-night-scenery-cityscape-jaipur-night-scenery-image263666716#res25254492" class="active"><div class="slide" id="slide-a-3"><span class="temp">Cityscape Jaipur at night</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/tealight-candle-lighting-all-darkness-small-solo-source-light-clears-image263666706#res25254492" class="active"><div class="slide" id="slide-a-4"><span class="temp">Small tealight candle</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/amer-fort-jaipur-amer-fort-jaipur-image242551218#res25254492" class="active"><div class="slide" id="slide-a-5"><span class="temp">Amer Fort Jaipur</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/sky-view-cityscape-image242551206#res25254492" class="active"><div class="slide" id="slide-a-6"><span class="temp">Sky View Cityscape</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/mustard-fields-village-mustard-fields-village-image237724620#res25254492" class="active"><div class="slide" id="slide-a-7"><span class="temp">Mustard fields village</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/martyr-statue-martyr-statue-jaipur-war-memorial-image145584315#res25254492" class="active"><div class="slide" id="slide-a-8"><span class="temp">Martyr Statue</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/temple-jaipur-made-white-marble-royal-pride-lakshmi-mandir-temple-image145584692#res25254492" class="active"><div class="slide" id="slide-a-9"><span class="temp">Temple in Jaipur, made with white marble royal pride</span></div></a>
+         <a target="_blank" href="https://www.dreamstime.com/sunset-clouds-dipping-horizon-travel-beyond-bounds-air-ride-image199686813#res25254492" class="active"><div class="slide" id="slide-a-10"><span class="temp">Sunset on the clouds, dipping in horizon, travel beyond bounds, Air ride</span></div></a>
+         <a  onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Dreamstime'});"  target="_blank" href="https://www.dreamstime.com/grv197_info" class="active"><div class="slide" id="slide-a-11"><span class="temp">More..</span></div></a>
+    </div>
+  </div>
+</div>
+            </p>
 
-# Close the browser
-driver.quit()
-
-def extract_report_data(driver):
-    report_data = {}
-    table = driver.find_element(By.CLASS_NAME, "admin-question-form")
-    rows = table.find_elements(By.CSS_SELECTOR, "tr")
-    for row in rows:
-        if "Bare - Code of Conduct" in row.text:
-            break  # Stop processing if "Bare - Code of Conduct" is found
-        cells = row.find_elements(By.CSS_SELECTOR, "td")
-        if not cells:
-            continue
-        question_cell = cells[0]
-        question = question_cell.text.strip()  # Initialize question with the full text of the cell
-        inputs = row.find_elements(By.CSS_SELECTOR, "input[type='text'], input[type='radio'], input[type='checkbox'], textarea, select")
-        answers = []
-        for input_elem in inputs:
-            if input_elem.tag_name == 'textarea' or input_elem.get_attribute('type') == 'text':
-                # Check if the parent TR does not have the specified background color and the input is empty
-                if input_elem.get_attribute('value').strip() == '' and 'background-color: rgb(128, 128, 128);' not in input_elem.find_element(By.XPATH, './ancestor::tr').get_attribute('style'):
-                    answers.append('Not Answered')
-                else:
-                    answers.append(input_elem.get_attribute('value').strip())
-            elif input_elem.tag_name == 'select':
-                answers.append(input_elem.find_element(By.CSS_SELECTOR, 'option:checked').text.strip())
-            elif input_elem.get_attribute('type') == 'radio' or input_elem.get_attribute('type') == 'checkbox':
-                if input_elem.is_selected():
-                    # Using JavaScript to retrieve the next sibling node's text content
-                    label = driver.execute_script(
-                        "return arguments[0].nextSibling.textContent;", input_elem)
-                    answers.append(label.strip())
-
-        # Join answers with 'and' if more than one checkbox is selected
-        answer = ' and '.join(filter(None, answers))
-        if answer:  # Only add to dictionary if answer is not empty
-            report_data[question] = answer
-    return report_data
-
-def data_processing(html_content, job_folder):
-    soup = BeautifulSoup(html_content, 'html.parser')
-    data_dict = {}
-
-    # Find the specific <td> tag with bgcolor attribute
-    target_td = soup.find('td', {'bgcolor': "#f5f5f5"})
-
-    # Replace <br> tags with newline characters in the target <td> content
-    for br in target_td.find_all("br"):
-        br.replace_with("\n")
-
-    # Get text from the modified soup object
-    text_content = target_td.get_text(separator="\n")
-
-    # Split the text into lines and process each line
-    lines = text_content.split('\n')
-    unwanted_keys = ["00", "Kindly note the following scenario to be followed"]
-    for line in lines:
-        if ':' in line:
-            key, value = line.split(':', 1)  # Split only on the first colon
-            key = key.strip()
-            if key not in unwanted_keys:
-                data_dict[key] = value.strip()
-
-    # Export data to CSV in the job folder
-    csv_file_path = os.path.join(job_folder, 'data_processed.csv')
-    with open(csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(['Key', 'Value'])
-        for key, value in data_dict.items():
-            writer.writerow([key, value])
-
-    return data_dict
-
-def download_images(driver, job_folder):
-    # Get the page source and parse it with BeautifulSoup
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-    
-    # Find all <a> tags where href starts with the specified URL
-    image_links = soup.find_all('a', href=lambda x: x and x.startswith('https://cdn.sassiex.com'))
-    
-    exif_date_time_found = False  # Flag to track if EXIF date and time is found
-    
-    for link in image_links:
-        # Get the image URL
-        image_url = link['href']
-        
-    # Input the username and password using updated methods
-    driver.find_element(By.NAME, 'login').send_keys("GSingh")  # Use 'login' for the username field
-    driver.find_element(By.NAME, 'password').send_keys("Henghyan00!")  # Use 'password' for the password field
-    driver.find_element(By.ID, 'login-button').click()  # Use 'login-button' ID for the submit button
-
-    # Navigate to the target page
-    job_id = "11689560"
-    url = f"https://www.apollo.bareinternational.com/admin/ShopReview-Right.php?JobID={job_id}"
-    driver.get(url)
-
-    # Handle sticky notes
-    handle_sticky_notes(driver, job_id)
-
-    # Close the browser
-    driver.quit()
-
-if __name__ == "__main__":
-    main()
+<br>
+   <h3>🌐💻 Volunteer Computing</h3>
+            <p>
+               <iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=grv97&mnOn=true&stat=1&imageNum=1&rankOn=true&projectsOn=true&special=false&link=1&memberId=1143426" frameborder="0" name="di" scrolling="no" width="405px" height="190px"></iframe>
+               <br><br>
+               
+         </p>
+            <br>
+            <br>
+            <br>
 
 
-
+            </p> 
+         </section>
+         <footer>
+         </footer>
+      </div>
+<!--       <script src="/assets/js/scale.fix.js"></script> -->
+      <script src="https://instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+      <canvas class="background"></canvas>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+   </body>
+</html>
