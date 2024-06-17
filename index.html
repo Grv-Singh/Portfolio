@@ -1,6 +1,437 @@
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
+      <style>
+         * {
+  transition: all 0.5s ease;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+a.logo {
+  display: none !important;
+}
+
+html {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+}
+
+.acmeclass {
+  background: aqua;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header {
+  width: 24em !important;
+  top: 3em;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  z-index: 5;
+  background-color: #fff;
+}
+
+/* #parallax {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  background-color: hsla(200, 40%, 30%, 0.4);
+  background-image: url("https://media.giphy.com/media/M9TbsVzWI8YAEEJJ5u/source.gif"),
+    url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
+    url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png");
+  background-repeat: repeat-x;
+  background-position: 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 250px, 500px 200px, 1000px, 400px 260px;
+  animation: 50s para infinite linear;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+}
+
+@keyframes para {
+  100% {
+    background-position: -800px 95%, 500px 50%, 1000px 100%, 400px 0;
+  }
+} */
+
+body {
+	background: linear-gradient(-45deg, #7CFC00, #C2DFFF, #87CEEB);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@font-face {
+  font-family: "Product Sans" !important;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+      format("woff2");
+}
+.tooltip,
+.arrow:after {
+  background: black;
+  border: 2px solid white;
+}
+body {
+  font-size: 13px !important;
+  font-family: Product Sans !important;
+}
+.tooltip {
+  pointer-events: none;
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font: bold 14px "Helvetica Neue", Sans-Serif;
+  font-stretch: condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+}
+.arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -22px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+
+  transform: rotate(45deg);
+}
+.tooltip.active {
+  opacity: 1;
+  margin-top: 5px;
+  transition: all 0.2s ease;
+}
+.tooltip.out {
+  opacity: 0;
+  margin-top: -20px;
+}
+::selection {
+  background-color: #e1e1e1;
+  color: #f1f1f1;
+}
+.dropcap {
+  float: left;
+  font-size: 400%;
+  color: #e1e1e1;
+  margin: -11px 7px -11px 1px;
+}
+
+.ikon {
+  margin: 0.5em;
+  font-size: 150%;
+  -webkit-filter: drop-shadow(3px 3px 3px #fff);
+  filter: drop-shadow(3px 3px 3px #fff);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.ikon:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+  -webkit-filter: drop-shadow(3px 3px 3px #e1e1e1);
+  filter: drop-shadow(3px 3px 3px #e1e1e1);
+  cursor: pointer;
+}
+
+.skill-icon {
+  padding: 10px;
+  border-radius: 50%;
+  background: conic-gradient(yellow var(--progress), transparent 0deg);
+}
+
+.akon {
+  margin: 5px;
+  border-radius: 10px;
+  border: #fff 1px solid;
+  -webkit-filter: drop-shadow(3px 3px 3px #fff);
+  filter: drop-shadow(3px 3px 3px #fff);
+}
+/* body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100);
+
+.slider-wrap {
+  width: 200em;
+  height: 500px;
+  margin: 20px auto;
+}
+.slider {
+  overflow-x: scroll;
+  height: 50em;
+}
+
+div.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.holder {
+  width: 300%;
+  margin: 1.5em;
+}
+
+.slide {
+  float: left;
+  width: 18em;
+  height: 500px;
+  position: relative;
+  margin: 8px 8px 8px 8px;
+  border-radius: 10px;
+  background-position: -100px 0;
+  box-shadow: -5px 20px 20px #999;
+}
+
+.slide:hover {
+  z-index: 1;
+  transform: scale(1.2);
+  cursor: pointer;
+  width: 36em;
+}
+
+.temp {
+  font-size: 8px;
+  position: absolute;
+  color: white;
+  font-size: 35px;
+  bottom: 15px;
+  left: 15px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 100;
+}
+#slide-0 {
+  background-image: url(https://image.thum.io/get/https://www.edgarsmission.org.au);
+}
+#slide-1 {
+  background-image: url(https://image.thum.io/get/https://lastobject.com/);
+}
+#slide-2 {
+  background-image: url(https://image.thum.io/get/https://www.wikimedia.org/);
+}
+#slide-3 {
+  background-image: url(https://image.thum.io/get/https://www.waterforpeople.org/);
+}
+#slide-4 {
+  background-image: url(https://image.thum.io/get/https://www.mcsuk.org/);
+}
+#slide-5 {
+  background-image: url(https://image.thum.io/get/https://www.tomstrust.org.uk/);
+}
+#slide-6 {
+  background-image: url(https://image.thum.io/get/https://www.elephantprotectioninitiative.org/);
+}
+#slide-7 {
+  background-image: url(https://image.thum.io/get/https://www.embracerelief.org/);
+}
+#slide-8 {
+  background-image: url(https://image.thum.io/get/https://www.wildlifecollections.com/);
+}
+#slide-9 {
+  background-image: url(https://image.thum.io/get/https://www.goldenswithoutborders.org/);
+}
+#slide-10 {
+  background-image: url(https://image.thum.io/get/https://www.mygreenfills.com/);
+}
+#slide-11 {
+  background-image: url(https://image.thum.io/get/https://www.onetreeplanted.org/);
+}
+#slide-12 {
+  background-image: url(https://image.thum.io/get/https://www.naacp.org/);
+}
+#slide-13 {
+  background-image: url(https://image.thum.io/get/https://www.project18.org.za/);
+}
+#slide-14 {
+  background-image: url(https://image.thum.io/get/https://www.boxed.com/);
+}
+#slide-15 {
+  background-image: url(https://image.thum.io/get/https://www.reachwithin.org/);
+}
+#slide-16 {
+  background-image: url(https://image.thum.io/get/https://www.facebook.com/thegreencompanyma/);
+}
+#slide-17 {
+  background-image: url(https://image.thum.io/get/https://www.arcticus.co.uk/);
+}
+#slide-18 {
+  background-image: url(https://image.thum.io/get/https://www.partners.ngo/);
+}
+#slide-19 {
+  background-image: url(https://image.thum.io/get/https://www.greater-change.org/);
+}
+#slide-20 {
+  background-image: url(https://image.thum.io/get/https://www.shamsfrance.wixsite.com/shams/);
+}
+#slide-21 {
+  background-image: url(https://image.thum.io/get/https://anlcf.org/);
+}
+#slide-22 {
+  background-image: url(https://image.thum.io/get/https://www.interpride.org/);
+}
+#slide-23 {
+  background-image: url(https://image.thum.io/get/https://theoceancleanup.com/);
+}
+#slide-24 {
+  background-image: url(https://image.thum.io/get/https://drive.google.com/file/d/1W706afguivLWaCr3iRuSERqLsa1ZrrTE/preview);
+}
+
+#slide-a-0 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/nalwa-king-punjab-%E0%A4%B8%E0%A5%8B%E0%A4%9C%E0%A4%BE-%E0%A4%AA%E0%A5%81%E0%A4%A4%E0%A5%8D-%E0%A4%A8%E0%A4%88-%E0%A4%A4%E0%A5%87-%E0%A4%A8%E0%A4%B2%E0%A4%B5%E0%A4%BE-%E0%A4%86-%E0%A4%9C%E0%A4%BE%E0%A4%8F%E0%A4%97%E0%A4%BE%E0%A5%A4-263710174.jpg);
+}
+
+#slide-a-1 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/https://thumbs.dreamstime.com/z/sunset-time-263710173.jpg);
+}
+
+#slide-a-2 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cloudscape-flight-top-above-263709865.jpg);
+}
+
+#slide-a-3 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cityscape-jaipur-night-scenery-cityscape-jaipur-night-scenery-263666716.jpg);
+}
+
+#slide-a-4 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/tealight-candle-lighting-all-darkness-small-solo-source-light-clears-263666706.jpg);
+}
+
+#slide-a-5 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/amer-fort-jaipur-amer-fort-jaipur-242551218.jpg);
+}
+
+#slide-a-6 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sky-view-cityscape-242551206.jpg);
+}
+
+#slide-a-7 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/mustard-fields-village-mustard-fields-village-237724620.jpg);
+}
+
+#slide-a-8 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/martyr-statue-martyr-statue-jaipur-war-memorial-145584315.jpg);
+}
+
+#slide-a-9 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/temple-jaipur-made-white-marble-royal-pride-lakshmi-mandir-temple-145584692.jpg);
+}
+
+#slide-a-10 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sunset-clouds-dipping-horizon-travel-beyond-bounds-air-ride-199686813.jpg);
+}
+
+#slide-a-11 {
+  background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/legends-god-mammoth-temple-crushing-ego-humans-behemoth-beautiful-architecture-legends-god-temple-hand-carving-199686829.jpg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(transparent, black);
+}
+.slider-nav {
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.slider-nav a {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #ddd;
+  overflow: hidden;
+  text-indent: -9999px;
+  border-radius: 50%;
+}
+.slider-nav a.active {
+  background: #999;
+}
+
+a#status:before {
+    position: fixed;
+    content: "";
+    padding: 8px;
+    margin: -0.5em;
+    border-radius: 10px;
+}
+      </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2XHV5PHH"></script>
 <!-- Hotjar Tracking Code for my site -->
 <script>
