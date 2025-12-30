@@ -2,6 +2,9 @@
 
 This repository contains the source code for the personal portfolio website of Gaurav Singh. It showcases projects, skills, and work experience.
 
+## Description
+Innovative Big Data Engineer and Web Specialist. Passionate about sustainability, analytics, and building creative solutions to solve real-world problems.
+
 ## Technologies Used
 
 *   **HTML5**
