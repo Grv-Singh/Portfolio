@@ -362,7 +362,7 @@ a:hover small {
 
 .wrapper {
     width: 860px;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     z-index: 1;
 }
