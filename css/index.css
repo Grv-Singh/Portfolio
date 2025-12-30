@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   display: block;
   top: 0;
   left: 0;
@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 } */
 
 body {
-	background: linear-gradient(-45deg, #7CFC00, #C2DFFF, #87CEEB);
+	background: linear-gradient(-45deg, #e0f7fa, #e1f5fe, #ffffff);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
@@ -267,7 +267,7 @@ div.slider::-webkit-scrollbar {
   font-size: 35px;
   bottom: 15px;
   left: 15px;
-  font-family: "Josefin Slab", serif;
+  font-family: "Josefin Slab", "Noto Sans", sans-serif;
   font-weight: 100;
 }
 #slide-0 {
