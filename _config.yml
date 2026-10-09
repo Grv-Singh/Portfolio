@@ -1,5 +1,8 @@
+title: Portfolio - Gaurav Singh
+description: Innovative Big Data Engineer and Web Specialist. Passionate about sustainability, analytics, and building creative solutions to solve real-world problems.
+url: "https://grv-singh.github.io"
+baseurl: ""
 theme: jekyll-theme-minimal
-
-- name: Upload to IPFS
-uses: aquiladev/ipfs-action@v0.3.1
-            
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
