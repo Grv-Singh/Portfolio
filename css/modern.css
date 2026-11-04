@@ -400,6 +400,12 @@ html, body {
   color: var(--accent);
 }
 
+.projects-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 /* Skills Deck (37 Items) */
 .skills-deck {
   display: grid;
