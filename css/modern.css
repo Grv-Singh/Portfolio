@@ -290,6 +290,44 @@ html, body {
   transform: scale(1.25) rotate(6deg);
 }
 
+/* Circular Social Media Buttons at Top */
+.social-circles {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.circle-btn .material-symbols-rounded {
+  font-size: 18px;
+}
+
+.circle-btn:hover {
+  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px) scale(1.12);
+}
+
+.circle-btn:active {
+  transform: scale(0.95);
+}
+
 /* Action Buttons */
 .action-buttons {
   display: flex;
@@ -633,26 +671,50 @@ html, body {
   }
 }
 
-/* Photography Showcase Grid */
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 0.65rem;
-  margin-bottom: 1rem;
+/* Photography Showcase Slider */
+.photo-slider-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.25rem 0 0.75rem 0;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
-.photo-card {
-  position: relative;
-  aspect-ratio: 16 / 11;
+.photo-slider-wrapper::-webkit-scrollbar {
+  height: 5px;
+}
+
+.photo-slider-wrapper::-webkit-scrollbar-track {
+  background: var(--bg-surface-elevated);
+  border-radius: var(--radius-full);
+}
+
+.photo-slider-wrapper::-webkit-scrollbar-thumb {
+  background: var(--border-focus);
+  border-radius: var(--radius-full);
+}
+
+.photo-slider-track {
+  display: flex;
+  gap: 0.65rem;
+  width: max-content;
+}
+
+.slider-photo-card {
+  width: 220px;
+  height: 155px;
   border-radius: var(--radius-sm);
   overflow: hidden;
+  position: relative;
   border: 1px solid var(--border-subtle);
   background: var(--bg-surface-elevated);
+  flex-shrink: 0;
   text-decoration: none;
+  scroll-snap-align: start;
   display: block;
 }
 
-.photo-card img {
+.slider-photo-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -660,8 +722,8 @@ html, body {
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.photo-card:hover img {
-  transform: scale(1.06);
+.slider-photo-card:hover img {
+  transform: scale(1.08);
 }
 
 .photo-overlay {
@@ -675,7 +737,7 @@ html, body {
   transition: background 0.2s ease;
 }
 
-.photo-card:hover .photo-overlay {
+.slider-photo-card:hover .photo-overlay {
   background: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.94) 100%);
 }
 
@@ -711,7 +773,7 @@ html, body {
   transition: transform 0.2s ease;
 }
 
-.photo-card:hover .photo-icon {
+.slider-photo-card:hover .photo-icon {
   transform: translateX(2px) translateY(-2px);
   color: var(--accent-light);
 }
@@ -830,18 +892,18 @@ footer {
     min-height: 24px;
   }
 
+  .social-circles {
+    justify-content: center;
+  }
+
   .projects-grid,
   .observability-grid {
     grid-template-columns: 1fr;
   }
 
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.45rem;
-  }
-
-  .photo-card {
-    aspect-ratio: 4 / 3;
+  .slider-photo-card {
+    width: 175px;
+    height: 130px;
   }
 
   .skills-deck {
@@ -902,4 +964,50 @@ footer {
   font-size: 0.72rem;
   color: var(--text-muted);
   margin-top: 0.35rem;
+}
+
+/* Floating Go to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease, border-color 0.2s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: translateY(-2px) scale(1.08);
+}
+
+.scroll-top-btn:active {
+  transform: scale(0.92);
+}
+
+.scroll-top-btn .material-symbols-rounded {
+  font-size: 20px;
 }
