@@ -36,4 +36,4 @@ User-agent: cohere-ai
 Allow: /
 
 # AI Specification & Sitemap
-Sitemap: https://grv-singh.github.io/Portfolio/sitemap.xml
+Sitemap: https://gr.vserver.app/sitemap.xml
