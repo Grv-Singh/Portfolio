@@ -69,10 +69,8 @@
   <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
 </head>
 <body>
-  <div class="ambient-glow"></div>
-
   <div class="container">
-    <!-- Navigation Bar -->
+    <!-- Compact Nav -->
     <header class="nav-bar">
       <a href="#" class="brand">
         <span class="material-symbols-rounded notranslate" translate="no">terminal</span>
@@ -88,16 +86,12 @@
           <span>Stack</span>
         </a>
         <a href="#activity" class="nav-link">
-          <span class="material-symbols-rounded notranslate" translate="no">query_stats</span>
+          <span class="material-symbols-rounded notranslate" translate="no">monitoring</span>
           <span>Stats</span>
         </a>
-        <a href="#creative" class="nav-link">
+        <a href="#visuals" class="nav-link">
           <span class="material-symbols-rounded notranslate" translate="no">photo_camera</span>
-          <span>Media</span>
-        </a>
-        <a href="#connect" class="nav-link">
-          <span class="material-symbols-rounded notranslate" translate="no">mail</span>
-          <span>Connect</span>
+          <span>Visuals</span>
         </a>
         <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
           <span id="themeIcon" class="material-symbols-rounded notranslate" translate="no">light_mode</span>
@@ -105,7 +99,7 @@
       </nav>
     </header>
 
-    <!-- Hero Card -->
+    <!-- Compact Hero -->
     <section class="card hero-card">
       <div class="avatar-wrapper">
         <img src="me.jpg" alt="Gaurav Singh" class="avatar">
@@ -118,7 +112,7 @@
           <span>Big Data Engineer & Systems Builder</span>
         </div>
         <p class="hero-bio">
-          Designing resilient distributed data pipelines, edge telemetry systems, and full-stack platforms. Focused on sustainable compute, observability, and purposeful engineering solutions.
+          Designing high-throughput data pipelines, edge telemetry systems, and resilient full-stack platforms. Focused on sustainable compute and observability.
         </p>
 
         <div class="meta-chips">
@@ -143,7 +137,7 @@
           </a>
           <a href="cv/" target="_blank" rel="noopener" class="btn btn-secondary" onclick="trackInteraction('Resume', 'Hero');">
             <span class="material-symbols-rounded notranslate" translate="no">description</span>
-            <span>View Resume</span>
+            <span>Resume</span>
           </a>
           <a href="https://github.com/Grv-Singh" target="_blank" rel="noopener" class="btn btn-secondary" onclick="trackInteraction('GitHub', 'Hero');">
             <span class="material-symbols-rounded notranslate" translate="no">code</span>
@@ -155,34 +149,29 @@
           </a>
           <a href="https://www.buymeacoffee.com/GrvSingh" target="_blank" rel="noopener" class="btn btn-secondary" onclick="trackInteraction('Coffee', 'Hero');">
             <span class="material-symbols-rounded notranslate" translate="no">local_cafe</span>
-            <span>Buy Coffee</span>
+            <span>Coffee</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Featured Engineering Projects -->
+    <!-- Engineering Systems -->
     <section id="projects">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="material-symbols-rounded notranslate" translate="no">rocket_launch</span>
-          <span>Featured Engineering Systems</span>
-        </h2>
-      </div>
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">rocket_launch</span>
+        <span>Featured Engineering Systems</span>
+      </h2>
 
       <div class="projects-grid">
-        <!-- DubForge Studio -->
         <article class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-badge">
-                <span class="material-symbols-rounded notranslate" translate="no">mic</span>
-                <span>Audio / Video</span>
-              </span>
-            </div>
+            <span class="project-badge">
+              <span class="material-symbols-rounded notranslate" translate="no">mic</span>
+              <span>Audio / Video</span>
+            </span>
             <h3 class="project-title">DubForge Studio</h3>
             <p class="project-desc">
-              Real-time video dubbing and studio recording engine equipped with synchronized teleprompter, dynamic audio ducking, and auto FFmpeg multi-track muxing.
+              Real-time video dubbing and recording studio with teleprompter, dynamic ducking, and auto FFmpeg multi-track muxing.
             </p>
           </div>
           <div>
@@ -190,61 +179,53 @@
               <span class="tag">FFmpeg</span>
               <span class="tag">Web Audio API</span>
               <span class="tag">Python</span>
-              <span class="tag">Streams</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/Grv-Singh/dubbing-studio" target="_blank" rel="noopener" class="project-link">
                 <span class="material-symbols-rounded notranslate" translate="no">code</span>
-                <span>Source Repository</span>
+                <span>Source</span>
               </a>
-              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 18px;">arrow_forward</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 16px;">arrow_forward</span>
             </div>
           </div>
         </article>
 
-        <!-- Magnite OS -->
         <article class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-badge">
-                <span class="material-symbols-rounded notranslate" translate="no">directions_car</span>
-                <span>Automotive / OS</span>
-              </span>
-            </div>
+            <span class="project-badge">
+              <span class="material-symbols-rounded notranslate" translate="no">directions_car</span>
+              <span>Automotive</span>
+            </span>
             <h3 class="project-title">Magnite OS Launcher</h3>
             <p class="project-desc">
-              Custom Android automotive head-unit launcher with full-screen gesture navigation engine, automotive telemetry dashboard, and distraction-free UI.
+              Custom Android automotive head-unit launcher with full-screen gesture navigation and vehicle metrics dashboard.
             </p>
           </div>
           <div>
             <div class="tech-tags">
               <span class="tag">Android</span>
               <span class="tag">Java/Kotlin</span>
-              <span class="tag">Gestures</span>
               <span class="tag">Head Unit</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/Grv-Singh/MagniteCarLauncher" target="_blank" rel="noopener" class="project-link">
                 <span class="material-symbols-rounded notranslate" translate="no">code</span>
-                <span>Source Repository</span>
+                <span>Source</span>
               </a>
-              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 18px;">arrow_forward</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 16px;">arrow_forward</span>
             </div>
           </div>
         </article>
 
-        <!-- Arjunpuri Civic Portal -->
         <article class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-badge">
-                <span class="material-symbols-rounded notranslate" translate="no">apartment</span>
-                <span>Civic Tech</span>
-              </span>
-            </div>
+            <span class="project-badge">
+              <span class="material-symbols-rounded notranslate" translate="no">apartment</span>
+              <span>Civic Tech</span>
+            </span>
             <h3 class="project-title">Arjunpuri Civic Portal</h3>
             <p class="project-desc">
-              Community grievance tracking system and resident directory for municipal action coordination, automated resolution tickets, and governance transparency.
+              Resident grievance tracking system and directory for municipal action coordination and governance transparency.
             </p>
           </div>
           <div>
@@ -252,30 +233,26 @@
               <span class="tag">Full Stack</span>
               <span class="tag">PostgreSQL</span>
               <span class="tag">Workflows</span>
-              <span class="tag">Civic Action</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/Grv-Singh/arjunpuri" target="_blank" rel="noopener" class="project-link">
                 <span class="material-symbols-rounded notranslate" translate="no">code</span>
-                <span>Source Repository</span>
+                <span>Source</span>
               </a>
-              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 18px;">arrow_forward</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 16px;">arrow_forward</span>
             </div>
           </div>
         </article>
 
-        <!-- Telemetry & Spooler Pipeline -->
         <article class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-badge">
-                <span class="material-symbols-rounded notranslate" translate="no">query_stats</span>
-                <span>Telemetry</span>
-              </span>
-            </div>
+            <span class="project-badge">
+              <span class="material-symbols-rounded notranslate" translate="no">query_stats</span>
+              <span>Telemetry</span>
+            </span>
             <h3 class="project-title">Telemetry & Spooler Pipeline</h3>
             <p class="project-desc">
-              High-throughput edge spooler collecting telemetry metrics, replaying heatmaps, and streaming events to Umami analytics with zero data loss under offline network conditions.
+              High-throughput edge spooler collecting telemetry metrics, heatmap replays, and event queues to Umami analytics.
             </p>
           </div>
           <div>
@@ -283,89 +260,78 @@
               <span class="tag">Umami</span>
               <span class="tag">Edge Spooler</span>
               <span class="tag">Nginx</span>
-              <span class="tag">Event Queues</span>
             </div>
             <div class="project-footer">
               <span class="project-link" style="color: var(--accent-light);">
                 <span class="material-symbols-rounded notranslate" translate="no">check_circle</span>
-                <span>Production Deployed</span>
+                <span>Production</span>
               </span>
             </div>
           </div>
         </article>
 
-        <!-- Bag of Convolutional Features -->
         <article class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-badge">
-                <span class="material-symbols-rounded notranslate" translate="no">neurology</span>
-                <span>AI & Vision</span>
-              </span>
-            </div>
+            <span class="project-badge">
+              <span class="material-symbols-rounded notranslate" translate="no">neurology</span>
+              <span>AI / Vision</span>
+            </span>
             <h3 class="project-title">Bag-of-Convolutional-Features</h3>
             <p class="project-desc">
-              Computer vision research benchmark combining Convolutional Neural Networks, Bag-of-Visual-Words (BoVW), and Grey Wolf Optimization (GWO) feature selection.
+              Computer vision benchmark combining CNN, Bag-of-Visual-Words (BoVW), and Grey Wolf Optimization (GWO).
             </p>
           </div>
           <div>
             <div class="tech-tags">
               <span class="tag">PyTorch</span>
-              <span class="tag">Optimization</span>
               <span class="tag">GWO</span>
               <span class="tag">Vision</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/Grv-Singh/Bag-of-Covolutional-Features" target="_blank" rel="noopener" class="project-link">
                 <span class="material-symbols-rounded notranslate" translate="no">code</span>
-                <span>Source Repository</span>
+                <span>Source</span>
               </a>
-              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 18px;">arrow_forward</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 16px;">arrow_forward</span>
             </div>
           </div>
         </article>
 
-        <!-- Bingo Travels Portal -->
         <article class="project-card">
           <div>
-            <div class="project-header">
-              <span class="project-badge">
-                <span class="material-symbols-rounded notranslate" translate="no">commute</span>
-                <span>Production App</span>
-              </span>
-            </div>
+            <span class="project-badge">
+              <span class="material-symbols-rounded notranslate" translate="no">commute</span>
+              <span>Production App</span>
+            </span>
             <h3 class="project-title">Bingo Tour & Travels</h3>
             <p class="project-desc">
-              Customer portal and fleet dispatch site for premium intercity taxi services, airport transfers, and booking logistics in Jaipur.
+              Fleet booking portal for premium taxi and outstation tours with dispatch management in Jaipur.
             </p>
           </div>
           <div>
             <div class="tech-tags">
               <span class="tag">Responsive UI</span>
-              <span class="tag">SEO Optimized</span>
               <span class="tag">Dispatch API</span>
               <span class="tag">Production</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/Grv-Singh/bingo-travels" target="_blank" rel="noopener" class="project-link">
                 <span class="material-symbols-rounded notranslate" translate="no">code</span>
-                <span>Source Repository</span>
+                <span>Source</span>
               </a>
-              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 18px;">arrow_forward</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="color: var(--text-muted); font-size: 16px;">arrow_forward</span>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Curated Skills Matrix (37 Tools) -->
+    <!-- Technical Stack (37 Tools) -->
     <section id="skills">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="material-symbols-rounded notranslate" translate="no">build</span>
-          <span>Core Technical Stack (37 Tools)</span>
-        </h2>
-      </div>
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">build</span>
+        <span>Technical Stack (37 Tools)</span>
+      </h2>
 
       <div class="skills-deck">
         <div class="skill-tile"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" alt="Python"><span class="skill-tile-name">Python</span></div>
@@ -408,91 +374,74 @@
       </div>
     </section>
 
-    <!-- Stats & Observability Badges -->
+    <!-- Observability, Badges & Activity -->
     <section id="activity">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="material-symbols-rounded notranslate" translate="no">monitoring</span>
-          <span>Observability, Stats & Badges</span>
-        </h2>
-      </div>
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">monitoring</span>
+        <span>Observability & Activity Badges</span>
+      </h2>
 
       <div class="observability-grid">
-        <!-- Project Euler Card -->
         <div class="badge-card">
           <div class="badge-card-top">
             <span class="badge-card-title">
               <span class="material-symbols-rounded notranslate" translate="no">calculate</span>
               <span>Project Euler</span>
             </span>
-            <span class="tag">Math & Logic</span>
-          </div>
-          <div class="badge-card-content">
-            <a href="https://projecteuler.net" target="_blank" rel="noopener" onclick="trackInteraction('Euler', 'Badge');">
-              <img src="https://projecteuler.net/profile/grv197.png" alt="Project Euler grv197">
+            <a href="https://projecteuler.net" target="_blank" rel="noopener" class="project-link">
+              <span>@grv197</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
             </a>
           </div>
-          <div>
-            <a href="https://projecteuler.net" target="_blank" rel="noopener" class="project-link" style="font-size: 0.8rem;">
-              <span>Profile @grv197</span>
-              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
+          <div class="badge-card-content">
+            <a href="https://projecteuler.net" target="_blank" rel="noopener">
+              <img src="https://projecteuler.net/profile/grv197.png" alt="Project Euler grv197">
             </a>
           </div>
         </div>
 
-        <!-- TypeRacer Card -->
         <div class="badge-card">
           <div class="badge-card-top">
             <span class="badge-card-title">
               <span class="material-symbols-rounded notranslate" translate="no">keyboard</span>
               <span>TypeRacer WPM</span>
             </span>
-            <span class="tag">Typing Metrics</span>
-          </div>
-          <div class="badge-card-content">
-            <a href="https://data.typeracer.com/pit/profile?user=grv97" target="_blank" rel="noopener" onclick="trackInteraction('TypeRacer', 'Badge');">
-              <img src="https://data.typeracer.com/misc/badge?user=grv97" alt="TypeRacer Stats grv97">
+            <a href="https://data.typeracer.com/pit/profile?user=grv97" target="_blank" rel="noopener" class="project-link">
+              <span>@grv97</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
             </a>
           </div>
-          <div>
-            <a href="https://data.typeracer.com/pit/profile?user=grv97" target="_blank" rel="noopener" class="project-link" style="font-size: 0.8rem;">
-              <span>Scoreboard @grv97</span>
-              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
+          <div class="badge-card-content">
+            <a href="https://data.typeracer.com/pit/profile?user=grv97" target="_blank" rel="noopener">
+              <img src="https://data.typeracer.com/misc/badge?user=grv97" alt="TypeRacer Stats grv97">
             </a>
           </div>
         </div>
 
-        <!-- World Community Grid Card -->
         <div class="badge-card">
           <div class="badge-card-top">
             <span class="badge-card-title">
               <span class="material-symbols-rounded notranslate" translate="no">public</span>
-              <span>Volunteer Computing</span>
+              <span>Volunteer Grid</span>
             </span>
-            <span class="tag">Grid Network</span>
+            <span class="tag">WCG @grv97</span>
           </div>
           <div class="badge-card-content" style="padding: 0;">
-            <iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=grv97&mnOn=true&stat=1&imageNum=1&rankOn=true&projectsOn=true&special=false&link=1&memberId=1143426" frameborder="0" name="di" scrolling="no" width="100%" height="150" style="border: none; border-radius: var(--radius-xs);"></iframe>
-          </div>
-          <div>
-            <span class="project-link" style="font-size: 0.8rem; color: var(--text-muted);">
-              <span>WCG Contributor @grv97</span>
-            </span>
+            <iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=grv97&mnOn=true&stat=1&imageNum=1&rankOn=true&projectsOn=true&special=false&link=1&memberId=1143426" frameborder="0" name="di" scrolling="no" width="100%" height="130" style="border: none;"></iframe>
           </div>
         </div>
       </div>
 
-      <!-- WakaTime Activity Cards -->
       <div class="wakatime-deck">
         <div class="badge-card">
           <div class="badge-card-top">
             <span class="badge-card-title">
               <span class="material-symbols-rounded notranslate" translate="no">schedule</span>
-              <span>WakaTime &bull; Last Month Coding</span>
+              <span>WakaTime &bull; Month</span>
             </span>
-            <a href="https://wakatime.com/@GrvSingh" target="_blank" rel="noopener" class="project-link" style="font-size: 0.8rem;">
-              <span>Live Profile</span>
-              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
+            <a href="https://wakatime.com/@GrvSingh" target="_blank" rel="noopener" class="project-link">
+              <span>Profile</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
             </a>
           </div>
           <a href="https://wakatime.com/@GrvSingh" target="_blank" rel="noopener">
@@ -504,11 +453,11 @@
           <div class="badge-card-top">
             <span class="badge-card-title">
               <span class="material-symbols-rounded notranslate" translate="no">history_toggle_drop_down</span>
-              <span>WakaTime &bull; Last Year Distribution</span>
+              <span>WakaTime &bull; Year</span>
             </span>
-            <a href="https://wakatime.com/@GrvSingh" target="_blank" rel="noopener" class="project-link" style="font-size: 0.8rem;">
+            <a href="https://wakatime.com/@GrvSingh" target="_blank" rel="noopener" class="project-link">
               <span>Metrics</span>
-              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
+              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
             </a>
           </div>
           <a href="https://wakatime.com/@GrvSingh" target="_blank" rel="noopener">
@@ -517,211 +466,109 @@
         </div>
       </div>
 
-      <!-- Biodiversity Scavenged -->
-      <div class="card" style="margin-top: 1.25rem;">
+      <div class="card" style="margin-bottom: 1rem; padding: 0.75rem 1rem;">
         <div class="badge-card-top">
           <span class="badge-card-title">
             <span class="material-symbols-rounded notranslate" translate="no">eco</span>
-            <span>Biodiversity Scavenged (iNaturalist)</span>
+            <span>Biodiversity (iNaturalist)</span>
           </span>
-          <a href="https://www.inaturalist.org/observations/grv97" target="_blank" rel="noopener" class="project-link" style="font-size: 0.82rem;">
-            <span>View All Observations</span>
-            <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
+          <a href="https://www.inaturalist.org/observations/grv97" target="_blank" rel="noopener" class="project-link">
+            <span>Observations</span>
+            <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
           </a>
         </div>
-        <div style="overflow-x: auto; padding-top: 0.5rem;">
+        <div style="overflow-x: auto;">
           <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/grv97.widget?layout=small&limit=8&order=desc&order_by=observed_on"></script>
         </div>
       </div>
     </section>
 
-    <!-- Creative Life & Photography -->
-    <section id="creative">
-      <div class="section-header">
-        <h2 class="section-title">
+    <!-- Visuals & Media -->
+    <section id="visuals">
+      <div class="badge-card-top" style="margin-bottom: 0.5rem;">
+        <h2 class="section-title" style="margin: 0;">
           <span class="material-symbols-rounded notranslate" translate="no">photo_camera</span>
-          <span>Photography & Visual Work</span>
+          <span>Photography & Art Albums</span>
         </h2>
-        <a href="https://www.dreamstime.com/grv197_info" target="_blank" rel="noopener" class="project-link" style="font-size: 0.85rem;">
+        <a href="https://www.dreamstime.com/grv197_info" target="_blank" rel="noopener" class="project-link">
           <span>Dreamstime Portfolio</span>
-          <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
+          <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
         </a>
       </div>
 
       <div class="slider-container">
         <div class="slider-track">
           <a target="_blank" rel="noopener" href="https://www.dreamstime.com/nalwa-king-punjab-image263710174#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/nalwa-king-punjab-%E0%A4%B8%E0%A5%8B%E0%A4%9C%E0%A4%BE-%E0%A4%AA%E0%A5%81%E0%A4%A4%E0%A5%8D-%E0%A4%A8%E0%A4%88-%E0%A4%A4%E0%A5%87-%E0%A4%A8%E0%A4%B2%E0%A4%B5%E0%A4%BE-%E0%A4%86-%E0%A4%9C%E0%A4%BE%E0%A4%8F%E0%A4%97%E0%A4%BE%E0%A5%A4-263710174.jpg);">
-            <span class="photo-title">Nalwa King of Punjab</span>
+            <span class="photo-title">Nalwa King</span>
           </a>
           <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sunset-time-image263710173#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sunset-time-263710173.jpg);">
-            <span class="photo-title">Sunset Time</span>
+            <span class="photo-title">Sunset</span>
           </a>
           <a target="_blank" rel="noopener" href="https://www.dreamstime.com/cloudscape-flight-top-above-image263709865#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cloudscape-flight-top-above-263709865.jpg);">
             <span class="photo-title">Flight Cloudscape</span>
           </a>
           <a target="_blank" rel="noopener" href="https://www.dreamstime.com/cityscape-jaipur-night-scenery-image263666716#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cityscape-jaipur-night-scenery-263666716.jpg);">
-            <span class="photo-title">Jaipur Night Scenery</span>
+            <span class="photo-title">Jaipur Night</span>
           </a>
           <a target="_blank" rel="noopener" href="https://www.dreamstime.com/tealight-candle-lighting-all-darkness-image263666706#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/tealight-candle-lighting-all-darkness-small-solo-source-light-clears-263666706.jpg);">
             <span class="photo-title">Tealight Candle</span>
           </a>
           <a target="_blank" rel="noopener" href="https://www.dreamstime.com/amer-fort-jaipur-image242551218#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/amer-fort-jaipur-242551218.jpg);">
-            <span class="photo-title">Amer Fort Jaipur</span>
+            <span class="photo-title">Amer Fort</span>
           </a>
           <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sky-view-cityscape-image242551206#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sky-view-cityscape-242551206.jpg);">
-            <span class="photo-title">Sky View Cityscape</span>
-          </a>
-          <a target="_blank" rel="noopener" href="https://www.dreamstime.com/mustard-fields-village-image237724620#res25254492" class="photo-card" style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/mustard-fields-village-237724620.jpg);">
-            <span class="photo-title">Mustard Fields Village</span>
+            <span class="photo-title">Sky View</span>
           </a>
         </div>
       </div>
 
-      <!-- Art & Cooking Albums -->
-      <div class="observability-grid" style="margin-top: 1.25rem;">
-        <div class="badge-card">
-          <div class="badge-card-top">
-            <span class="badge-card-title">
-              <span class="material-symbols-rounded notranslate" translate="no">brush</span>
-              <span>Art Gallery</span>
-            </span>
-            <a href="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8" target="_blank" rel="noopener" class="project-link" style="font-size: 0.8rem;">
-              <span>Google Photos</span>
-              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
-            </a>
-          </div>
-          <div class="pa-carousel-widget" style="width:100%; height:280px; display:none;"
-            data-link="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8"
-            data-title="Art Gallery"
-            data-description="Art & Sketches by Gaurav Singh">
-            <object data="https://lh3.googleusercontent.com/v45s2Dq0Xqc8MSxvLECCfPEJ0Y935vo44UABPORFXOWPVRY704drapPt-Y8FRaAHDFjUcfHSMURJvsUdPnFG_mJpWhfSXULwFvaCQLIi9fMg7-lviGkrD2wmMJ9Y68L8DAL-cDo7oZs=w1920-h1080"></object>
-            <object data="https://lh3.googleusercontent.com/pw/AL9nZEXuxvD0ToXXRn8xRTnDcsjM7BWs9ttEdDjpQm_TG7ew181-5XnmXjahT6VZIidJj2M7Pv_9BVyNIpFZMojUwEyTqYeyefrrVZb9V8AEuDdpnc3-jJ_hXrpTH603GlgPv-tG5PAcA7V8QPW03s2MtM1WLg=w723-h933-no"></object>
-          </div>
-        </div>
-
-        <div class="badge-card">
-          <div class="badge-card-top">
-            <span class="badge-card-title">
-              <span class="material-symbols-rounded notranslate" translate="no">restaurant</span>
-              <span>Culinary & Cooking</span>
-            </span>
-            <a href="https://photos.app.goo.gl/BQbFwK3NMJN22GZe8" target="_blank" rel="noopener" class="project-link" style="font-size: 0.8rem;">
-              <span>Google Photos</span>
-              <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 16px;">open_in_new</span>
-            </a>
-          </div>
-          <div class="pa-carousel-widget" style="width:100%; height:280px; display:none;"
-            data-link="https://photos.app.goo.gl/BQbFwK3NMJN22GZe8"
-            data-title="Cooking"
-            data-description="Culinary Creations by Gaurav Singh">
-            <object data="https://lh3.googleusercontent.com/_ziqG8k0ll5iom_NQcLesiwORSDVhkKr9z2bNxgEi89e5LL6vyVaik0RwbQauDAveEVDA69aosHUwyhmgZ3YyzpTUJDJ2nkj3soDvswnvDnc-W9yGchvd4defbB3MRJeQS8PxMJiR8c=w1920-h1080"></object>
-            <object data="https://lh3.googleusercontent.com/AkR6tWE4XMUwEChOmHXXEBX52L7ZjS9ffpb_9TNz6k8AXm3bTFrGEjxQ9CgcUyDsugjkTTR-JZ2euETsCvvv46AGP-3asZo-xrbgpWHg_MjIUbmgkUTdXBdYi0guMC0zOuc3cihpTQo=w1920-h1080"></object>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Connect & Social Grid -->
-    <section id="connect">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="material-symbols-rounded notranslate" translate="no">alternate_email</span>
-          <span>Connect & Inquiries</span>
-        </h2>
-      </div>
-
-      <div class="connect-grid">
-        <a href="mailto:acad.grv97@gmail.com" class="connect-card" onclick="trackInteraction('Email', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">mail</span>
-          </div>
-          <div>
-            <span class="connect-label">Email Direct</span>
-            <span class="connect-sub">acad.grv97@gmail.com</span>
-          </div>
+      <div class="channels-bar" style="justify-content: space-around; margin-bottom: 1rem;">
+        <a href="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8" target="_blank" rel="noopener" class="channel-pill">
+          <span class="material-symbols-rounded notranslate" translate="no">brush</span>
+          <span>Google Photos &bull; Art Gallery Album</span>
+          <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
         </a>
-
-        <a href="https://linkedin.com/in/grvsingh97/" target="_blank" rel="noopener" class="connect-card" onclick="trackInteraction('LinkedIn', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">business_center</span>
-          </div>
-          <div>
-            <span class="connect-label">LinkedIn</span>
-            <span class="connect-sub">/in/grvsingh97</span>
-          </div>
-        </a>
-
-        <a href="https://github.com/Grv-Singh" target="_blank" rel="noopener" class="connect-card" onclick="trackInteraction('GitHub', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">code</span>
-          </div>
-          <div>
-            <span class="connect-label">GitHub</span>
-            <span class="connect-sub">@Grv-Singh</span>
-          </div>
-        </a>
-
-        <a href="https://calendly.com/grv-singh/quickcall" target="_blank" rel="noopener" class="connect-card" onclick="trackInteraction('Calendly', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">calendar_month</span>
-          </div>
-          <div>
-            <span class="connect-label">Quick Call</span>
-            <span class="connect-sub">calendly.com/grv-singh</span>
-          </div>
-        </a>
-
-        <a href="https://api.whatsapp.com/send?phone=918946968876&text=Hi%20Gaurav" target="_blank" rel="noopener" class="connect-card" onclick="trackInteraction('WhatsApp', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">chat</span>
-          </div>
-          <div>
-            <span class="connect-label">WhatsApp</span>
-            <span class="connect-sub">+91 89469 68876</span>
-          </div>
-        </a>
-
-        <a href="https://www.quora.com/profile/Gaurav-Singh-249/" target="_blank" rel="noopener" class="connect-card" onclick="trackInteraction('Quora', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">forum</span>
-          </div>
-          <div>
-            <span class="connect-label">Quora</span>
-            <span class="connect-sub">Answers & Writing</span>
-          </div>
-        </a>
-
-        <a href="https://gauravsinghsays.blogspot.com" target="_blank" rel="noopener" class="connect-card" onclick="trackInteraction('Blogger', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">article</span>
-          </div>
-          <div>
-            <span class="connect-label">Personal Blog</span>
-            <span class="connect-sub">gauravsinghsays</span>
-          </div>
-        </a>
-
-        <a href="https://maps.app.goo.gl/GH1L1J77eYEuHpog9" target="_blank" rel="noopener" class="connect-card" onclick="trackInteraction('Maps', 'Connect');">
-          <div class="connect-icon">
-            <span class="material-symbols-rounded notranslate" translate="no">location_on</span>
-          </div>
-          <div>
-            <span class="connect-label">Location</span>
-            <span class="connect-sub">Jaipur, Rajasthan</span>
-          </div>
+        <a href="https://photos.app.goo.gl/BQbFwK3NMJN22GZe8" target="_blank" rel="noopener" class="channel-pill">
+          <span class="material-symbols-rounded notranslate" translate="no">restaurant</span>
+          <span>Google Photos &bull; Culinary Album</span>
+          <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
         </a>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Streamlined Direct Channels (Non-redundant) -->
+    <div class="channels-bar">
+      <a href="mailto:acad.grv97@gmail.com" class="channel-pill" onclick="trackInteraction('Email', 'Channel');">
+        <span class="material-symbols-rounded notranslate" translate="no">mail</span>
+        <span>acad.grv97@gmail.com</span>
+      </a>
+      <a href="https://linkedin.com/in/grvsingh97/" target="_blank" rel="noopener" class="channel-pill" onclick="trackInteraction('LinkedIn', 'Channel');">
+        <span class="material-symbols-rounded notranslate" translate="no">business_center</span>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=918946968876&text=Hi%20Gaurav" target="_blank" rel="noopener" class="channel-pill" onclick="trackInteraction('WhatsApp', 'Channel');">
+        <span class="material-symbols-rounded notranslate" translate="no">chat</span>
+        <span>WhatsApp</span>
+      </a>
+      <a href="https://www.quora.com/profile/Gaurav-Singh-249/" target="_blank" rel="noopener" class="channel-pill" onclick="trackInteraction('Quora', 'Channel');">
+        <span class="material-symbols-rounded notranslate" translate="no">forum</span>
+        <span>Quora</span>
+      </a>
+      <a href="https://gauravsinghsays.blogspot.com" target="_blank" rel="noopener" class="channel-pill" onclick="trackInteraction('Blogger', 'Channel');">
+        <span class="material-symbols-rounded notranslate" translate="no">article</span>
+        <span>Blog</span>
+      </a>
+    </div>
+
+    <!-- Compact Footer -->
     <footer>
       <div>
-        <span>Gaurav Singh &bull; Systems Architecture & Data Engineering</span>
+        <span>Gaurav Singh &bull; Systems & Data Engineering</span>
       </div>
       <div>
         <a href="https://github.com/Grv-Singh/Portfolio" target="_blank" rel="noopener" class="project-link">
           <span class="material-symbols-rounded notranslate" translate="no">code</span>
-          <span>Source Repository</span>
+          <span>Repository</span>
         </a>
       </div>
     </footer>
