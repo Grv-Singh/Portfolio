@@ -364,7 +364,23 @@ html, body {
   border-color: var(--border-focus);
 }
 
-/* Section Titles */
+/* Section Titles & Headers */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.25rem 0 0.65rem 0;
+  gap: 0.5rem;
+}
+
+.section-header .section-title {
+  margin: 0;
+}
+
+.section-header .btn {
+  margin-left: auto;
+}
+
 .section-title {
   display: flex;
   align-items: center;
@@ -379,6 +395,17 @@ html, body {
   color: var(--accent);
   font-size: 20px;
   animation: iconFloat 3.5s ease-in-out infinite;
+}
+
+.btn-sm {
+  padding: 0.28rem 0.65rem;
+  font-size: 0.74rem;
+  min-height: 28px;
+  gap: 0.25rem;
+}
+
+.btn-sm .material-symbols-rounded {
+  font-size: 15px;
 }
 
 /* Projects Deck */
@@ -464,12 +491,6 @@ html, body {
 
 .project-link:hover {
   color: var(--accent);
-}
-
-.projects-more {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
 }
 
 /* Skills Deck (37 Items) */
