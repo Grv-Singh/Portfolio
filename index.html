@@ -460,10 +460,10 @@
           </div>
           <div class="wpm-display">
             <div class="wpm-value">
-              <span>85</span>
+              <span id="typeracer-wpm">85</span>
               <span class="wpm-unit">WPM</span>
             </div>
-            <span class="wpm-label">Competitive Average Speed</span>
+            <span class="wpm-label" id="typeracer-label">Live Competitive Speed</span>
           </div>
           <div class="project-footer">
             <a href="https://data.typeracer.com/pit/profile?user=grv97" target="_blank" rel="noopener"
@@ -682,6 +682,23 @@
         localStorage.setItem('theme', newTheme);
         themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
       });
+
+      // Live TypeRacer sync
+      const wpmEl = document.getElementById('typeracer-wpm');
+      if (wpmEl) {
+        fetch('data/typeracer.json?v=' + Date.now())
+          .then(res => res.json())
+          .then(data => {
+            if (data && (data.recentAvgWpm || data.wpm)) {
+              wpmEl.textContent = data.recentAvgWpm || data.wpm;
+              const lbl = document.getElementById('typeracer-label');
+              if (lbl && data.gamesPlayed) {
+                lbl.textContent = `Live Avg (${data.gamesPlayed} races)`;
+              }
+            }
+          })
+          .catch(() => {});
+      }
     })();
   </script>
 </body>

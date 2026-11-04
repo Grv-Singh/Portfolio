@@ -1,0 +1,42 @@
+name: Sync TypeRacer Live Stats
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Puppeteer
+        run: npm install puppeteer --no-save
+
+      - name: Fetch TypeRacer Live Stats
+        run: node scripts/sync-typeracer.js
+
+      - name: Commit and Push Updated Stats
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/typeracer.json
+          if git diff --staged --quiet; then
+            echo "No change in TypeRacer statistics."
+          else
+            git commit -m "Auto-sync live TypeRacer statistics"
+            git push origin master
+          fi
