@@ -680,6 +680,73 @@
           </a>
         </div>
       </div>
+
+      <!-- iNaturalist Biodiversity Observations Slider -->
+      <div class="section-header" style="margin-top: 1.25rem;">
+        <h2 class="section-title">
+          <span class="material-symbols-rounded notranslate" translate="no">eco</span>
+          <span>iNaturalist Observations</span>
+        </h2>
+        <a href="https://www.inaturalist.org/observations/grv97" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"
+          onclick="trackInteraction('iNaturalist', 'Visuals');">
+          <span>iNaturalist Profile</span>
+          <span class="material-symbols-rounded notranslate" translate="no">open_in_new</span>
+        </a>
+      </div>
+
+      <div class="photo-slider-wrapper">
+        <div class="photo-slider-track" id="inat-slider-track">
+          <a target="_blank" rel="noopener" href="https://www.inaturalist.org/observations/258532441" class="slider-photo-card">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/463874864/medium.jpeg" alt="Yellow trumpet flower" loading="lazy">
+            <div class="photo-overlay">
+              <div class="photo-meta">
+                <span class="photo-title">Yellow Trumpet Flower</span>
+                <span class="photo-tag">Jaipur, India</span>
+              </div>
+            </div>
+          </a>
+
+          <a target="_blank" rel="noopener" href="https://www.inaturalist.org/observations/258532375" class="slider-photo-card">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/463874745/medium.jpeg" alt="Bambusa" loading="lazy">
+            <div class="photo-overlay">
+              <div class="photo-meta">
+                <span class="photo-title">Bambusa</span>
+                <span class="photo-tag">Jaipur, India</span>
+              </div>
+            </div>
+          </a>
+
+          <a target="_blank" rel="noopener" href="https://www.inaturalist.org/observations/247848570" class="slider-photo-card">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/442742618/medium.jpeg" alt="Spider lilies" loading="lazy">
+            <div class="photo-overlay">
+              <div class="photo-meta">
+                <span class="photo-title">Spider Lilies</span>
+                <span class="photo-tag">Jaipur, India</span>
+              </div>
+            </div>
+          </a>
+
+          <a target="_blank" rel="noopener" href="https://www.inaturalist.org/observations/247848501" class="slider-photo-card">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/442742588/medium.jpeg" alt="Crown-of-thorns" loading="lazy">
+            <div class="photo-overlay">
+              <div class="photo-meta">
+                <span class="photo-title">Crown-of-thorns</span>
+                <span class="photo-tag">Jaipur, India</span>
+              </div>
+            </div>
+          </a>
+
+          <a target="_blank" rel="noopener" href="https://www.inaturalist.org/observations/247847806" class="slider-photo-card">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/442741134/medium.jpeg" alt="White leadtree" loading="lazy">
+            <div class="photo-overlay">
+              <div class="photo-meta">
+                <span class="photo-title">White Leadtree</span>
+                <span class="photo-tag">Jaipur, India</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Compact Footer -->
@@ -751,6 +818,29 @@
                     <div class="photo-meta">
                       <span class="photo-title">${p.title || `Art Piece #${i + 1}`}</span>
                       <span class="photo-tag">${p.tag || 'Gallery'}</span>
+                    </div>
+                  </div>
+                </a>
+              `).join('');
+            }
+          })
+          .catch(() => {});
+      }
+
+      // Dynamic iNaturalist Observations sync
+      const inatTrack = document.getElementById('inat-slider-track');
+      if (inatTrack) {
+        fetch('data/inaturalist.json?v=' + Date.now())
+          .then(res => res.json())
+          .then(data => {
+            if (data && data.observations && data.observations.length > 0) {
+              inatTrack.innerHTML = data.observations.map(obs => `
+                <a target="_blank" rel="noopener" href="${obs.uri}" class="slider-photo-card">
+                  <img src="${obs.photo}" alt="${obs.title}" loading="lazy">
+                  <div class="photo-overlay">
+                    <div class="photo-meta">
+                      <span class="photo-title">${obs.title}</span>
+                      <span class="photo-tag">${obs.location}</span>
                     </div>
                   </div>
                 </a>
