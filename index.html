@@ -112,7 +112,7 @@
         <div class="hero-identity">
           <div class="avatar-wrapper">
             <img src="me.jpg" alt="Gaurav Singh" class="avatar">
-            <div class="status-indicator" title="Available for engineering challenges"></div>
+            <div class="status-indicator offline" id="liveIndicator" title="Offline / Away"></div>
           </div>
           <div class="hero-title-group">
             <h1>Gaurav Singh</h1>
@@ -864,6 +864,33 @@
               .catch(() => {});
           });
       }
+      // Real-time VM Presence Heartbeat (Live Green when working, Slate Gray when away)
+      const ind = document.getElementById('liveIndicator');
+      if (ind) {
+        fetch('https://gist.githubusercontent.com/Grv-Singh/22dca5820057d11790313f73787c4c83/raw/status.json?v=' + Date.now())
+          .then(res => res.json())
+          .then(data => {
+            const nowSec = Math.floor(Date.now() / 1000);
+            const diffSec = nowSec - (data.timestamp || 0);
+
+            // If ping arrived within the last 5 minutes (300s), show Green; otherwise Gray
+            if (diffSec >= 0 && diffSec < 300) {
+              ind.classList.remove('offline');
+              ind.classList.add('online');
+              ind.setAttribute('title', 'Active now in Dev Environment');
+            } else {
+              ind.classList.remove('online');
+              ind.classList.add('offline');
+              ind.setAttribute('title', 'Offline / Away');
+            }
+          })
+          .catch(() => {
+            ind.classList.remove('online');
+            ind.classList.add('offline');
+            ind.setAttribute('title', 'Offline / Away');
+          });
+      }
+
       // Floating Go to Top Button
       const scrollBtn = document.getElementById('scrollToTopBtn');
       if (scrollBtn) {

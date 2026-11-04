@@ -246,11 +246,34 @@ html, body {
   position: absolute;
   bottom: 2px;
   right: 2px;
-  width: 13px;
-  height: 13px;
-  background-color: #10b981;
+  width: 14px;
+  height: 14px;
+  background-color: #64748b; /* Default muted gray for offline */
   border: 2px solid var(--bg-surface);
   border-radius: 50%;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.status-indicator.online {
+  background-color: #10b981; /* Glowing vibrant green when working in VM */
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25), 0 0 8px rgba(16, 185, 129, 0.75);
+  animation: liveDotPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.status-indicator.offline {
+  background-color: #64748b; /* Slate gray when offline/away */
+  box-shadow: none;
+}
+
+@keyframes liveDotPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25), 0 0 8px rgba(16, 185, 129, 0.75);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15), 0 0 12px rgba(16, 185, 129, 0.9);
+  }
 }
 
 .hero-title-group {
