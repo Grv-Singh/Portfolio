@@ -3,7 +3,7 @@ const path = require('path');
 
 async function syncINaturalist() {
   const username = 'grv97';
-  const url = `https://api.inaturalist.org/v1/observations?user_id=${username}&order=desc&order_by=observed_on&per_page=12`;
+  const url = `https://api.inaturalist.org/v1/observations?user_id=${username}&order=desc&order_by=created_at&per_page=12`;
   console.log('Fetching iNaturalist observations for:', username);
 
   try {
@@ -59,3 +59,4 @@ async function syncINaturalist() {
 }
 
 syncINaturalist();
+

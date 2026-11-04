@@ -827,27 +827,54 @@
           .catch(() => {});
       }
 
-      // Dynamic iNaturalist Observations sync
+      // Real-time iNaturalist Observations (Live API with cached JSON fallback)
       const inatTrack = document.getElementById('inat-slider-track');
       if (inatTrack) {
-        fetch('data/inaturalist.json?v=' + Date.now())
+        const renderInat = (obsList) => {
+          if (!obsList || obsList.length === 0) return;
+          inatTrack.innerHTML = obsList.map(obs => `
+            <a target="_blank" rel="noopener" href="${obs.uri}" class="slider-photo-card">
+              <img src="${obs.photo}" alt="${obs.title}" loading="lazy">
+              <div class="photo-overlay">
+                <div class="photo-meta">
+                  <span class="photo-title">${obs.title}</span>
+                  <span class="photo-tag">${obs.location}</span>
+                </div>
+              </div>
+            </a>
+          `).join('');
+        };
+
+        // Live API fetch for zero-delay instant updates on new uploads
+        fetch('https://api.inaturalist.org/v1/observations?user_id=grv97&order=desc&order_by=created_at&per_page=12')
           .then(res => res.json())
           .then(data => {
-            if (data && data.observations && data.observations.length > 0) {
-              inatTrack.innerHTML = data.observations.map(obs => `
-                <a target="_blank" rel="noopener" href="${obs.uri}" class="slider-photo-card">
-                  <img src="${obs.photo}" alt="${obs.title}" loading="lazy">
-                  <div class="photo-overlay">
-                    <div class="photo-meta">
-                      <span class="photo-title">${obs.title}</span>
-                      <span class="photo-tag">${obs.location}</span>
-                    </div>
-                  </div>
-                </a>
-              `).join('');
+            if (data && data.results && data.results.length > 0) {
+              const liveObs = data.results.map(r => {
+                const photoObj = (r.photos && r.photos[0]) || (r.taxon && r.taxon.default_photo);
+                const photoUrl = photoObj && photoObj.url ? photoObj.url.replace('square', 'medium') : null;
+                const title = r.species_guess || (r.taxon && (r.taxon.preferred_common_name || r.taxon.name)) || 'Wild Observation';
+                const cleanLoc = r.place_guess ? r.place_guess.split(',').slice(-2).join(', ').trim() : 'India';
+                return {
+                  uri: r.uri || `https://www.inaturalist.org/observations/${r.id}`,
+                  title: title.charAt(0).toUpperCase() + title.slice(1),
+                  location: cleanLoc,
+                  photo: photoUrl
+                };
+              }).filter(x => x.photo);
+              renderInat(liveObs);
+            } else {
+              throw new Error('Fallback to cache');
             }
           })
-          .catch(() => {});
+          .catch(() => {
+            fetch('data/inaturalist.json?v=' + Date.now())
+              .then(res => res.json())
+              .then(data => {
+                if (data && data.observations) renderInat(data.observations);
+              })
+              .catch(() => {});
+          });
       }
       // Floating Go to Top Button
       const scrollBtn = document.getElementById('scrollToTopBtn');
