@@ -1,365 +1,491 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <title>Portfolio - Gaurav Singh</title>
+  <title>Gaurav Singh | Portfolio & Systems Engineering</title>
   
-  <meta name="generator" content="Jekyll v3.9.0" />
-  <meta property="og:title" content="Portfolio | Gaurav Singh" />
-  <meta name="google-site-verification" content="KXZqLMBXcjGDS0O9gKtjrJK2Z4bzY9lHr9vkWkmDDqw" />
-  <meta property="og:locale" content="en_US" />
-  <meta name="keywords" content="AWS,cloud,big data, splunk, snowflake, hadoop, sqoop, spark, kafka, python, seo,javascript,full stack,front end,ui,ux,wsl,windows 10, vs code,jupyter,full stack developers,azure,mysql,sql,asci,utf-8,php,html,
-                                     ,symfony,twig,XML,JSON,GeoJSON,technology,androoid,app inventor,markdown,form,volunteer,mentor,page insight,cloudflare,dns,proxy,big data, machine learning,ai,react.js,d3.js,js,jquery,moment.js,git,github,offie 365, ms office, word, excel, sway,c,c++,nginx,google sheets, google docs, thunkable, figma,python,azure,zapier,ajax,bootstrap,web developmenyt, front end evelopment, full stack development,data structures,scrum, oops, mvc, wiki,dbms, computer network, math, logic, cyber security, project euler, hascat, linux, kde, data science, big data anaytics, grid computing" />
-  <meta name="description" content="Innovative Big Data Engineer and Web Specialist. Passionate about sustainability, analytics, and building creative solutions to solve real-world problems." />
-  <meta property="og:description" content="Innovative Big Data Engineer and Web Specialist. Passionate about sustainability, analytics, and building creative solutions to solve real-world problems." />
-  <meta property="og:url" content="/" />
-  <meta property="og:site_name" content="Grv-Singh" />
-  
-  <link rel="canonical" href="/" />
-  <link rel="shortcut icon" type="image/jpg" href="https://i.postimg.cc/J7QcG55G/circle-cropped.png"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/index.css" defer>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Portfolio of Gaurav Singh — Systems Architect, Big Data Engineer & Full Stack Developer specializing in telemetry, distributed data pipelines, and intelligent interfaces.">
+  <meta name="keywords" content="Gaurav Singh, Big Data Engineer, Data Analytics, Python, AWS, Spark, Splunk, Docker, Linux, Proxmox, Full Stack Developer, Telemetry, Jaipur">
+  <meta name="author" content="Gaurav Singh">
+  <meta property="og:title" content="Gaurav Singh | Portfolio & Systems Engineering">
+  <meta property="og:description" content="Systems Architect, Big Data Engineer & Full Stack Developer specializing in telemetry, distributed pipelines, and resilient systems.">
+  <meta property="og:url" content="https://grv-singh.github.io/Portfolio/">
+  <meta property="og:type" content="website">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+  <!-- Google Fonts: Inter & Material Symbols Rounded -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <link rel="stylesheet" href="css/modern.css">
+  <link rel="shortcut icon" type="image/jpg" href="me.jpg">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2XHV5PHH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-KQ2XHV5PHH');
   </script>
 
-  <!-- Hotjar Tracking Code for my site -->
-  <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3788397,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
-
-  <script>
-    function trackImageClick(element) {
-     var title = element.getAttribute("title");
-      gtag('event', 'click', {
-        'event_category': 'Image Interaction',
-        'event_action': 'click',
-        'event_label': title // Fixed 'name' to 'title' assuming 'name' was meant to be the variable
-      });
-    }
-  </script>
-
-  <script type="text/javascript">
-    window._mfq = window._mfq || [];
-    (function() {
-      var mf = document.createElement("script");
-      mf.type = "text/javascript"; mf.defer = true;
-      mf.src = "//cdn.mouseflow.com/projects/5c1f49e5-04c5-4906-b1bd-3c71b200beb6.js";
-      document.getElementsByTagName("head")[0].appendChild(mf);
-    })();
-  </script>
-
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5TXQJXH');</script>
-  <!-- End Google Tag Manager -->
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "Gaurav Singh",
-      "url": "",
-      "image": "https://i.postimg.cc/Y0bKVmz9/IMG-5190-2-modified.png",
-      "sameAs": [
-        "https://www.facebook.com/grv.sj",
-        "https://twitter.com/grvsinghsays",
-        "https://www.instagram.com/grvsays",
-        "https://www.youtube.com/channel/UCSMwiBEXzlU-2khoEa2WBCg",
-        "https://www.linkedin.com/in/grvsingh97",
-        "https://soundcloud.com/gaurav-singh-22",
-        "https://github.com/Grv-Singh",
-        ""
-      ],
-      "jobTitle": "Software Developer 2",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Legato Healthcare Technologies"
-      }
-    }
-  </script>
-  <script type="application/ld+json">
-     {"url":"/","@type":"WebSite","headline":"👋 Hi there","description":"Portfolio","name":"Grv-Singh","@context":"https://schema.org"}
-  </script>
-
-  <!-- Custom JS -->
-  <script src="js/ping.js" defer></script>
-  <script src="js/index.js" defer></script>
-
+  <!-- Umami Telemetry Tracker -->
+  <script defer src="/stats/script.js" data-website-id="portfolio-grv" data-auto-track="true"></script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TXQJXH"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <div class="ambient-glow"></div>
 
-  <div class="wrapper">
-     <header>
-        <img src="me.jpg" width="200px" style="border-radius: 50%;"/>
-        <br><br>
-        <style id="styleElem"></style>
-        <h1><a target="_blank" id="status" href="https://www.github.com/Grv-Singh" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Name'});" >Gaurav Singh</a></h1>
-        <h3>
-           <span class="dropcap">I</span>nnovative and curious by nature. Talking about sustainability and purpose driven business. A data engineer in Analytics, Visualization, expert in observability and web.
-        </h3>
-        <br>
-        <h3 id="lets-connect-">🤝🏻 Let's connect</h3>
-        <p>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Github'});" href="https://github.com/Grv-Singh"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Github" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" /></a>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'LinkedIn'});" href="https://linkedin.com/in/grvsingh97/"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="LinkedIn" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /></a>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Quora'});" href="https://www.quora.com/profile/Gaurav-Singh-249/"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Quora" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/quora.svg" /></a>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Blogger'});" href="https://gauravsinghsays.blogspot.com"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Blog" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.7.0/icons/blogger.svg" /></a>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Mail'});" href="mailto:acad.grv97@gmail.com?subject=Reaching out&body=Hello! I came across your portfolio on the internet. This is related to.."><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Inbox me" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mail-dot-ru.svg" /></a>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Whatsapp'});" href="https://api.whatsapp.com/send?phone=918946968876&text=Hello!%20Gaurav!"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Whatsapp" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/whatsapp.svg" /></a>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Call'});" href="tel:+918946968876"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Dial" width="20px" src="https://i.postimg.cc/529kyWhj/call-answer.png" /></a>
-           <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Address'});" href="https://maps.app.goo.gl/GH1L1J77eYEuHpog9"><img target="_blank" class="ikon icon" align="left" style="--progress: 90deg;" align="left" title="Address" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/homeadvisor.svg" /></a>
-        </p>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br><h3 id="like-what-you-see-">😍 Like what you see ?</h3>
-        <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Meeting'});" href="https://calendly.com/grv-singh/quickcall"><img target="_blank" align="left" title="Meet & Greet" width="130" style="padding:0.2em;" src="css/book.png" /></a>
-        <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Say Thanks'});" href="https://saythanks.io/to/acad.grv97"><img style="width: 10em;padding:0.2em;" target="_blank" src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" title="Say Thanks!" /></a>
-        <br>
-        <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Buy Coffee'});" href="https://www.buymeacoffee.com/GrvSingh" target="_blank"><img  target="_blank" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" title="Buy Me A Coffee" height="28px" style="width: 10em;padding:0.2em;" /></a>
-        <br>
-        <br>
-     <br>
-        </p>
-     </header>
-     <section>
-        <h3 id="hi-there-">👋 Hi! there,</h3>
-
-        <ul>
-           <li><h3>💡 <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Projects'});" href="https://www.github.com/Grv-Singh">View projects</a> or <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Resume'});" href="https://drive.google.com/file/d/1j6DCV6IOXjHBMhinDNMuV28UJZZqV8Xf/preview">Let's work together</a></h3></li>
-           <li><h3>🧐 I am a curious mind and we can talk on anything</h3></li>
-           <li><h3>🤔 Question ? Ask me on <a target="_blank" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Quora'});"  target="_blank" href="https://www.quora.com/profile/Gaurav-Singh-249">Quora</a></h3></li>
-           <li><h3>🌏 Based out of <font style="color:#FF9933;">In</font><font style="color:#000080;"></font>d<font style="color:#138808;">ia</font>, open to exploration!</h3></li>
-           <li><h3>✨ Fun fact: I can cook good food.</h3></li>
-        </ul>
-
-        <h2 id="languages-and-tools-">🛠 Tools of trade</h2>
-        <p style="display:inline-block !important;">
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 72deg;" align="left" title="AWS" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/amazonaws.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Splunk" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/splunk.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="PHP" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Python" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Jupyter" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="JQuery" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="D3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Visual Studio Code" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/visualstudiocode.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="HTML5" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/html5.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Javascript" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/javascript.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Markdown" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" /> <img  target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="SQL" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mysql.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="MS Teams" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/microsoftteams.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Linux" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/linux.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Windows" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" /> <img target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="NGINX" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Strapi" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/strapi.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Zapier Automation" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zapier.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Arduino" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/arduino.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Curl" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/curl.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="XDA Developers" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/xdadevelopers.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Zoom" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zoom.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 360deg;" align="left" title="Font Awesome" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fontawesome.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="SVG" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/svg.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Symfony" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/symfony.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Slack" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/slack.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="IFTTT" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ifttt.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="JSON" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/json.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="KDE" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/kde.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Chocolatey" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/chocolatey.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Hive" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/hive.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Anaconda" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/anaconda.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Android" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/android.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Azure Devops" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/azuredevops.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Bata" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftazure.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Bitbucket" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/bitbucket.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Bootstrap" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/bootstrap.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Confluence" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/confluence.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="CSS3" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/css3.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Fitbit" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fitbit.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Google" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/google.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Google Drive" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googledrive.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Google Chrome" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlechrome.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Google Lens" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlelens.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Google Maps" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlemaps.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Google Business" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlemybusiness.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Google Sheets" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlesheets.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Google Tag Manager" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googletagmanager.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Google Translate" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googletranslate.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Jira" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jira.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Jekyll" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jekyll.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="JPEG" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jpeg.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Keras" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/keras.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Lighthouse" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/lighthouse.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Microsoft Excel" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftexcel.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Microsoft Office" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftoffice.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Microsoft Powerpoint" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftpowerpoint.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Microsoft Sharepoint" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftsharepoint.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Microsoft Word" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftword.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="NPM" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/npm.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="NFC" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/nfc.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Numpy" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/numpy.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Overleaf" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/overleaf.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Pandas" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/pandas.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Pastebin" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/pastebin.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Paypal" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/paypal.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Playstation" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/playstation.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 180deg;" align="left" title="Postman" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/postman.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 108deg;" align="left" title="Powershell" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/powershell.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 108deg;" align="left" title="Scikit-Learn" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/scikit-learn.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 288deg;" align="left" title="Slideshare" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/slideshare.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Stackoverflow" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/stackoverflow.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 216deg;" align="left" title="Ubuntu" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ubuntu.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 252deg;" align="left" title="Unsplash" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/unsplash.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 324deg;" align="left" title="Wakatime" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/wakatime.svg" />
-           <img onclick="trackImageClick(this);" target="_blank" class="ikon skill-icon" align="left" style="--progress: 144deg;" align="left" title="Wikipedia" width="26px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/wikipedia.svg" />
-           <br />
-        </p>
-        <br>
-        <h3 id="mathematics-and-computer-programming-">🍃 Biodiversity scavenged </h3>
-        <br>
-        <style type="text/css" media="screen">
-          .inat-widget { font-family: Georgia, serif; line-height: 1;}
-          .inat-widget td {vertical-align: top; padding-bottom: 10px;}
-          .inat-label { color: #888; }
-          .inat-meta { font-size: smaller; margin-top: 3px; line-height: 1.2;}
-          .inat-observation-body, .inat-user-body { padding-left: 10px; }
-          .inat-observation-image {text-align: center;}
-          .inat-observation-image, .inat-user-image { width: 100px; display: inline-block; }
-          .inat-observation-image img, .inat-user-image img { max-width: 100px; }
-          .inat-observation-image img { vertical-align: middle; }
-          .inat-widget-small .inat-observation-image { display:block; float: left; height:100px; margin: 0 3px 3px 0; }
-          .inat-label, .inat-value, .inat-user { font-family: "Trebuchet MS", Arial, sans-serif; }
-          .inat-user-body {vertical-align: middle;}
-          .inat-widget td.inat-user-body {vertical-align: middle;}
-          .inat-widget .inat-footer td.inat-value {vertical-align: middle; padding-left: 10px;}
-        </style>
-        <div class="inat-widget">
-          <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/grv97.widget?layout=small&limit=8&order=desc&order_by=observed_on"></script>
-          <br>
-           <strong><a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'iNaturalist'});" href="https://www.inaturalist.org/observations/grv97">more observations »</a></strong>
-        </div>
-
-
-        <br>
-
-        <h3 id="mathematics-and-computer-programming-">📐 Math & compute</h3>
-        <p><a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Project Euler'});" target="_blank" href="https://projecteuler.net"><img class="akon" target="_blank" src="https://projecteuler.net/profile/grv197.png" title="Project Euler" /></a></p>
-
-        <h3 id="clickety-clack-">⌨ Clickety Clack</h3>
-        <p><a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'WPM'});" target="_blank" href="https://data.typeracer.com/pit/profile?user=grv97"><img class="akon" target="_blank" src="https://data.typeracer.com/misc/badge?user=grv97" title="Typing Stats" /></a></p>
-
-        <h2 id="stats-">📈 Work activity</h2>
-        <p>
-           <a  onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Stats'});" target="_blank" href="https://wakatime.com/@GrvSingh">
-        <h3>⌚ Last month</h3>
-        <figure class="ikon"><embed src="https://wakatime.com/share/@GrvSingh/bbf9e056-1f40-406f-a5d6-b9bcd102fada.svg"></embed></figure>
-        <h3>⏳ Last year</h3>
-        <figure><embed src="https://wakatime.com/share/@GrvSingh/92b56b4c-bc44-4b29-83d7-7bbfdf7616cd.svg"></embed></figure>
-
+  <div class="container">
+    <!-- Navigation Bar -->
+    <header class="nav-bar">
+      <a href="#" class="brand">
+        <span class="material-symbols-rounded notranslate" translate="no">terminal</span>
+        <span>gaurav.singh</span>
+      </a>
+      <div class="nav-actions">
+        <a href="#projects" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+          <span class="material-symbols-rounded notranslate" translate="no">code_blocks</span>
+          <span>Projects</span>
         </a>
-        </p>
-        <h3 id="art-">🧑‍🎨 Art Gallery</h3>
-        <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-        <p><script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-        <div class="pa-carousel-widget" style="width:100%; height:480px; display:none;"
-          data-link="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8"
-          data-title="Art"
-          data-description="4 new items added to shared album">
-          <object data="https://lh3.googleusercontent.com/v45s2Dq0Xqc8MSxvLECCfPEJ0Y935vo44UABPORFXOWPVRY704drapPt-Y8FRaAHDFjUcfHSMURJvsUdPnFG_mJpWhfSXULwFvaCQLIi9fMg7-lviGkrD2wmMJ9Y68L8DAL-cDo7oZs=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/pw/AL9nZEXuxvD0ToXXRn8xRTnDcsjM7BWs9ttEdDjpQm_TG7ew181-5XnmXjahT6VZIidJj2M7Pv_9BVyNIpFZMojUwEyTqYeyefrrVZb9V8AEuDdpnc3-jJ_hXrpTH603GlgPv-tG5PAcA7V8QPW03s2MtM1WLg=w723-h933-no"></object>
-          <object data="https://lh3.googleusercontent.com/JVeZTvWGmTMU6Gh69y526ynht9_e_6mJdTqgxSIgINYXoyDhm59FVY2qvtzixoIMlAkft90O7V4pWrSc06dAXVLvYL0FaY3TFCvu5QViqR_DTcukIoJ4iH1ebJM0x_oU3AUmytf_bhA=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/S6EL-ugE6uvID9WzyWaPU-Y39MF8uqpZEhPgcn-BL8ZMVeag2GbV-tXumD8Zg97v3X2OwPdrpmByFRTGpk_yIl_JCfkYu7ZPrqFE66m3m-AJOf1GHuUaFqwgI9cshbhumK6XKgOYKDw=w1920-h1080"></object>
+        <a href="#skills" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+          <span class="material-symbols-rounded notranslate" translate="no">layers</span>
+          <span>Stack</span>
+        </a>
+        <a href="#contact" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+          <span class="material-symbols-rounded notranslate" translate="no">mail</span>
+          <span>Contact</span>
+        </a>
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span id="themeIcon" class="material-symbols-rounded notranslate" translate="no">light_mode</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="avatar-wrapper">
+        <img src="me.jpg" alt="Gaurav Singh" class="avatar">
+        <div class="status-indicator" title="Available for engineering challenges"></div>
+      </div>
+      <div class="hero-content">
+        <h1>Gaurav Singh</h1>
+        <div class="hero-subtitle">
+          <span class="material-symbols-rounded notranslate" translate="no">data_object</span>
+          <span>Big Data Engineer & Systems Builder</span>
         </div>
+        <p class="hero-bio">
+          Designing high-throughput data pipelines, edge telemetry systems, and resilient full-stack applications. Passionate about sustainable compute, distributed observability, and open-source infrastructure.
         </p>
 
-        <h3 id="art-">🍽️ Cooking</h3>
-        <p><script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-        <div class="pa-carousel-widget" style="width:100%; height:480px; display:none;"
-          data-link="https://photos.app.goo.gl/BQbFwK3NMJN22GZe8"
-          data-title="Cooking"
-          data-description="13 new items added to shared album">
-          <object data="https://lh3.googleusercontent.com/_ziqG8k0ll5iom_NQcLesiwORSDVhkKr9z2bNxgEi89e5LL6vyVaik0RwbQauDAveEVDA69aosHUwyhmgZ3YyzpTUJDJ2nkj3soDvswnvDnc-W9yGchvd4defbB3MRJeQS8PxMJiR8c=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/AkR6tWE4XMUwEChOmHXXEBX52L7ZjS9ffpb_9TNz6k8AXm3bTFrGEjxQ9CgcUyDsugjkTTR-JZ2euETsCvvv46AGP-3asZo-xrbgpWHg_MjIUbmgkUTdXBdYi0guMC0zOuc3cihpTQo=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/m1vSsgiLDdIdwfsX36yA-LvC4Ap9CXf73ePPm1JBaIqMJS6VoyZj1NPVNfHt-lIAgZgZOCzKz_glGLIzC3cRx9n5EgLXuBNGLHw4neIbhXaiQyCe4gzTw_GdTOYwTsuXl_ngAd5D3lM=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/La5Y7AdRt-PRjdXxE8_0TlC_q-fmNUA44uVSWjp0IbrGPfl1y9dGDv51zomkDtfadQbr4WYOtR49zDIe5Tp3Qd6zHdPagy5V3gb1eUc16toNQxWkOfGjF7h_Z0eU5KtGPaEMvrSXLRk=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/vV-UB3P_jv0aqb1ZzO88dDvnB_NLswpcmZw_5ymJCjTh7fmjtFz9MSu8IfwP2R78IbDTHlxIHpblyHjvGsSq4uXtaxzKF1bDlehauAkE6h7nSrAKpeadCFEvqIyjEFmTzYD-_NbMs7s=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/aAiGzlUlWI1qiK0rAMdC6kGuI9pJorcWwijlca4VZ60ecujWkzMBbzUnRe3bvhxYTJUkiCfK7v6Ks6ZBJ9Gkuk616laHHKNrIvurBeYK6EyyKqqD2iWG3yEWBDBwpwev5BrG4BgHouM=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/KDY7rlu8-1CLpH-v6v-a6Gs11ctzUgT7rxF1-e5gnzT2IQTKxHdiJHM4I0k61o2LWoz2Rtva05Igvr948dgAsp9fH71cjV5CiO6rK35y5Dh4V3bOCh8_KlIbY5w3VTLRkMFSTx90c8k=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/WHzOhrHhNTX-zXMQdQOvPZ_sl3FvOlDc1C5770shuytUPHAMSWvq-3EAdIxWCrsrRBCsQX3IbDd3yoIv8oG05BaB-8QCkf_y_T4K7c5NfT--jeEuWr1m6LhwaDSvpeBQX-NO16xgdMo=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/0FpY2v9zprMFcRaGAonPx2aX-kpzs_1UapDcl9TsBQ70YjorsitgrbHuUBtIZQMuZsIAZnyoMmTTGDGySgYh03nrhgewIiHyT2sTU7oKMnAPmzXWyCFLdAFnqHzY_bw_QREhNZLyTRA=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/Y_EhQ6KJoV_hTYsEFz2ksb0pNSrtjHefAT2iduCwAtsTPDH_8P79BFI6X7rpXsD-ACvvN5PZe7MsUFp0jCDkQoab0WtMGxVrVNnsP67HOzxhSJ9iNyqWvvIT6oWNeMxMfndHdPFd7fM=w1920-h1080"></object>
-          <object data="https://lh3.googleusercontent.com/VEfXzJde9aXG5SOBNhWyN6J34jKlsRtn7uPneCq3pEhzKipTKurHOlTnWyAzr7PAqrGTB4wEzrV-Cd-PwsSSU-6DqeXCT31okQ_0xA9z8zxZejYL7xJeEYKCmV2Wfx80t314Q-WcsEE=w1920-h1080"></object>
-        </div>
-        </p>
-
-        <h3 id="spotify-playing-">🎧 Spotify Playing</h3>
-        <p><iframe src="https://open.spotify.com/embed/playlist/47iPfZrgscXhVJlWPQDKXK?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></p>
-
-        <h3>
-           📷 Photography
-        </h3>
-        <p>
-           <div class="slider-wrap">
-          <div class="slider" id="slider">
-            <div class="holder">
-                 <a target="_blank" href="https://www.dreamstime.com/nalwa-king-punjab-सोजा-पुत्-नई-ते-नलवा-आ-जाएगा।-image263710174#res25254492" class="active"><div class="slide" id="slide-a-0"><span class="temp">सोजा पुत् नई ते नलवा आ जाएगा।</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/sunset-time-image263710173#res25254492" class="active"><div class="slide" id="slide-a-1"><span class="temp">Sunset about time</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/cloudscape-flight-top-above-image263709865#res25254492" class="active"><div class="slide" id="slide-a-2"><span class="temp">Cloudscape from flight on top above</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/cityscape-jaipur-night-scenery-cityscape-jaipur-night-scenery-image263666716#res25254492" class="active"><div class="slide" id="slide-a-3"><span class="temp">Cityscape Jaipur at night</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/tealight-candle-lighting-all-darkness-small-solo-source-light-clears-image263666706#res25254492" class="active"><div class="slide" id="slide-a-4"><span class="temp">Small tealight candle</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/amer-fort-jaipur-amer-fort-jaipur-image242551218#res25254492" class="active"><div class="slide" id="slide-a-5"><span class="temp">Amer Fort Jaipur</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/sky-view-cityscape-image242551206#res25254492" class="active"><div class="slide" id="slide-a-6"><span class="temp">Sky View Cityscape</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/mustard-fields-village-mustard-fields-village-image237724620#res25254492" class="active"><div class="slide" id="slide-a-7"><span class="temp">Mustard fields village</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/martyr-statue-martyr-statue-jaipur-war-memorial-image145584315#res25254492" class="active"><div class="slide" id="slide-a-8"><span class="temp">Martyr Statue</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/temple-jaipur-made-white-marble-royal-pride-lakshmi-mandir-temple-image145584692#res25254492" class="active"><div class="slide" id="slide-a-9"><span class="temp">Temple in Jaipur, made with white marble royal pride</span></div></a>
-                 <a target="_blank" href="https://www.dreamstime.com/sunset-clouds-dipping-horizon-travel-beyond-bounds-air-ride-image199686813#res25254492" class="active"><div class="slide" id="slide-a-10"><span class="temp">Sunset on the clouds, dipping in horizon, travel beyond bounds, Air ride</span></div></a>
-                 <a  onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Dreamstime'});"  target="_blank" href="https://www.dreamstime.com/grv197_info" class="active"><div class="slide" id="slide-a-11"><span class="temp">More..</span></div></a>
-            </div>
+        <div class="hero-meta">
+          <div class="meta-pill">
+            <span class="material-symbols-rounded notranslate" translate="no">location_on</span>
+            <span>Jaipur, India</span>
+          </div>
+          <div class="meta-pill">
+            <span class="material-symbols-rounded notranslate" translate="no">verified</span>
+            <span>Open for Projects & Consulting</span>
+          </div>
+          <div class="meta-pill">
+            <span class="material-symbols-rounded notranslate" translate="no">monitoring</span>
+            <span>Observability & Cloud Analytics</span>
           </div>
         </div>
-        </p>
 
-        <br>
-        <h3>🌐💻 Volunteer Computing</h3>
-        <p>
-           <iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=grv97&mnOn=true&stat=1&imageNum=1&rankOn=true&projectsOn=true&special=false&link=1&memberId=1143426" frameborder="0" name="di" scrolling="no" width="405px" height="190px"></iframe>
-           <br><br>
-        </p>
-        <br>
-        <br>
-        <br>
-        </p>
-     </section>
-     <footer>
-     </footer>
+        <div class="hero-buttons">
+          <a href="https://calendly.com/grv-singh/quickcall" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'Hero', 'event_label': 'Schedule'});">
+            <span class="material-symbols-rounded notranslate" translate="no">calendar_month</span>
+            <span>Schedule Call</span>
+          </a>
+          <a href="cv/" target="_blank" rel="noopener" class="btn btn-secondary" onclick="gtag('event', 'click', {'event_category': 'Hero', 'event_label': 'Resume'});">
+            <span class="material-symbols-rounded notranslate" translate="no">description</span>
+            <span>View Resume</span>
+          </a>
+          <a href="https://github.com/Grv-Singh" target="_blank" rel="noopener" class="btn btn-secondary" onclick="gtag('event', 'click', {'event_category': 'Hero', 'event_label': 'GitHub'});">
+            <span class="material-symbols-rounded notranslate" translate="no">open_in_new</span>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">rocket_launch</span>
+        <span>Featured Engineering Projects</span>
+      </h2>
+
+      <div class="projects-grid">
+        <!-- DubForge Studio -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">
+                <span class="material-symbols-rounded notranslate" translate="no">mic</span>
+                <span>Audio / Video</span>
+              </span>
+              <a href="https://github.com/Grv-Singh/dubbing-studio" target="_blank" rel="noopener" class="project-link" aria-label="DubForge GitHub">
+                <span class="material-symbols-rounded notranslate" translate="no">arrow_outward</span>
+              </a>
+            </div>
+            <h3 class="project-title">DubForge Studio</h3>
+            <p class="project-desc">
+              Real-time video dubbing and studio recording engine equipped with synchronized teleprompter, dynamic audio ducking, and auto FFmpeg multi-track muxing.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tech-tag">FFmpeg</span>
+              <span class="tech-tag">Web Audio API</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Realtime Streams</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Grv-Singh/dubbing-studio" target="_blank" rel="noopener" class="project-link">
+                <span class="material-symbols-rounded notranslate" translate="no">code</span>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Magnite OS -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">
+                <span class="material-symbols-rounded notranslate" translate="no">directions_car</span>
+                <span>Automotive / OS</span>
+              </span>
+              <a href="https://github.com/Grv-Singh/MagniteCarLauncher" target="_blank" rel="noopener" class="project-link" aria-label="Magnite OS GitHub">
+                <span class="material-symbols-rounded notranslate" translate="no">arrow_outward</span>
+              </a>
+            </div>
+            <h3 class="project-title">Magnite OS Launcher</h3>
+            <p class="project-desc">
+              Custom Android automotive head-unit launcher with full-screen gesture navigation engine, automotive metrics dashboard, and distraction-free UI.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">Java/Kotlin</span>
+              <span class="tech-tag">Gesture Navigation</span>
+              <span class="tech-tag">Head Unit</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Grv-Singh/MagniteCarLauncher" target="_blank" rel="noopener" class="project-link">
+                <span class="material-symbols-rounded notranslate" translate="no">code</span>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Arjunpuri Community Portal -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">
+                <span class="material-symbols-rounded notranslate" translate="no">apartment</span>
+                <span>Civic Tech</span>
+              </span>
+              <a href="https://github.com/Grv-Singh/arjunpuri" target="_blank" rel="noopener" class="project-link" aria-label="Arjunpuri Portal GitHub">
+                <span class="material-symbols-rounded notranslate" translate="no">arrow_outward</span>
+              </a>
+            </div>
+            <h3 class="project-title">Arjunpuri Civic Portal</h3>
+            <p class="project-desc">
+              Community grievance tracking system and resident directory for municipal action coordination, automated resolution tickets, and governance transparency.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tech-tag">Full Stack</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Workflows</span>
+              <span class="tech-tag">Civic Action</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Grv-Singh/arjunpuri" target="_blank" rel="noopener" class="project-link">
+                <span class="material-symbols-rounded notranslate" translate="no">code</span>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Telemetry & Observability Spooler -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">
+                <span class="material-symbols-rounded notranslate" translate="no">query_stats</span>
+                <span>Telemetry</span>
+              </span>
+              <span class="project-link">
+                <span class="material-symbols-rounded notranslate" translate="no">hub</span>
+              </span>
+            </div>
+            <h3 class="project-title">Telemetry & Spooler Pipeline</h3>
+            <p class="project-desc">
+              High-throughput edge spooler collecting telemetry metrics, replaying heatmaps, and streaming events to Umami analytics with zero data loss under offline network conditions.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tech-tag">Umami</span>
+              <span class="tech-tag">Edge Spooler</span>
+              <span class="tech-tag">Nginx</span>
+              <span class="tech-tag">Event Queues</span>
+            </div>
+            <div class="project-links">
+              <span class="project-link" style="color: var(--text-muted);">
+                <span class="material-symbols-rounded notranslate" translate="no">check_circle</span>
+                <span>Production Deployed</span>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bag of Convolutional Features -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">
+                <span class="material-symbols-rounded notranslate" translate="no">neurology</span>
+                <span>AI & Vision</span>
+              </span>
+              <a href="https://github.com/Grv-Singh/Bag-of-Covolutional-Features" target="_blank" rel="noopener" class="project-link" aria-label="BoCF GitHub">
+                <span class="material-symbols-rounded notranslate" translate="no">arrow_outward</span>
+              </a>
+            </div>
+            <h3 class="project-title">Bag-of-Convolutional-Features</h3>
+            <p class="project-desc">
+              Computer vision research benchmark combining Convolutional Neural Networks, Bag-of-Visual-Words (BoVW), and Grey Wolf Optimization (GWO) feature selection.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tech-tag">PyTorch/TensorFlow</span>
+              <span class="tech-tag">Optimization</span>
+              <span class="tech-tag">GWO</span>
+              <span class="tech-tag">Computer Vision</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Grv-Singh/Bag-of-Covolutional-Features" target="_blank" rel="noopener" class="project-link">
+                <span class="material-symbols-rounded notranslate" translate="no">code</span>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bingo Travels Portal -->
+        <article class="project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">
+                <span class="material-symbols-rounded notranslate" translate="no">commute</span>
+                <span>Web / Production</span>
+              </span>
+              <a href="https://github.com/Grv-Singh/bingo-travels" target="_blank" rel="noopener" class="project-link" aria-label="Bingo Travels GitHub">
+                <span class="material-symbols-rounded notranslate" translate="no">arrow_outward</span>
+              </a>
+            </div>
+            <h3 class="project-title">Bingo Tour & Travels</h3>
+            <p class="project-desc">
+              Customer portal and fleet dispatch site for premium intercity taxi services, airport transfers, and booking logistics in Jaipur.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tech-tag">Responsive UI</span>
+              <span class="tech-tag">SEO Optimized</span>
+              <span class="tech-tag">Dispatch API</span>
+              <span class="tech-tag">Production</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Grv-Singh/bingo-travels" target="_blank" rel="noopener" class="project-link">
+                <span class="material-symbols-rounded notranslate" translate="no">code</span>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Technical Stack -->
+    <section id="skills">
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">dns</span>
+        <span>Technical Architecture & Stack</span>
+      </h2>
+
+      <div class="skills-grid">
+        <!-- Data & Analytics -->
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="material-symbols-rounded notranslate" translate="no">database</span>
+            <span>Data Engineering & Analytics</span>
+          </div>
+          <div class="skill-pill-list">
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">code</span> Python</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">table_chart</span> PostgreSQL / MySQL</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">water</span> Apache Spark</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">stream</span> Apache Kafka</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">query_stats</span> Splunk Observability</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">insights</span> D3.js Visualization</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">cloud</span> AWS / Cloud Pipelines</div>
+          </div>
+        </div>
+
+        <!-- Infrastructure & DevOps -->
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="material-symbols-rounded notranslate" translate="no">memory</span>
+            <span>Infrastructure & Systems</span>
+          </div>
+          <div class="skill-pill-list">
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">terminal</span> Linux / Debian / Bash</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">lan</span> Proxmox VE / KVM</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">deployed_code</span> Docker Containers</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">dns</span> Nginx Reverse Proxy</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">lock</span> Authentik SSO / Identity</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">smartphone</span> Android AVF / AOSP</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">security</span> Network Tracing / Wireshark</div>
+          </div>
+        </div>
+
+        <!-- Full Stack & Web -->
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="material-symbols-rounded notranslate" translate="no">web</span>
+            <span>Web & Applications</span>
+          </div>
+          <div class="skill-pill-list">
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">javascript</span> JavaScript (ES6+)</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">html</span> HTML5 & CSS3 Architecture</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">api</span> REST & Streaming APIs</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">palette</span> Material Design 3</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">speed</span> Core Web Vitals & Perf</div>
+            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">sync_alt</span> Git & CI/CD Automations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect & Contact -->
+    <section id="contact">
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">alternate_email</span>
+        <span>Connect & Collaborate</span>
+      </h2>
+
+      <div class="socials-grid">
+        <a href="mailto:acad.grv97@gmail.com" class="social-card" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'Email'});">
+          <div class="social-icon-wrapper">
+            <span class="material-symbols-rounded notranslate" translate="no">mail</span>
+          </div>
+          <div>
+            <span class="social-label">Email Direct</span>
+            <span class="social-handle">acad.grv97@gmail.com</span>
+          </div>
+        </a>
+
+        <a href="https://linkedin.com/in/grvsingh97/" target="_blank" rel="noopener" class="social-card" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'LinkedIn'});">
+          <div class="social-icon-wrapper">
+            <span class="material-symbols-rounded notranslate" translate="no">business_center</span>
+          </div>
+          <div>
+            <span class="social-label">LinkedIn</span>
+            <span class="social-handle">/in/grvsingh97</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/Grv-Singh" target="_blank" rel="noopener" class="social-card" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'GitHub'});">
+          <div class="social-icon-wrapper">
+            <span class="material-symbols-rounded notranslate" translate="no">code</span>
+          </div>
+          <div>
+            <span class="social-label">GitHub</span>
+            <span class="social-handle">@Grv-Singh</span>
+          </div>
+        </a>
+
+        <a href="https://calendly.com/grv-singh/quickcall" target="_blank" rel="noopener" class="social-card" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'Calendly'});">
+          <div class="social-icon-wrapper">
+            <span class="material-symbols-rounded notranslate" translate="no">event_available</span>
+          </div>
+          <div>
+            <span class="social-label">Quick Call</span>
+            <span class="social-handle">calendly.com/grv-singh</span>
+          </div>
+        </a>
+
+        <a href="https://api.whatsapp.com/send?phone=918946968876&text=Hi%20Gaurav" target="_blank" rel="noopener" class="social-card" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'WhatsApp'});">
+          <div class="social-icon-wrapper">
+            <span class="material-symbols-rounded notranslate" translate="no">chat</span>
+          </div>
+          <div>
+            <span class="social-label">WhatsApp</span>
+            <span class="social-handle">+91 89469 68876</span>
+          </div>
+        </a>
+
+        <a href="https://www.buymeacoffee.com/GrvSingh" target="_blank" rel="noopener" class="social-card" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'Coffee'});">
+          <div class="social-icon-wrapper">
+            <span class="material-symbols-rounded notranslate" translate="no">local_cafe</span>
+          </div>
+          <div>
+            <span class="social-label">Support My Work</span>
+            <span class="social-handle">buymeacoffee.com/GrvSingh</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <span>Gaurav Singh &bull; Portfolio</span>
+      </div>
+      <div>
+        <a href="https://github.com/Grv-Singh/Portfolio" target="_blank" rel="noopener">
+          <span class="material-symbols-rounded notranslate" translate="no">code</span>
+          <span>Source Repository</span>
+        </a>
+      </div>
+    </footer>
   </div>
 
-  <script src="js/scale.fix.js"></script>
-  <script src="https://instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-  <canvas class="background"></canvas>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <!-- Theme Toggle & Script -->
+  <script>
+    (function() {
+      const toggleBtn = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      
+      const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeIcon.textContent = 'dark_mode';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.textContent = 'light_mode';
+      }
 
+      toggleBtn.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeIcon.textContent = newTheme === 'light' ? 'dark_mode' : 'light_mode';
+      });
+    })();
+  </script>
 </body>
 </html>
