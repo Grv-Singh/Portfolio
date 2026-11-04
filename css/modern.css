@@ -656,3 +656,131 @@ footer {
   color: var(--text-muted);
   font-size: 0.85rem;
 }
+
+/* Comprehensive Mobile Responsiveness & Overflow Prevention */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.85rem 3.5rem 0.85rem;
+    overflow-x: hidden;
+  }
+
+  .nav-bar {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.25rem;
+  }
+
+  .brand span:not(.material-symbols-rounded) {
+    font-size: 0.95rem;
+  }
+
+  .nav-links {
+    gap: 0.2rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.45rem;
+  }
+
+  .nav-link span:not(.material-symbols-rounded) {
+    display: none; /* Hide link text on mobile to avoid overflow */
+  }
+
+  .nav-link .material-symbols-rounded {
+    font-size: 20px;
+  }
+
+  .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
+    margin-left: 0.25rem;
+  }
+
+  .hero-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 1.65rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    justify-content: center;
+  }
+
+  .meta-chips {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .chip {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .btn {
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .skills-deck {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .skill-tile {
+    padding: 0.65rem 0.5rem;
+    gap: 0.45rem;
+  }
+
+  .skill-tile img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .skill-tile-name {
+    font-size: 0.75rem;
+  }
+
+  .observability-grid,
+  .wakatime-deck,
+  .projects-grid,
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-card,
+  .project-card,
+  .connect-card {
+    padding: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 1.45rem;
+  }
+
+  .brand span:not(.material-symbols-rounded) {
+    display: none; /* Only terminal icon on ultra-narrow screens */
+  }
+}
