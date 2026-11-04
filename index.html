@@ -4,15 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gaurav Singh | Portfolio & Systems Engineering</title>
+  <title>Gaurav Singh | Portfolio, Systems & Badges</title>
   
-  <meta name="description" content="Portfolio of Gaurav Singh — Systems Architect, Big Data Engineer & Full Stack Developer specializing in telemetry, distributed data pipelines, and intelligent interfaces.">
-  <meta name="keywords" content="Gaurav Singh, Big Data Engineer, Data Analytics, Python, AWS, Spark, Splunk, Docker, Linux, Proxmox, Full Stack Developer, Telemetry, Jaipur">
+  <meta name="description" content="Portfolio of Gaurav Singh — Systems Architect, Big Data Engineer & Full Stack Developer. Analytics, Observability, Telemetry, and Open Compute.">
+  <meta name="keywords" content="AWS, cloud, big data, splunk, spark, kafka, python, javascript, full stack, ui, ux, linux, proxmox, d3.js, sql, data engineering, jaipur">
   <meta name="author" content="Gaurav Singh">
-  <meta property="og:title" content="Gaurav Singh | Portfolio & Systems Engineering">
-  <meta property="og:description" content="Systems Architect, Big Data Engineer & Full Stack Developer specializing in telemetry, distributed pipelines, and resilient systems.">
+  <meta property="og:title" content="Gaurav Singh | Portfolio, Systems & Badges">
+  <meta property="og:description" content="Systems Architect, Big Data Engineer & Full Stack Developer. Explore projects, coding badges, telemetry, and live stats.">
   <meta property="og:url" content="https://grv-singh.github.io/Portfolio/">
   <meta property="og:type" content="website">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Gaurav Singh",
+      "url": "https://grv-singh.github.io/Portfolio/",
+      "image": "me.jpg",
+      "sameAs": [
+        "https://www.facebook.com/grv.sj",
+        "https://twitter.com/grvsinghsays",
+        "https://www.instagram.com/grvsays",
+        "https://www.youtube.com/channel/UCSMwiBEXzlU-2khoEa2WBCg",
+        "https://www.linkedin.com/in/grvsingh97",
+        "https://soundcloud.com/gaurav-singh-22",
+        "https://github.com/Grv-Singh"
+      ],
+      "jobTitle": "Big Data Engineer & Systems Builder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Hypothetica"
+      }
+    }
+  </script>
 
   <!-- Google Fonts: Inter & Material Symbols Rounded -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +47,10 @@
   <link rel="stylesheet" href="css/modern.css">
   <link rel="shortcut icon" type="image/jpg" href="me.jpg">
 
+  <!-- jQuery & D3 for Interactive Badges & Tooltips -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2XHV5PHH"></script>
   <script>
@@ -29,10 +58,21 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KQ2XHV5PHH');
+
+    function trackImageClick(element) {
+      var title = element.getAttribute("title");
+      gtag('event', 'click', {
+        'event_category': 'Image Interaction',
+        'event_action': 'click',
+        'event_label': title
+      });
+    }
   </script>
 
   <!-- Umami Telemetry Tracker -->
   <script defer src="/stats/script.js" data-website-id="portfolio-grv" data-auto-track="true"></script>
+  <!-- Public Album Embed for Gallery -->
+  <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
 </head>
 <body>
   <div class="ambient-glow"></div>
@@ -49,13 +89,17 @@
           <span class="material-symbols-rounded notranslate" translate="no">code_blocks</span>
           <span>Projects</span>
         </a>
-        <a href="#skills" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
-          <span class="material-symbols-rounded notranslate" translate="no">layers</span>
-          <span>Stack</span>
+        <a href="#badges" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+          <span class="material-symbols-rounded notranslate" translate="no">verified</span>
+          <span>Badges</span>
         </a>
-        <a href="#contact" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
-          <span class="material-symbols-rounded notranslate" translate="no">mail</span>
-          <span>Contact</span>
+        <a href="#skills" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+          <span class="material-symbols-rounded notranslate" translate="no">build</span>
+          <span>Tools</span>
+        </a>
+        <a href="#creative" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+          <span class="material-symbols-rounded notranslate" translate="no">palette</span>
+          <span>Creative</span>
         </a>
         <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
           <span id="themeIcon" class="material-symbols-rounded notranslate" translate="no">light_mode</span>
@@ -76,46 +120,147 @@
           <span>Big Data Engineer & Systems Builder</span>
         </div>
         <p class="hero-bio">
-          Designing high-throughput data pipelines, edge telemetry systems, and resilient full-stack applications. Passionate about sustainable compute, distributed observability, and open-source infrastructure.
+          Innovative and curious by nature. Talking about sustainability, distributed data pipelines, telemetry observability, and purpose-driven applications.
         </p>
 
-        <div class="hero-meta">
-          <div class="meta-pill">
-            <span class="material-symbols-rounded notranslate" translate="no">location_on</span>
-            <span>Jaipur, India</span>
-          </div>
-          <div class="meta-pill">
-            <span class="material-symbols-rounded notranslate" translate="no">verified</span>
-            <span>Open for Projects & Consulting</span>
-          </div>
-          <div class="meta-pill">
-            <span class="material-symbols-rounded notranslate" translate="no">monitoring</span>
-            <span>Observability & Cloud Analytics</span>
-          </div>
+        <!-- Social & Direct Channels -->
+        <div class="hero-meta" style="margin-bottom: 1rem;">
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Github'});" href="https://github.com/Grv-Singh" title="Github">
+            <img width="22" height="22" alt="Github" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'LinkedIn'});" href="https://linkedin.com/in/grvsingh97/" title="LinkedIn">
+            <img width="22" height="22" alt="LinkedIn" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Quora'});" href="https://www.quora.com/profile/Gaurav-Singh-249/" title="Quora">
+            <img width="22" height="22" alt="Quora" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/quora.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Blogger'});" href="https://gauravsinghsays.blogspot.com" title="Blog">
+            <img width="22" height="22" alt="Blog" src="https://cdn.jsdelivr.net/npm/simple-icons@3.7.0/icons/blogger.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Mail'});" href="mailto:acad.grv97@gmail.com?subject=Reaching out" title="Email Direct">
+            <img width="22" height="22" alt="Mail" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mail-dot-ru.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Whatsapp'});" href="https://api.whatsapp.com/send?phone=918946968876&text=Hello!%20Gaurav!" title="WhatsApp">
+            <img width="22" height="22" alt="WhatsApp" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/whatsapp.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Call'});" href="tel:+918946968876" title="Phone">
+            <img width="22" height="22" alt="Dial" src="https://i.postimg.cc/529kyWhj/call-answer.png">
+          </a>
+          <a target="_blank" rel="noopener" class="ikon" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Address'});" href="https://maps.app.goo.gl/GH1L1J77eYEuHpog9" title="Location: Jaipur">
+            <img width="22" height="22" alt="Location" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/homeadvisor.svg">
+          </a>
         </div>
 
-        <div class="hero-buttons">
-          <a href="https://calendly.com/grv-singh/quickcall" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'Hero', 'event_label': 'Schedule'});">
-            <span class="material-symbols-rounded notranslate" translate="no">calendar_month</span>
-            <span>Schedule Call</span>
+        <!-- Support & Direct Action Badges -->
+        <div class="support-badges">
+          <a target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Meeting'});" href="https://calendly.com/grv-singh/quickcall">
+            <img title="Meet & Greet" width="130" style="vertical-align: middle;" src="css/book.png" alt="Calendly Meet">
           </a>
-          <a href="cv/" target="_blank" rel="noopener" class="btn btn-secondary" onclick="gtag('event', 'click', {'event_category': 'Hero', 'event_label': 'Resume'});">
+          <a target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Say Thanks'});" href="https://saythanks.io/to/acad.grv97">
+            <img style="height: 28px; vertical-align: middle;" target="_blank" src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" title="Say Thanks!" alt="Say Thanks">
+          </a>
+          <a target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Buy Coffee'});" href="https://www.buymeacoffee.com/GrvSingh">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" title="Buy Me A Coffee" height="28" style="vertical-align: middle;" alt="Buy Me A Coffee">
+          </a>
+          <a href="cv/" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.85rem;">
             <span class="material-symbols-rounded notranslate" translate="no">description</span>
-            <span>View Resume</span>
-          </a>
-          <a href="https://github.com/Grv-Singh" target="_blank" rel="noopener" class="btn btn-secondary" onclick="gtag('event', 'click', {'event_category': 'Hero', 'event_label': 'GitHub'});">
-            <span class="material-symbols-rounded notranslate" translate="no">open_in_new</span>
-            <span>GitHub</span>
+            <span>Resume</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects -->
+    <!-- Coding Badges, Activity & Work Stats -->
+    <section id="badges">
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">military_tech</span>
+        <span>Stats, Badges & Activity</span>
+      </h2>
+
+      <!-- Euler, TypeRacer & Volunteer Grid -->
+      <div class="badges-container">
+        <!-- Project Euler Badge -->
+        <div>
+          <h4 style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+            <span class="material-symbols-rounded notranslate" translate="no">calculate</span>
+            <span>Math & Compute (Project Euler)</span>
+          </h4>
+          <a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Project Euler'});" target="_blank" rel="noopener" href="https://projecteuler.net">
+            <img class="akon" src="https://projecteuler.net/profile/grv197.png" title="Project Euler - grv197" alt="Project Euler Badge">
+          </a>
+        </div>
+
+        <!-- TypeRacer Badge -->
+        <div>
+          <h4 style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+            <span class="material-symbols-rounded notranslate" translate="no">keyboard</span>
+            <span>Clickety Clack (TypeRacer Speed)</span>
+          </h4>
+          <a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'WPM'});" target="_blank" rel="noopener" href="https://data.typeracer.com/pit/profile?user=grv97">
+            <img class="akon" src="https://data.typeracer.com/misc/badge?user=grv97" title="Typing Stats - grv97" alt="TypeRacer Stats Badge">
+          </a>
+        </div>
+
+        <!-- Volunteer Computing (World Community Grid) -->
+        <div>
+          <h4 style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+            <span class="material-symbols-rounded notranslate" translate="no">public</span>
+            <span>Volunteer Computing</span>
+          </h4>
+          <iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=grv97&mnOn=true&stat=1&imageNum=1&rankOn=true&projectsOn=true&special=false&link=1&memberId=1143426" frameborder="0" name="di" scrolling="no" width="405" height="190" style="border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-secondary);"></iframe>
+        </div>
+      </div>
+
+      <!-- Wakatime Live Activity Cards -->
+      <div class="wakatime-grid">
+        <div class="wakatime-card">
+          <h4>
+            <span class="material-symbols-rounded notranslate" translate="no">schedule</span>
+            <span>WakaTime &mdash; Last Month Coding</span>
+          </h4>
+          <a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Stats'});" target="_blank" rel="noopener" href="https://wakatime.com/@GrvSingh">
+            <embed src="https://wakatime.com/share/@GrvSingh/bbf9e056-1f40-406f-a5d6-b9bcd102fada.svg" type="image/svg+xml">
+          </a>
+        </div>
+
+        <div class="wakatime-card">
+          <h4>
+            <span class="material-symbols-rounded notranslate" translate="no">history_toggle_drop_down</span>
+            <span>WakaTime &mdash; Last Year Distribution</span>
+          </h4>
+          <a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Stats'});" target="_blank" rel="noopener" href="https://wakatime.com/@GrvSingh">
+            <embed src="https://wakatime.com/share/@GrvSingh/92b56b4c-bc44-4b29-83d7-7bbfdf7616cd.svg" type="image/svg+xml">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biodiversity Scavenged (iNaturalist Widget) -->
+    <section id="biodiversity">
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">eco</span>
+        <span>Biodiversity Scavenged (iNaturalist)</span>
+      </h2>
+      <div class="inat-card">
+        <div class="inat-widget">
+          <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/grv97.widget?layout=small&limit=8&order=desc&order_by=observed_on"></script>
+          <div style="margin-top: 1rem;">
+            <strong>
+              <a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'iNaturalist'});" href="https://www.inaturalist.org/observations/grv97" target="_blank" rel="noopener" style="color: var(--accent-primary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <span class="material-symbols-rounded notranslate" translate="no">open_in_new</span>
+                <span>View All Observations on iNaturalist &raquo;</span>
+              </a>
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Engineering Projects -->
     <section id="projects">
       <h2 class="section-title">
         <span class="material-symbols-rounded notranslate" translate="no">rocket_launch</span>
-        <span>Featured Engineering Projects</span>
+        <span>Featured Engineering Systems</span>
       </h2>
 
       <div class="projects-grid">
@@ -185,7 +330,7 @@
           </div>
         </article>
 
-        <!-- Arjunpuri Community Portal -->
+        <!-- Arjunpuri Civic Portal -->
         <article class="project-card">
           <div>
             <div class="project-header">
@@ -232,7 +377,7 @@
             </div>
             <h3 class="project-title">Telemetry & Spooler Pipeline</h3>
             <p class="project-desc">
-              High-throughput edge spooler collecting telemetry metrics, replaying heatmaps, and streaming events to Umami analytics with zero data loss under offline network conditions.
+              High-throughput edge spooler collecting telemetry metrics, replaying heatmaps, and streaming events to Umami analytics with zero data loss.
             </p>
           </div>
           <div>
@@ -265,7 +410,7 @@
             </div>
             <h3 class="project-title">Bag-of-Convolutional-Features</h3>
             <p class="project-desc">
-              Computer vision research benchmark combining Convolutional Neural Networks, Bag-of-Visual-Words (BoVW), and Grey Wolf Optimization (GWO) feature selection.
+              Computer vision research benchmark combining Convolutional Neural Networks, Bag-of-Visual-Words (BoVW), and Grey Wolf Optimization (GWO).
             </p>
           </div>
           <div>
@@ -319,62 +464,198 @@
       </div>
     </section>
 
-    <!-- Technical Stack -->
+    <!-- Complete Interactive Skills (Tools of Trade) -->
     <section id="skills">
       <h2 class="section-title">
-        <span class="material-symbols-rounded notranslate" translate="no">dns</span>
-        <span>Technical Architecture & Stack</span>
+        <span class="material-symbols-rounded notranslate" translate="no">build</span>
+        <span>Tools of Trade (Skills & Stack)</span>
       </h2>
 
-      <div class="skills-grid">
-        <!-- Data & Analytics -->
-        <div class="skill-category">
-          <div class="category-header">
-            <span class="material-symbols-rounded notranslate" translate="no">database</span>
-            <span>Data Engineering & Analytics</span>
-          </div>
-          <div class="skill-pill-list">
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">code</span> Python</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">table_chart</span> PostgreSQL / MySQL</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">water</span> Apache Spark</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">stream</span> Apache Kafka</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">query_stats</span> Splunk Observability</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">insights</span> D3.js Visualization</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">cloud</span> AWS / Cloud Pipelines</div>
+      <div class="skill-category" style="margin-bottom: 1.5rem;">
+        <div class="category-header">
+          <span class="material-symbols-rounded notranslate" translate="no">donut_large</span>
+          <span>Proficiency & Toolset Matrix (Hover for Tooltips)</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 72deg;" title="AWS" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/amazonaws.svg" alt="AWS">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Splunk" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/splunk.svg" alt="Splunk">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="PHP" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/php.svg" alt="PHP">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Python" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/python.svg" alt="Python">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Jupyter" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jupyter.svg" alt="Jupyter">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="JQuery" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/jquery.svg" alt="JQuery">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="D3" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/d3-dot-js.svg" alt="D3">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="Visual Studio Code" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/visualstudiocode.svg" alt="VS Code">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="HTML5" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/html5.svg" alt="HTML5">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Javascript" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/javascript.svg" alt="Javascript">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Markdown" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/markdown.svg" alt="Markdown">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="SQL" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/mysql.svg" alt="SQL">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="MS Teams" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/microsoftteams.svg" alt="MS Teams">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="Linux" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/linux.svg" alt="Linux">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Windows" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/windows.svg" alt="Windows">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="NGINX" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.10.0/icons/nginx.svg" alt="NGINX">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Strapi" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/strapi.svg" alt="Strapi">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="Zapier Automation" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zapier.svg" alt="Zapier">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="Arduino" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/arduino.svg" alt="Arduino">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Curl" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/curl.svg" alt="Curl">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="XDA Developers" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/xdadevelopers.svg" alt="XDA">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Zoom" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/zoom.svg" alt="Zoom">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 360deg;" title="Font Awesome" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fontawesome.svg" alt="Font Awesome">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="SVG" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/svg.svg" alt="SVG">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Symfony" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/symfony.svg" alt="Symfony">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Slack" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/slack.svg" alt="Slack">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="IFTTT" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ifttt.svg" alt="IFTTT">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="JSON" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/json.svg" alt="JSON">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="KDE" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/kde.svg" alt="KDE">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Chocolatey" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/chocolatey.svg" alt="Chocolatey">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="Hive" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/hive.svg" alt="Hive">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="Anaconda" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/anaconda.svg" alt="Anaconda">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="Android" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/android.svg" alt="Android">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Azure Devops" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/azuredevops.svg" alt="Azure DevOps">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Bitbucket" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/bitbucket.svg" alt="Bitbucket">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Bootstrap" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/bootstrap.svg" alt="Bootstrap">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Confluence" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/confluence.svg" alt="Confluence">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="CSS3" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/css3.svg" alt="CSS3">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="Fitbit" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/fitbit.svg" alt="Fitbit">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="Google" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/google.svg" alt="Google">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="Google Drive" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googledrive.svg" alt="Google Drive">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Google Chrome" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlechrome.svg" alt="Chrome">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="Google Lens" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlelens.svg" alt="Google Lens">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Google Maps" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlemaps.svg" alt="Google Maps">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Google Business" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlemybusiness.svg" alt="Google My Business">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Google Sheets" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googlesheets.svg" alt="Google Sheets">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Google Tag Manager" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/googletagmanager.svg" alt="Google Tag Manager">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Jira" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jira.svg" alt="Jira">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="Jekyll" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/jekyll.svg" alt="Jekyll">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="Keras" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/keras.svg" alt="Keras">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="Lighthouse" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/lighthouse.svg" alt="Lighthouse">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Microsoft Excel" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftexcel.svg" alt="Excel">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Microsoft Office" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftoffice.svg" alt="Office">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="Microsoft Powerpoint" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftpowerpoint.svg" alt="Powerpoint">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Microsoft Word" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/microsoftword.svg" alt="Word">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="NPM" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/npm.svg" alt="NPM">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="NFC" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/nfc.svg" alt="NFC">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Numpy" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/numpy.svg" alt="Numpy">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Overleaf" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/overleaf.svg" alt="Overleaf">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="Pandas" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/pandas.svg" alt="Pandas">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 288deg;" title="Pastebin" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/pastebin.svg" alt="Pastebin">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Paypal" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/paypal.svg" alt="Paypal">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 180deg;" title="Postman" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/postman.svg" alt="Postman">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 108deg;" title="Powershell" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/powershell.svg" alt="Powershell">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 108deg;" title="Scikit-Learn" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/scikit-learn.svg" alt="Scikit-Learn">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Stackoverflow" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/stackoverflow.svg" alt="Stackoverflow">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 216deg;" title="Ubuntu" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/ubuntu.svg" alt="Ubuntu">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 252deg;" title="Unsplash" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/unsplash.svg" alt="Unsplash">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 324deg;" title="Wakatime" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/wakatime.svg" alt="Wakatime">
+          <img onclick="trackImageClick(this);" class="ikon skill-icon" style="--progress: 144deg;" title="Wikipedia" width="26" src="https://cdn.jsdelivr.net/npm/simple-icons@3.11.0/icons/wikipedia.svg" alt="Wikipedia">
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Showcase: Spotify, Photography, Art & Cooking -->
+    <section id="creative">
+      <h2 class="section-title">
+        <span class="material-symbols-rounded notranslate" translate="no">palette</span>
+        <span>Creative Life & Media</span>
+      </h2>
+
+      <!-- Spotify Embed -->
+      <div class="spotify-card">
+        <h4 style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          <span class="material-symbols-rounded notranslate" translate="no">headphones</span>
+          <span>Spotify Playing</span>
+        </h4>
+        <iframe src="https://open.spotify.com/embed/playlist/47iPfZrgscXhVJlWPQDKXK?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+
+      <!-- Photography Carousel -->
+      <div style="margin: 1.5rem 0;">
+        <h4 style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between;">
+          <span style="display: flex; align-items: center; gap: 0.4rem;">
+            <span class="material-symbols-rounded notranslate" translate="no">photo_camera</span>
+            <span>Photography Showcase (Dreamstime)</span>
+          </span>
+          <a onclick="gtag('event', 'click', {'event_category': 'Link Clicks', 'event_label': 'Dreamstime'});" target="_blank" rel="noopener" href="https://www.dreamstime.com/grv197_info" style="color: var(--accent-primary); font-size: 0.82rem; text-decoration: none;">
+            View Full Portfolio &raquo;
+          </a>
+        </h4>
+
+        <div class="slider-wrap">
+          <div class="slider-flex">
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/nalwa-king-punjab-image263710174#res25254492" class="slide-item" id="slide-a-0">
+              <span class="slide-caption">Nalwa King of Punjab</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sunset-time-image263710173#res25254492" class="slide-item" id="slide-a-1">
+              <span class="slide-caption">Sunset About Time</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/cloudscape-flight-top-above-image263709865#res25254492" class="slide-item" id="slide-a-2">
+              <span class="slide-caption">Cloudscape Flight Top View</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/cityscape-jaipur-night-scenery-image263666716#res25254492" class="slide-item" id="slide-a-3">
+              <span class="slide-caption">Jaipur Night Scenery</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/tealight-candle-lighting-all-darkness-image263666706#res25254492" class="slide-item" id="slide-a-4">
+              <span class="slide-caption">Tealight Candle Glow</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/amer-fort-jaipur-image242551218#res25254492" class="slide-item" id="slide-a-5">
+              <span class="slide-caption">Amer Fort Heritage</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sky-view-cityscape-image242551206#res25254492" class="slide-item" id="slide-a-6">
+              <span class="slide-caption">Sky View Cityscape</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/mustard-fields-village-image237724620#res25254492" class="slide-item" id="slide-a-7">
+              <span class="slide-caption">Mustard Fields Village</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/martyr-statue-jaipur-war-memorial-image145584315#res25254492" class="slide-item" id="slide-a-8">
+              <span class="slide-caption">War Memorial Statue</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/temple-jaipur-made-white-marble-image145584692#res25254492" class="slide-item" id="slide-a-9">
+              <span class="slide-caption">Birla White Marble Temple</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sunset-clouds-dipping-horizon-image199686813#res25254492" class="slide-item" id="slide-a-10">
+              <span class="slide-caption">Sunset Beyond Bounds</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <!-- Infrastructure & DevOps -->
+      <!-- Art & Cooking Google Photos Galleries -->
+      <div class="skills-grid" style="margin-top: 1.5rem;">
         <div class="skill-category">
           <div class="category-header">
-            <span class="material-symbols-rounded notranslate" translate="no">memory</span>
-            <span>Infrastructure & Systems</span>
+            <span class="material-symbols-rounded notranslate" translate="no">brush</span>
+            <span>Art Gallery</span>
           </div>
-          <div class="skill-pill-list">
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">terminal</span> Linux / Debian / Bash</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">lan</span> Proxmox VE / KVM</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">deployed_code</span> Docker Containers</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">dns</span> Nginx Reverse Proxy</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">lock</span> Authentik SSO / Identity</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">smartphone</span> Android AVF / AOSP</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">security</span> Network Tracing / Wireshark</div>
+          <div class="pa-carousel-widget" style="width:100%; height:320px; display:none;"
+            data-link="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8"
+            data-title="Art"
+            data-description="Art Gallery">
+            <object data="https://lh3.googleusercontent.com/v45s2Dq0Xqc8MSxvLECCfPEJ0Y935vo44UABPORFXOWPVRY704drapPt-Y8FRaAHDFjUcfHSMURJvsUdPnFG_mJpWhfSXULwFvaCQLIi9fMg7-lviGkrD2wmMJ9Y68L8DAL-cDo7oZs=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/pw/AL9nZEXuxvD0ToXXRn8xRTnDcsjM7BWs9ttEdDjpQm_TG7ew181-5XnmXjahT6VZIidJj2M7Pv_9BVyNIpFZMojUwEyTqYeyefrrVZb9V8AEuDdpnc3-jJ_hXrpTH603GlgPv-tG5PAcA7V8QPW03s2MtM1WLg=w723-h933-no"></object>
           </div>
+          <p style="margin-top: 0.75rem;">
+            <a href="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8" target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--accent-primary); text-decoration: none;">
+              Open Art Album on Google Photos &raquo;
+            </a>
+          </p>
         </div>
 
-        <!-- Full Stack & Web -->
         <div class="skill-category">
           <div class="category-header">
-            <span class="material-symbols-rounded notranslate" translate="no">web</span>
-            <span>Web & Applications</span>
+            <span class="material-symbols-rounded notranslate" translate="no">restaurant</span>
+            <span>Culinary & Cooking</span>
           </div>
-          <div class="skill-pill-list">
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">javascript</span> JavaScript (ES6+)</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">html</span> HTML5 & CSS3 Architecture</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">api</span> REST & Streaming APIs</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">palette</span> Material Design 3</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">speed</span> Core Web Vitals & Perf</div>
-            <div class="skill-chip"><span class="material-symbols-rounded notranslate" translate="no">sync_alt</span> Git & CI/CD Automations</div>
+          <div class="pa-carousel-widget" style="width:100%; height:320px; display:none;"
+            data-link="https://photos.app.goo.gl/BQbFwK3NMJN22GZe8"
+            data-title="Cooking"
+            data-description="Cooking album">
+            <object data="https://lh3.googleusercontent.com/_ziqG8k0ll5iom_NQcLesiwORSDVhkKr9z2bNxgEi89e5LL6vyVaik0RwbQauDAveEVDA69aosHUwyhmgZ3YyzpTUJDJ2nkj3soDvswnvDnc-W9yGchvd4defbB3MRJeQS8PxMJiR8c=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/AkR6tWE4XMUwEChOmHXXEBX52L7ZjS9ffpb_9TNz6k8AXm3bTFrGEjxQ9CgcUyDsugjkTTR-JZ2euETsCvvv46AGP-3asZo-xrbgpWHg_MjIUbmgkUTdXBdYi0guMC0zOuc3cihpTQo=w1920-h1080"></object>
           </div>
+          <p style="margin-top: 0.75rem;">
+            <a href="https://photos.app.goo.gl/BQbFwK3NMJN22GZe8" target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--accent-primary); text-decoration: none;">
+              Open Cooking Album on Google Photos &raquo;
+            </a>
+          </p>
         </div>
       </div>
     </section>
@@ -383,7 +664,7 @@
     <section id="contact">
       <h2 class="section-title">
         <span class="material-symbols-rounded notranslate" translate="no">alternate_email</span>
-        <span>Connect & Collaborate</span>
+        <span>Let's Connect & Work Together</span>
       </h2>
 
       <div class="socials-grid">
@@ -452,7 +733,7 @@
     <!-- Footer -->
     <footer>
       <div>
-        <span>Gaurav Singh &bull; Portfolio</span>
+        <span>Gaurav Singh &bull; Personal Portfolio</span>
       </div>
       <div>
         <a href="https://github.com/Grv-Singh/Portfolio" target="_blank" rel="noopener">
@@ -463,7 +744,8 @@
     </footer>
   </div>
 
-  <!-- Theme Toggle & Script -->
+  <!-- Scripts: Custom Tooltips & Theme Toggle -->
+  <script src="js/index.js"></script>
   <script>
     (function() {
       const toggleBtn = document.getElementById('themeToggle');

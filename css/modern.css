@@ -541,3 +541,226 @@ footer a {
 footer a:hover {
   color: var(--text-primary);
 }
+
+
+/* Classic Badges & Embeds Section Styles */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1rem 0;
+}
+
+.akon {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: var(--transition);
+  max-width: 100%;
+}
+
+.akon:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-focus);
+}
+
+.ikon {
+  display: inline-block;
+  margin: 0.35rem;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.ikon:hover {
+  transform: scale(1.25);
+}
+
+.skill-icon {
+  padding: 8px;
+  border-radius: 50%;
+  background: conic-gradient(#6366f1 var(--progress, 180deg), transparent 0deg);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .skill-icon {
+  background: conic-gradient(#4f46e5 var(--progress, 180deg), #e2e8f0 0deg);
+}
+
+/* WakaTime Figures */
+.wakatime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.wakatime-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.wakatime-card h4 {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.wakatime-card embed {
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+}
+
+/* iNaturalist widget */
+.inat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.inat-widget {
+  font-family: inherit;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.inat-widget td {
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+.inat-label {
+  color: var(--text-muted);
+}
+
+.inat-meta {
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+.inat-observation-body, .inat-user-body {
+  padding-left: 10px;
+}
+
+.inat-observation-image {
+  text-align: center;
+  width: 100px;
+  display: inline-block;
+}
+
+.inat-observation-image img, .inat-user-image img {
+  max-width: 100px;
+  border-radius: var(--radius-sm);
+}
+
+/* Spotify Card */
+.spotify-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin: 1rem 0;
+}
+
+/* Photography Slider */
+.slider-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  padding-bottom: 1rem;
+}
+
+.slider-wrap::-webkit-scrollbar {
+  height: 8px;
+}
+
+.slider-wrap::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.slider-wrap::-webkit-scrollbar-thumb {
+  background: var(--border-focus);
+  border-radius: 4px;
+}
+
+.slider-flex {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+.slide-item {
+  width: 260px;
+  height: 340px;
+  position: relative;
+  border-radius: var(--radius-md);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.slide-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  border-color: var(--border-focus);
+}
+
+.slide-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 500;
+  z-index: 2;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+#slide-a-0 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/nalwa-king-punjab-%E0%A4%B8%E0%A5%8B%E0%A4%9C%E0%A4%BE-%E0%A4%AA%E0%A5%81%E0%A4%A4%E0%A5%8D-%E0%A4%A8%E0%A4%88-%E0%A4%A4%E0%A5%87-%E0%A4%A8%E0%A4%B2%E0%A4%B5%E0%A4%BE-%E0%A4%86-%E0%A4%9C%E0%A4%BE%E0%A4%8F%E0%A4%97%E0%A4%BE%E0%A5%A4-263710174.jpg); }
+#slide-a-1 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/https://thumbs.dreamstime.com/z/sunset-time-263710173.jpg); }
+#slide-a-2 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cloudscape-flight-top-above-263709865.jpg); }
+#slide-a-3 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cityscape-jaipur-night-scenery-cityscape-jaipur-night-scenery-263666716.jpg); }
+#slide-a-4 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/tealight-candle-lighting-all-darkness-small-solo-source-light-clears-263666706.jpg); }
+#slide-a-5 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/amer-fort-jaipur-amer-fort-jaipur-242551218.jpg); }
+#slide-a-6 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sky-view-cityscape-242551206.jpg); }
+#slide-a-7 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/mustard-fields-village-mustard-fields-village-237724620.jpg); }
+#slide-a-8 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/martyr-statue-martyr-statue-jaipur-war-memorial-145584315.jpg); }
+#slide-a-9 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/temple-jaipur-made-white-marble-royal-pride-lakshmi-mandir-temple-145584692.jpg); }
+#slide-a-10 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sunset-clouds-dipping-horizon-travel-beyond-bounds-air-ride-199686813.jpg); }
+#slide-a-11 { background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/legends-god-mammoth-temple-crushing-ego-humans-behemoth-beautiful-architecture-legends-god-temple-hand-carving-199686829.jpg); }
+
+/* Support & Appreciation Badges */
+.support-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
