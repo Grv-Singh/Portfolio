@@ -596,6 +596,43 @@ html, body {
   border: none;
 }
 
+.wcg-frame-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 190px;
+  background: #ffffff;
+  border-radius: var(--radius-xs);
+}
+
+.wcg-frame-wrapper iframe {
+  width: 405px;
+  height: 190px;
+  border: none;
+  display: block;
+  transform-origin: center center;
+}
+
+@media (max-width: 480px) {
+  .wcg-frame-wrapper {
+    height: 160px;
+  }
+  .wcg-frame-wrapper iframe {
+    transform: scale(0.82);
+  }
+}
+
+@media (max-width: 380px) {
+  .wcg-frame-wrapper {
+    height: 145px;
+  }
+  .wcg-frame-wrapper iframe {
+    transform: scale(0.72);
+  }
+}
+
 .wakatime-deck {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

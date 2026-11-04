@@ -40,3 +40,4 @@ jobs:
             git commit -m "Auto-sync live TypeRacer statistics"
             git push origin master
           fi
+
