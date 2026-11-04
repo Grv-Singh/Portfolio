@@ -633,58 +633,87 @@ html, body {
   }
 }
 
-/* Photo Track */
-.slider-container {
-  width: 100%;
-  overflow-x: auto;
-  padding-bottom: 0.4rem;
-  -webkit-overflow-scrolling: touch;
-}
-
-.slider-container::-webkit-scrollbar {
-  height: 4px;
-}
-
-.slider-container::-webkit-scrollbar-thumb {
-  background: var(--border-focus);
-  border-radius: 2px;
-}
-
-.slider-track {
-  display: flex;
-  gap: 0.5rem;
-  width: max-content;
+/* Photography Showcase Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.65rem;
+  margin-bottom: 1rem;
 }
 
 .photo-card {
-  width: 160px;
-  height: 210px;
-  border-radius: var(--radius-sm);
-  background-size: cover;
-  background-position: center;
-  border: 1px solid var(--border-subtle);
   position: relative;
+  aspect-ratio: 16 / 11;
+  border-radius: var(--radius-sm);
   overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-elevated);
   text-decoration: none;
-  flex-shrink: 0;
+  display: block;
 }
 
-.photo-card::before {
-  content: "";
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-card:hover img {
+  transform: scale(1.06);
+}
+
+.photo-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 14, 23, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.6rem 0.65rem;
+  transition: background 0.2s ease;
+}
+
+.photo-card:hover .photo-overlay {
+  background: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.94) 100%);
+}
+
+.photo-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
 }
 
 .photo-title {
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
-  right: 6px;
-  color: #ffffff;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  z-index: 2;
+  color: #ffffff;
+  line-height: 1.25;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.photo-tag {
+  font-size: 0.62rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.photo-icon {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: transform 0.2s ease;
+}
+
+.photo-card:hover .photo-icon {
+  transform: translateX(2px) translateY(-2px);
+  color: var(--accent-light);
 }
 
 /* Channels Bar */
@@ -804,6 +833,15 @@ footer {
   .projects-grid,
   .observability-grid {
     grid-template-columns: 1fr;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .photo-card {
+    aspect-ratio: 4 / 3;
   }
 
   .skills-deck {

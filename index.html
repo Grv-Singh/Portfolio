@@ -511,57 +511,98 @@
 
     <!-- Visuals & Media -->
     <section id="visuals">
-      <div class="badge-card-top" style="margin-bottom: 0.5rem;">
-        <h2 class="section-title" style="margin: 0;">
+      <div class="section-header">
+        <h2 class="section-title">
           <span class="material-symbols-rounded notranslate" translate="no">photo_camera</span>
-          <span>Photography & Art Albums</span>
+          <span>Photography Showcase</span>
         </h2>
-        <a href="https://www.dreamstime.com/grv197_info" target="_blank" rel="noopener" class="project-link">
-          <span>Dreamstime Portfolio</span>
-          <span class="material-symbols-rounded notranslate" translate="no" style="font-size: 15px;">open_in_new</span>
+        <a href="https://www.dreamstime.com/grv197_info" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"
+          onclick="trackInteraction('Dreamstime', 'Visuals');">
+          <span>@grv197 on Dreamstime</span>
+          <span class="material-symbols-rounded notranslate" translate="no">open_in_new</span>
         </a>
       </div>
 
-      <div class="slider-container">
-        <div class="slider-track">
-          <a target="_blank" rel="noopener"
-            href="https://www.dreamstime.com/nalwa-king-punjab-image263710174#res25254492" class="photo-card"
-            style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/nalwa-king-punjab-%E0%A4%B8%E0%A5%8B%E0%A4%9C%E0%A4%BE-%E0%A4%AA%E0%A5%81%E0%A4%A4%E0%A5%8D-%E0%A4%A8%E0%A4%88-%E0%A4%A4%E0%A5%87-%E0%A4%A8%E0%A4%B2%E0%A4%B5%E0%A4%BE-%E0%A4%86-%E0%A4%9C%E0%A4%BE%E0%A4%8F%E0%A4%97%E0%A4%BE%E0%A5%A4-263710174.jpg);">
-            <span class="photo-title">Nalwa King</span>
-          </a>
-          <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sunset-time-image263710173#res25254492"
-            class="photo-card"
-            style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sunset-time-263710173.jpg);">
-            <span class="photo-title">Sunset</span>
-          </a>
-          <a target="_blank" rel="noopener"
-            href="https://www.dreamstime.com/cloudscape-flight-top-above-image263709865#res25254492" class="photo-card"
-            style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cloudscape-flight-top-above-263709865.jpg);">
-            <span class="photo-title">Flight Cloudscape</span>
-          </a>
-          <a target="_blank" rel="noopener"
-            href="https://www.dreamstime.com/cityscape-jaipur-night-scenery-image263666716#res25254492"
-            class="photo-card"
-            style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/cityscape-jaipur-night-scenery-263666716.jpg);">
-            <span class="photo-title">Jaipur Night</span>
-          </a>
-          <a target="_blank" rel="noopener"
-            href="https://www.dreamstime.com/tealight-candle-lighting-all-darkness-image263666706#res25254492"
-            class="photo-card"
-            style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/tealight-candle-lighting-all-darkness-small-solo-source-light-clears-263666706.jpg);">
-            <span class="photo-title">Tealight Candle</span>
-          </a>
-          <a target="_blank" rel="noopener"
-            href="https://www.dreamstime.com/amer-fort-jaipur-image242551218#res25254492" class="photo-card"
-            style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/amer-fort-jaipur-242551218.jpg);">
-            <span class="photo-title">Amer Fort</span>
-          </a>
-          <a target="_blank" rel="noopener"
-            href="https://www.dreamstime.com/sky-view-cityscape-image242551206#res25254492" class="photo-card"
-            style="background-image: url(https://image.thum.io/get/https://thumbs.dreamstime.com/z/sky-view-cityscape-242551206.jpg);">
-            <span class="photo-title">Sky View</span>
-          </a>
-        </div>
+      <div class="photo-grid">
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/amer-fort-jaipur-image242551218#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/amer-fort-jaipur-242551218.jpg" alt="Amer Fort Jaipur" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">Amer Fort, Jaipur</span>
+              <span class="photo-tag">Heritage</span>
+            </div>
+          </div>
+        </a>
+
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/cityscape-jaipur-night-scenery-image263666716#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/cityscape-jaipur-night-scenery-263666716.jpg" alt="Jaipur Night Scenery" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">Jaipur Night Scenery</span>
+              <span class="photo-tag">Cityscape</span>
+            </div>
+          </div>
+        </a>
+
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sky-view-cityscape-image242551206#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/sky-view-cityscape-242551206.jpg" alt="Sky View Cityscape" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">Sky View Cityscape</span>
+              <span class="photo-tag">Aerial</span>
+            </div>
+          </div>
+        </a>
+
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/sunset-time-image263710173#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/sunset-time-263710173.jpg" alt="Sunset Time" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">Sunset Time</span>
+              <span class="photo-tag">Golden Hour</span>
+            </div>
+          </div>
+        </a>
+
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/cloudscape-flight-top-above-image263709865#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/cloudscape-flight-top-above-263709865.jpg" alt="Flight Cloudscape" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">Above the Clouds</span>
+              <span class="photo-tag">Cloudscape</span>
+            </div>
+          </div>
+        </a>
+
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/tealight-candle-lighting-all-darkness-image263666706#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/tealight-candle-lighting-all-darkness-small-solo-source-light-clears-263666706.jpg" alt="Tealight Candle" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">Tealight Candle</span>
+              <span class="photo-tag">Still Life</span>
+            </div>
+          </div>
+        </a>
+
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/temple-jaipur-made-white-marble-image145584692#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/temple-jaipur-made-white-marble-royal-pride-lakshmi-mandir-temple-145584692.jpg" alt="White Marble Temple" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">White Marble Temple</span>
+              <span class="photo-tag">Jaipur</span>
+            </div>
+          </div>
+        </a>
+
+        <a target="_blank" rel="noopener" href="https://www.dreamstime.com/nalwa-king-punjab-image263710174#res25254492" class="photo-card">
+          <img src="https://thumbs.dreamstime.com/b/nalwa-king-punjab-%E0%A4%B8%E0%A5%8B%E0%A4%9C%E0%A4%BE-%E0%A4%AA%E0%A5%81%E0%A4%A4%E0%A5%8D-%E0%A4%A8%E0%A4%88-%E0%A4%A4%E0%A5%87-%E0%A4%A8%E0%A4%B2%E0%A4%B5%E0%A4%BE-%E0%A4%86-%E0%A4%9C%E0%A4%BE%E0%A4%8F%E0%A4%97%E0%A4%BE%E0%A5%A4-263710174.jpg" alt="Nalwa King" loading="lazy">
+          <div class="photo-overlay">
+            <div class="photo-meta">
+              <span class="photo-title">Nalwa King</span>
+              <span class="photo-tag">Punjab</span>
+            </div>
+          </div>
+        </a>
       </div>
 
       <div class="channels-bar" style="justify-content: space-around; margin-bottom: 1rem;">
