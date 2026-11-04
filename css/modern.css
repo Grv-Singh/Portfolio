@@ -633,19 +633,6 @@ html, body {
   }
 }
 
-.wakatime-deck {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-}
-
-.wakatime-deck .badge-card embed {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Photo Track */
 .slider-container {
   width: 100%;
@@ -815,8 +802,7 @@ footer {
   }
 
   .projects-grid,
-  .observability-grid,
-  .wakatime-deck {
+  .observability-grid {
     grid-template-columns: 1fr;
   }
 
