@@ -370,15 +370,21 @@ html, body {
   align-items: center;
   justify-content: space-between;
   margin: 1.25rem 0 0.65rem 0;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .section-header .section-title {
   margin: 0;
+  white-space: nowrap;
+  flex-shrink: 1;
 }
 
 .section-header .btn {
   margin-left: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .section-title {
@@ -759,6 +765,16 @@ footer {
     font-size: 0.76rem;
     padding: 0.35rem 0.6rem;
     min-height: auto;
+  }
+
+  .section-header .section-title {
+    font-size: 0.88rem;
+  }
+
+  .section-header .btn-sm {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+    min-height: 24px;
   }
 
   .projects-grid,
