@@ -46,7 +46,7 @@
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip; /* Clip horizontal overflow without disabling position: sticky */
   background-color: var(--bg-page);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -125,15 +125,16 @@ html, body {
   justify-content: space-between;
   padding: 0.55rem 0.85rem;
   background: var(--bg-surface);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full);
   margin-bottom: 0.85rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  position: -webkit-sticky;
   position: sticky;
   top: 0.5rem;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .brand {
@@ -901,7 +902,10 @@ footer {
 
   .nav-bar {
     padding: 0.4rem 0.65rem;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0.25rem;
+    z-index: 1000;
   }
 
   .brand span:not(.material-symbols-rounded) {
