@@ -1,0 +1,47 @@
+# Complete Technical Dossier — Gaurav Singh
+
+## Overview
+Gaurav Singh is a Computer Engineer and Systems Builder based in Jaipur, Rajasthan, India. His work spans distributed computing, edge IoT telemetry, data engineering pipelines, full-stack application development, and open-source systems architecture.
+
+## Primary Roles & Experience
+- Systems Architect & Computer Engineer at Hypothetica.
+- Designer of resilient telemetry pipelines, edge hardware firmware (ESP8266/MicroPython, Brocade/Aruba network topologies, SMPS noise filtering, circadian lighting), and high-throughput data processing engines.
+- Focus on sustainable, energy-efficient compute and robust observability without external cloud bloat.
+
+## Complete Skills & Tools Matrix
+- Core Programming: Python, JavaScript, TypeScript, Bash, SQL, C++, Node.js
+- Data Engineering & Analytics: Apache Spark, Apache Kafka, Apache Hadoop, PySpark, Pandas, NumPy, D3.js, Splunk, ETL Orchestration
+- Operating Systems & Virtualization: Debian Linux, Ubuntu Server, Proxmox VE, Docker, Tailscale Mesh Networking
+- Databases & Storage: PostgreSQL, SQLite, MongoDB, Redis
+- Observability: Umami Analytics, Custom Spooler Daemons, OpenTelemetry, Health check daemons
+- Embedded & Edge: MicroPython, Wemos D1 Mini, ESP8266/ESP32, Hardware PWM, Sensor Telemetry (DS18B20, MQ-135, ADC debounce)
+
+## Detailed Systems Portfolio
+1. DubForge Studio
+   - Architecture: Modern speech synthesis, vocal diarization, and emotion transfer pipeline designed for open-source multi-speaker audio dubbing.
+   - Repository: https://github.com/Grv-Singh/dubforge-studio
+2. Magnite OS Launcher & Taskbar
+   - Architecture: Modular Linux desktop panel with live system metric graphs, launcher integration, and configurable widget sidebars.
+   - Repository: https://github.com/Grv-Singh/Magnite-OS-Taskbar
+3. Arjunpuri Civic Portal
+   - Architecture: Local municipal problem resolver with live status tracking, geotagging, and citizen submission workflows.
+   - Repository: https://github.com/Grv-Singh/Arjunpuri
+4. Twitter NLP Traffic Congestion Evaluation
+   - Architecture: Distributed NLP sentiment parsing and traffic anomaly detection pipeline evaluating public sentiment during odd-even vehicle regulation.
+   - Repository: https://github.com/Grv-Singh/Analysis-and-Evaluation-of-Traffic-Congestion-using-Twitter
+5. Bag of Convolutional Features (BoCF)
+   - Architecture: Deep learning feature aggregation system extracting intermediate CNN activations for high-speed content-based image retrieval.
+   - Repository: https://github.com/Grv-Singh/Bag-of-Convolutional-Features
+6. Bingo Tour & Travels Portal
+   - Architecture: Commercial fleet scheduling and booking web platform supporting dynamic route reservation and booking confirmations.
+   - Repository: https://github.com/Grv-Singh/bingotourandtravels
+
+## Contact & Public Profiles
+- Website: https://grv-singh.github.io/Portfolio/
+- GitHub: https://github.com/Grv-Singh
+- LinkedIn: https://linkedin.com/in/grvsingh97/
+- Email: acad.grv97@gmail.com
+- WhatsApp: https://api.whatsapp.com/send?phone=918946968876&text=Hi%20Gaurav
+- Quora: https://www.quora.com/profile/Gaurav-Singh-249/
+- Technical Blog: https://gauravsinghsays.blogspot.com
+- Quick Call: https://calendly.com/grv-singh/quickcall

@@ -1,0 +1,46 @@
+# Gaurav Singh — Portfolio & Engineering Systems
+
+> Computer Engineer, Systems Architect & Full-Stack Builder specializing in high-throughput telemetry pipelines, distributed data infrastructure, edge compute, and intelligent interfaces.
+
+## Personal Information
+- Name: Gaurav Singh
+- Role: Computer Engineer & Systems Builder
+- Location: Jaipur, Rajasthan, India
+- Website: https://grv-singh.github.io/Portfolio/
+- Email: acad.grv97@gmail.com
+- GitHub: https://github.com/Grv-Singh
+- LinkedIn: https://linkedin.com/in/grvsingh97/
+- WhatsApp: https://api.whatsapp.com/send?phone=918946968876&text=Hi%20Gaurav
+- Quora: https://www.quora.com/profile/Gaurav-Singh-249/
+- Technical Blog: https://gauravsinghsays.blogspot.com
+
+## Technical Stack & Competencies
+- Languages & Frameworks: Python, JavaScript, TypeScript, Bash, SQL, C++, HTML5/CSS3
+- Distributed Data & Streaming: Apache Spark, Apache Kafka, Hadoop, MapReduce, ETL/ELT pipelines
+- Infrastructure & Edge: Linux (Debian, Ubuntu), Proxmox VE, Docker, MicroPython, Embedded Telemetry
+- Cloud & Observability: AWS, Splunk, Umami Telemetry, Open-Telemetry, Prometheus, Grafana
+- Databases: PostgreSQL, MongoDB, Redis, SQLite
+
+## Featured Engineering Systems
+- DubForge Studio: Open-source AI multi-speaker dubbing and subtitle pipeline with diarization and emotion transfer.
+  - Link: https://github.com/Grv-Singh/dubforge-studio
+- Magnite OS Launcher: Production Linux launcher and taskbar with dynamic telemetry and widget management.
+  - Link: https://github.com/Grv-Singh/Magnite-OS-Taskbar
+- Arjunpuri Civic Portal: Hyperlocal civic issue tracker with GPS coordinate mapping and real-time status reporting.
+  - Link: https://github.com/Grv-Singh/Arjunpuri
+- Traffic Congestion Analysis: Distributed Twitter NLP sentiment and geolocation clustering pipeline during Odd-Even traffic trials.
+  - Link: https://github.com/Grv-Singh/Analysis-and-Evaluation-of-Traffic-Congestion-using-Twitter
+- Bag-of-Convolutional-Features: Computer vision and image retrieval framework using CNN feature maps for high-accuracy similarity search.
+  - Link: https://github.com/Grv-Singh/Bag-of-Convolutional-Features
+- Bingo Tour & Travels: Full-stack online fleet reservation and logistics booking portal with live availability.
+  - Link: https://github.com/Grv-Singh/bingotourandtravels
+
+## Scientific & Open Compute Contributions
+- World Community Grid: Active volunteer computing contributor donating compute cycles for humanitarian biomedical research (Member ID: 1143426, @grv97).
+- iNaturalist: Biodiversity surveyor with verified field observations across flora and fauna (@grv97, https://www.inaturalist.org/observations/grv97).
+- Dreamstime Stock Photography: Contributor photographer capturing architectural heritage, nature, and urban landscapes (@grv197, https://www.dreamstime.com/grv197_info).
+- TypeRacer: Competitive typing speedster maintaining 45+ WPM average over 125+ races (@grv97).
+
+## Consulting & Availability
+- Open for engineering challenges, systems design, distributed data architecture, and technical consulting.
+- Calendar Booking: https://calendly.com/grv-singh/quickcall
