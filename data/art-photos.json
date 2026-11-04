@@ -1,0 +1,22 @@
+{
+  "updatedAt": "2026-11-04T10:58:02.185Z",
+  "albumUrl": "https://photos.app.goo.gl/46GVaVPFXTvs9gCR8",
+  "totalPhotos": 3,
+  "photos": [
+    {
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczP9p5NBsyzd63pFg2av5VdM6Kj8TrHqfRboTSgzMnRBOezQGa1sp2cPn-xYTE0bwdDwxzd4cA_sYeoRR2sq5sMlcZf-bgT99HFVQQLJk4-ghPUMiyCk=w800",
+      "title": "Original Art & Sketches",
+      "tag": "Gallery"
+    },
+    {
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOJOx9cWlVDwSfFOJIYwttEz_aZ5GqAqAE_ImKmh49f9ViqEBrlGXyTj5rH2DF5tHzQEfPk3aK74Dl_RClanYV7-Xjgo1taH-3Z8zl2bj7xl-fCFQZI=w800",
+      "title": "Illustration & Portrait",
+      "tag": "Gallery"
+    },
+    {
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczNvPFySrtJObD8SoUBk3rFppWgkpTIhiaQrz3Ydb3f7YHz1W1p1BidI0XhQwlemdigre4JS-Wp6gHpPrTpiVf_BnF7ZIaSI10npQBChB8o0jw3-8BXI=w800",
+      "title": "Art Piece #3",
+      "tag": "Gallery"
+    }
+  ]
+}

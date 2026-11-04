@@ -1,4 +1,4 @@
-name: Sync TypeRacer Live Stats
+name: Sync Live Stats and Media
 
 on:
   schedule:
@@ -29,15 +29,17 @@ jobs:
       - name: Fetch TypeRacer Live Stats
         run: node scripts/sync-typeracer.js
 
-      - name: Commit and Push Updated Stats
+      - name: Sync Google Photos Art Album
+        run: node scripts/sync-album.js
+
+      - name: Commit and Push Updated Data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/typeracer.json
+          git add data/typeracer.json data/art-photos.json
           if git diff --staged --quiet; then
-            echo "No change in TypeRacer statistics."
+            echo "No change in live data."
           else
-            git commit -m "Auto-sync live TypeRacer statistics"
+            git commit -m "Auto-sync live TypeRacer stats and Google Photos Art album"
             git push origin master
           fi
-

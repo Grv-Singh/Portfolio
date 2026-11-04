@@ -648,7 +648,7 @@
       </div>
 
       <div class="photo-slider-wrapper">
-        <div class="photo-slider-track">
+        <div class="photo-slider-track" id="art-slider-track">
           <a target="_blank" rel="noopener" href="https://photos.app.goo.gl/46GVaVPFXTvs9gCR8" class="slider-photo-card">
             <img src="https://lh3.googleusercontent.com/pw/AP1GczP9p5NBsyzd63pFg2av5VdM6Kj8TrHqfRboTSgzMnRBOezQGa1sp2cPn-xYTE0bwdDwxzd4cA_sYeoRR2sq5sMlcZf-bgT99HFVQQLJk4-ghPUMiyCk=w800" alt="Art Piece 1" loading="lazy">
             <div class="photo-overlay">
@@ -772,6 +772,30 @@
               if (lbl && data.gamesPlayed) {
                 lbl.textContent = `Live Avg (${data.gamesPlayed} races)`;
               }
+            }
+          })
+          .catch(() => {});
+      }
+
+      // Dynamic Google Photos Art Album sync
+      const artTrack = document.getElementById('art-slider-track');
+      if (artTrack) {
+        fetch('data/art-photos.json?v=' + Date.now())
+          .then(res => res.json())
+          .then(data => {
+            if (data && data.photos && data.photos.length > 0) {
+              const albumHref = data.albumUrl || 'https://photos.app.goo.gl/46GVaVPFXTvs9gCR8';
+              artTrack.innerHTML = data.photos.map((p, i) => `
+                <a target="_blank" rel="noopener" href="${albumHref}" class="slider-photo-card">
+                  <img src="${p.url}" alt="${p.title || 'Art Piece'}" loading="lazy">
+                  <div class="photo-overlay">
+                    <div class="photo-meta">
+                      <span class="photo-title">${p.title || `Art Piece #${i + 1}`}</span>
+                      <span class="photo-tag">${p.tag || 'Gallery'}</span>
+                    </div>
+                  </div>
+                </a>
+              `).join('');
             }
           })
           .catch(() => {});
